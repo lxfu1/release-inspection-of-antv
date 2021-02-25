@@ -2,7 +2,7 @@
  * @version: 0.0.1
  * @Author: fujin
  * @Date: 2021-02-25 14:44:27
- * @LastEditTime: 2021-02-25 15:40:11
+ * @LastEditTime: 2021-02-25 15:52:21
  */
 import React, { useState, useEffect } from 'react';
 import { worker } from '../worker';
@@ -54,8 +54,7 @@ const CountDownTimer: React.FC<Props> = ({ endTime, onEnd }: Props) => {
 				lineHeight: '32px',
 			}}
 		>
-			{time ? `${time}秒后自动截图` : '截图完成'}
-			{time}
+			{time ? `${time} 秒后自动截图` : '截图完成'}
 		</div>
 	);
 };
