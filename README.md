@@ -1,2 +1,8 @@
-# g2-release-inspection
-G2 release inspection
+# Release inspection of AntV
+
+```bash
+
+# 执行
+sh start.sh
+
+```
