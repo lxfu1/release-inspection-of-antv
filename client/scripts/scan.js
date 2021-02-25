@@ -3,7 +3,7 @@
  * @version: 0.0.1
  * @Author: fujin
  * @Date: 2021-02-24 16:55:09
- * @LastEditTime: 2021-02-25 13:10:25
+ * @LastEditTime: 2021-02-25 18:50:16
  */
 const fs = require('fs');
 const path = require('path');
@@ -21,6 +21,9 @@ const filter = code => {
 	return code
 		.replace(`('container',`, `('container-${index}',`)
 		.replace(/`/g, '(**)')
+		.replace(/new\s+_g2plot\./g, 'new G2Plot.')
+		.replace(/_g2plot\.G2\./g, 'G2Plot.G2.')
+		.replace(/_g2plot\./g, 'G2Plot.')
 		.replace(/\\n/g, '')
 		.replace(/\\/g, '')
 		.replace(`('container')`, `('container-${index}')`)

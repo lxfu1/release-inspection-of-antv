@@ -8,22 +8,33 @@ echo $PATH
 # time=$(date "+%Y%m%d-%H%M%S")
 # echo "-------------------${project_name=}--------------------"
 
-cd ./client
-
-echo "\033[49;32m \n******* client installing *******\n \033[0m"
+cd ../G2Plot
 
 tnpm i
+
+echo "\033[49;32m \n******* G2Plot installing *******\n \033[0m"
+
+tnpm run dist
 
 echo "\033[49;32m \n******* client building *******\n \033[0m"
 
-tnpm run build
+cd ../release-inspection-of-antv/client
 
-cd ../server
-
-echo "\033[49;32m \n******* server installing *******\n \033[0m"
 
 tnpm i
 
-echo "\033[49;32m \n******* server starting *******\n \033[0m"
+echo "\033[49;32m \n******* client installing *******\n \033[0m"
+
+tnpm run build
+
+echo "\033[49;32m \n******* client building *******\n \033[0m"
+
+cd ../server
+
+tnpm i
+
+echo "\033[49;32m \n******* server installing *******\n \033[0m"
 
 tnpm start
+
+echo "\033[49;32m \n******* server starting *******\n \033[0m"

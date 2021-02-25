@@ -35,6 +35,8 @@
     "chalk": "^4.1.0",
     "delay": "^5.0.0",
     "nodemon": "^1.18.5",
+    "pixelmatch": "^5.2.1",
+    "pngjs": "^6.0.0",
     "puppeteer": "^7.1.0"
   }
 }

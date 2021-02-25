@@ -11,3 +11,12 @@
 	height: 200px;
 	margin-bottom: 24px;
 }
+
+.loading {
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+	font-size: 32px;
+	line-height: 100vh;
+	color: rgba(0, 0, 0, 0.65);
+}

@@ -16,7 +16,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var area = new _g2plot.Area('container-0', {
+    var area = new G2Plot.Area('container-0', {
       data: data,
       xField: 'Date',
       yField: 'scales',
@@ -58,7 +58,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var area = new _g2plot.Area('container-1', {
+    var area = new G2Plot.Area('container-1', {
       data: data,
       xField: 'Date',
       yField: 'scales',
@@ -92,7 +92,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var area = new _g2plot.Area('container-2', {
+    var area = new G2Plot.Area('container-2', {
       data: data,
       xField: 'Date',
       yField: 'scales',
@@ -128,7 +128,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/360c3eae-0c73-46f0-a982-4746a6095010.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var area = new _g2plot.Area('container-3', {
+    var area = new G2Plot.Area('container-3', {
       data: data,
       xField: 'timePeriod',
       yField: 'value',
@@ -156,7 +156,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/67ef5751-b228-417c-810a-962f978af3e7.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var area = new _g2plot.Area('container-4', {
+    var area = new G2Plot.Area('container-4', {
       data: data,
       xField: 'year',
       yField: 'value',
@@ -195,7 +195,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/55424a73-7cb8-4f79-b60d-3ab627ac5698.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var area = new _g2plot.Area('container-5', {
+    var area = new G2Plot.Area('container-5', {
       data: data,
       xField: 'year',
       yField: 'value',
@@ -239,7 +239,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/b21e7336-0b3e-486c-9070-612ede49284e.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var area = new _g2plot.Area('container-6', {
+    var area = new G2Plot.Area('container-6', {
       data: data,
       xField: 'date',
       yField: 'value',
@@ -269,7 +269,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/b21e7336-0b3e-486c-9070-612ede49284e.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var area = new _g2plot.Area('container-7', {
+    var area = new G2Plot.Area('container-7', {
       data: data,
       xField: 'date',
       yField: 'value',
@@ -317,7 +317,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '家庭清洁',
     sales: 38
   }];
-  var bar = new _g2plot.Bar('container-8', {
+  var bar = new G2Plot.Bar('container-8', {
     data: data,
     xField: 'sales',
     yField: 'type',
@@ -366,7 +366,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     year: '1958 年',
     value: 48
   }];
-  var bar = new _g2plot.Bar('container-9', {
+  var bar = new G2Plot.Bar('container-9', {
     data: data,
     xField: 'value',
     yField: 'year',
@@ -416,7 +416,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '家庭清洁',
     sales: 38
   }];
-  var barPlot = new _g2plot.Bar('container-10', {
+  var barPlot = new G2Plot.Bar('container-10', {
     data: data,
     xField: 'sales',
     yField: 'type',
@@ -467,7 +467,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     action: '完成交易',
     pv: 8500
   }];
-  var barPlot = new _g2plot.Bar('container-11', {
+  var barPlot = new G2Plot.Bar('container-11', {
     data: data,
     xField: 'pv',
     yField: 'action',
@@ -492,7 +492,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/be63e0a2-d2be-4c45-97fd-c00f752a66d4.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var column = new _g2plot.Bar('container-12', {
+    var column = new G2Plot.Bar('container-12', {
       data: data,
       yField: '城市',
       xField: '销售额',
@@ -547,7 +547,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '家庭清洁',
     sales: 38
   }];
-  var barPlot = new _g2plot.Bar('container-13', {
+  var barPlot = new G2Plot.Bar('container-13', {
     data: data,
     xField: 'sales',
     yField: 'type',
@@ -602,7 +602,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '家庭清洁',
     sales: 38
   }];
-  var barPlot = new _g2plot.Bar('container-14', {
+  var barPlot = new G2Plot.Bar('container-14', {
     data: data,
     xField: 'sales',
     yField: 'type',
@@ -674,7 +674,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: 'series2',
     value: 100
   }];
-  var stackedBarPlot = new _g2plot.Bar('container-15', {
+  var stackedBarPlot = new G2Plot.Bar('container-15', {
     data: data,
     isGroup: true,
     xField: 'value',
@@ -758,7 +758,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: 'series2',
     value: 100
   }];
-  var stackedBarPlot = new _g2plot.Bar('container-16', {
+  var stackedBarPlot = new G2Plot.Bar('container-16', {
     data: data,
     isGroup: true,
     xField: 'value',
@@ -876,7 +876,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     year: '2050',
     value: 628
   }];
-  var barPlot = new _g2plot.Bar('container-17', {
+  var barPlot = new G2Plot.Bar('container-17', {
     data: data,
     xField: 'value',
     yField: 'year',
@@ -937,7 +937,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '分类八',
     values: [18, 34]
   }];
-  var barPlot = new _g2plot.Bar('container-18', {
+  var barPlot = new G2Plot.Bar('container-18', {
     data: data.reverse(),
     xField: 'values',
     yField: 'type',
@@ -1038,7 +1038,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 13,
     type: 'Bor'
   }];
-  var stackedBarPlot = new _g2plot.Bar('container-19', {
+  var stackedBarPlot = new G2Plot.Bar('container-19', {
     data: data.reverse(),
     isStack: true,
     xField: 'value',
@@ -1097,7 +1097,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       return ['United States', 'France', 'Germany', 'Austria', 'Japan', 'Sweden'].includes(d.country);
     });
   }).then(function (data) {
-    var line = new _g2plot.Line('container-20', {
+    var line = new G2Plot.Line('container-20', {
       padding: 'auto',
       appendPadding: [8, 10, 0, 10],
       data: data,
@@ -1130,7 +1130,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     line.render();
 
     var createPie = function createPie(container, data) {
-      var piePlot = new _g2plot.Pie(container, {
+      var piePlot = new G2Plot.Pie(container, {
         data: data,
         width: 120,
         height: 120,
@@ -1215,7 +1215,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
         height = _getSizeFactor.height,
         size = _getSizeFactor.size;
 
-    var plot = new _g2plot.Heatmap('container-21', {
+    var plot = new G2Plot.Heatmap('container-21', {
       data: data,
       autoFit: false,
       width: width,
@@ -1367,7 +1367,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
         referringSites: d
       };
     });
-    var plot = new _g2plot.MultiView('container-22', {
+    var plot = new G2Plot.MultiView('container-22', {
       height: 140,
       appendPadding: [20, 0, 0, 0],
       tooltip: false,
@@ -1712,7 +1712,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     conversionUV: 200
   }];
   (0, _insertCss.insertCss)("  .container{    margin: 16px -8px; display: flex;  }  .box{    padding: 0px 16px;  }  .title{    font-weight: bold;  }  .tooltip-item{    margin-top: 12px;    display: flex;    width: 120px;    justify-content: space-between;  }  .link{    display: inline-block;    margin-top: 12px;    color: #5B8FF9;    text-decoration: none;    cursor: pointer;  }  .link:hover{    color: #5D7092;  }");
-  var funnelPlot = new _g2plot.Funnel('container-23', {
+  var funnelPlot = new G2Plot.Funnel('container-23', {
     data: data,
     xField: 'stage',
     yField: 'times',
@@ -1767,7 +1767,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new _g2plot.Pie('container-24', {
+  var piePlot = new G2Plot.Pie('container-24', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -1867,7 +1867,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '家庭清洁',
     sales: 38
   }];
-  var columnPlot = new _g2plot.Column('container-25', {
+  var columnPlot = new G2Plot.Column('container-25', {
     data: data,
     xField: 'type',
     yField: 'sales',
@@ -1939,7 +1939,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   }];
   var paletteSemanticRed = '#F4664A';
   var brandColor = '#5B8FF9';
-  var columnPlot = new _g2plot.Column('container-26', {
+  var columnPlot = new G2Plot.Column('container-26', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -2003,7 +2003,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     action: '完成交易',
     pv: 8500
   }];
-  var columnPlot = new _g2plot.Column('container-27', {
+  var columnPlot = new G2Plot.Column('container-27', {
     data: data,
     xField: 'action',
     yField: 'pv',
@@ -2068,7 +2068,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     month: '12',
     value: 597
   }];
-  var columnPlot = new _g2plot.Column('container-28', {
+  var columnPlot = new G2Plot.Column('container-28', {
     data: data,
     padding: 'auto',
     xField: 'month',
@@ -2123,7 +2123,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/be63e0a2-d2be-4c45-97fd-c00f752a66d4.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var column = new _g2plot.Column('container-29', {
+    var column = new G2Plot.Column('container-29', {
       data: data,
       xField: '城市',
       yField: '销售额',
@@ -2156,7 +2156,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/be63e0a2-d2be-4c45-97fd-c00f752a66d4.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var column = new _g2plot.Column('container-30', {
+    var column = new G2Plot.Column('container-30', {
       data: data,
       xField: '城市',
       yField: '销售额',
@@ -2212,7 +2212,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '家庭清洁',
     sales: 38
   }];
-  var columnPlot = new _g2plot.Column('container-31', {
+  var columnPlot = new G2Plot.Column('container-31', {
     data: data,
     xField: 'type',
     yField: 'sales',
@@ -2273,7 +2273,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '家庭清洁',
     sales: 38
   }];
-  var columnPlot = new _g2plot.Column('container-32', {
+  var columnPlot = new G2Plot.Column('container-32', {
     data: data,
     xField: 'type',
     yField: 'sales',
@@ -2375,7 +2375,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     月份: 'Aug.',
     月均降雨量: 42.4
   }];
-  var stackedColumnPlot = new _g2plot.Column('container-33', {
+  var stackedColumnPlot = new G2Plot.Column('container-33', {
     data: data,
     isGroup: true,
     xField: '月份',
@@ -2423,7 +2423,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/PC3daFYjNw/column-data.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var column = new _g2plot.Column('container-34', {
+    var column = new G2Plot.Column('container-34', {
       data: data,
       xField: 'city',
       yField: 'value',
@@ -2453,7 +2453,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/mor%26R5yBI9/stack-group-column.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var column = new _g2plot.Column('container-35', {
+    var column = new G2Plot.Column('container-35', {
       data: data,
       xField: 'product_type',
       yField: 'order_amt',
@@ -2482,7 +2482,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/cK%24sTxSsah/stack-group-column.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var column = new _g2plot.Column('container-36', {
+    var column = new G2Plot.Column('container-36', {
       data: data,
       xField: 'month',
       yField: 'value',
@@ -2593,7 +2593,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     year: '2050',
     value: 628
   }];
-  var columnPlot = new _g2plot.Column('container-37', {
+  var columnPlot = new G2Plot.Column('container-37', {
     data: data,
     xField: 'year',
     yField: 'value',
@@ -2626,7 +2626,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  _g2plot.G2.registerInteraction('element-link', {
+  G2Plot.G2.registerInteraction('element-link', {
     start: [{
       trigger: 'interval:mouseenter',
       action: 'element-link-by-color:link'
@@ -2640,7 +2640,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/jSRiL%26YNql/percent-column.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var columnPlot = new _g2plot.Column('container-38', {
+    var columnPlot = new G2Plot.Column('container-38', {
       data: data,
       xField: 'year',
       yField: 'value',
@@ -2711,7 +2711,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '分类八',
     values: [18, 34]
   }];
-  var barPlot = new _g2plot.Column('container-39', {
+  var barPlot = new G2Plot.Column('container-39', {
     data: data,
     xField: 'type',
     yField: 'values',
@@ -2742,7 +2742,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/8elHX%26irfq/stack-column-data.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var stackedColumnPlot = new _g2plot.Column('container-40', {
+    var stackedColumnPlot = new G2Plot.Column('container-40', {
       data: data,
       isStack: true,
       xField: 'year',
@@ -2785,7 +2785,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/8elHX%26irfq/stack-column-data.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var stackedColumnPlot = new _g2plot.Column('container-41', {
+    var stackedColumnPlot = new G2Plot.Column('container-41', {
       data: data,
       isStack: true,
       xField: 'year',
@@ -2844,7 +2844,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 470,
     count: 220
   }];
-  var dualAxes = new _g2plot.DualAxes('container-42', {
+  var dualAxes = new G2Plot.DualAxes('container-42', {
     data: [data, data],
     xField: 'time',
     yField: ['value', 'count'],
@@ -2950,7 +2950,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     count: 200,
     name: 'c'
   }];
-  var dualAxes = new _g2plot.DualAxes('container-43', {
+  var dualAxes = new G2Plot.DualAxes('container-43', {
     data: [uvData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -2999,7 +2999,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 470,
     count: 220
   }];
-  var dualAxes = new _g2plot.DualAxes('container-44', {
+  var dualAxes = new G2Plot.DualAxes('container-44', {
     data: [data, data],
     xField: 'time',
     yField: ['value', 'count'],
@@ -3193,7 +3193,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     consumeTime: 10424,
     completeTime: 753.583
   }];
-  var dualAxes = new _g2plot.DualAxes('container-45', {
+  var dualAxes = new G2Plot.DualAxes('container-45', {
     data: [data, data],
     xField: 'time',
     yField: ['consumeTime', 'completeTime'],
@@ -3320,7 +3320,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: [500, 550],
     count: 220
   }];
-  var dualAxes = new _g2plot.DualAxes('container-46', {
+  var dualAxes = new G2Plot.DualAxes('container-46', {
     data: [data, data],
     xField: 'time',
     yField: ['value', 'count'],
@@ -3474,7 +3474,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     consumeTime: 10424,
     completeTime: 753.583
   }];
-  var dualAxes = new _g2plot.DualAxes('container-47', {
+  var dualAxes = new G2Plot.DualAxes('container-47', {
     data: [data, data],
     xField: 'time',
     yField: ['consumeTime', 'completeTime'],
@@ -3547,7 +3547,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 13,
     count: 20
   }];
-  var dualAxes = new _g2plot.DualAxes('container-48', {
+  var dualAxes = new G2Plot.DualAxes('container-48', {
     data: [data, data],
     xField: 'year',
     yField: ['value', 'count'],
@@ -3641,7 +3641,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 13,
     count: 20
   }];
-  var dualAxes = new _g2plot.DualAxes('container-49', {
+  var dualAxes = new G2Plot.DualAxes('container-49', {
     data: [data, data],
     xField: 'year',
     yField: ['value', 'count'],
@@ -3771,7 +3771,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     count: 200,
     name: 'c'
   }];
-  var dualAxes = new _g2plot.DualAxes('container-50', {
+  var dualAxes = new G2Plot.DualAxes('container-50', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -3842,7 +3842,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 13,
     count: 20
   }];
-  var dualAxes = new _g2plot.DualAxes('container-51', {
+  var dualAxes = new G2Plot.DualAxes('container-51', {
     data: [data, data],
     xField: 'year',
     yField: ['value', 'count'],
@@ -3930,7 +3930,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     time: '2019-07',
     count: 220
   }];
-  var dualAxes = new _g2plot.DualAxes('container-52', {
+  var dualAxes = new G2Plot.DualAxes('container-52', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -4054,7 +4054,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     time: '2019-07',
     count: 220
   }];
-  var dualAxes = new _g2plot.DualAxes('container-53', {
+  var dualAxes = new G2Plot.DualAxes('container-53', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -4187,7 +4187,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     count: 200,
     name: 'c'
   }];
-  var dualAxes = new _g2plot.DualAxes('container-54', {
+  var dualAxes = new G2Plot.DualAxes('container-54', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -4363,7 +4363,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 5.4,
     type: '高数'
   }];
-  var dualAxes = new _g2plot.DualAxes('container-55', {
+  var dualAxes = new G2Plot.DualAxes('container-55', {
     data: [columnData, lineData],
     xField: 'month',
     yField: ['value', 'value'],
@@ -4397,7 +4397,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var registerTheme = _g2plot.G2.registerTheme;
+  var registerTheme = G2Plot.G2.registerTheme;
   registerTheme('custom-theme', {
     colors10: ['#FACDAA', '#F4A49E', '#EE7B91', '#E85285', '#BE408C', '#BE408C'],
 
@@ -4461,7 +4461,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     time: '2019-07',
     count: 220
   }];
-  var dualAxes = new _g2plot.DualAxes('container-56', {
+  var dualAxes = new G2Plot.DualAxes('container-56', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -4576,7 +4576,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     time: '2019-07',
     count: 220
   }];
-  var dualAxes = new _g2plot.DualAxes('container-57', {
+  var dualAxes = new G2Plot.DualAxes('container-57', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -4706,7 +4706,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     count: 200,
     name: 'c'
   }];
-  var dualAxes = new _g2plot.DualAxes('container-58', {
+  var dualAxes = new G2Plot.DualAxes('container-58', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -4807,7 +4807,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     time: '2019-07',
     count: 220
   }];
-  var dualAxes = new _g2plot.DualAxes('container-59', {
+  var dualAxes = new G2Plot.DualAxes('container-59', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -4890,7 +4890,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   }
 
-  var plot = new _g2plot.MultiView('container-60', {
+  var plot = new G2Plot.MultiView('container-60', {
     tooltip: false,
     plots: plots
   });
@@ -4914,7 +4914,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     return res.json();
   }).then(function (originalData) {
     var cnt = 2;
-    var area = new _g2plot.Area('container-61', {
+    var area = new G2Plot.Area('container-61', {
       data: originalData.slice(0, cnt),
       xField: 'timePeriod',
       yField: 'value',
@@ -4974,7 +4974,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   }];
   var paletteSemanticRed = '#F4664A';
   var brandColor = '#5B8FF9';
-  var columnPlot = new _g2plot.Column('container-62', {
+  var columnPlot = new G2Plot.Column('container-62', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -5019,7 +5019,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     return percent < 0.4 ? color[0] : percent < 0.6 ? color[1] : color[2];
   };
 
-  var gauge = new _g2plot.Gauge('container-63', {
+  var gauge = new G2Plot.Gauge('container-63', {
     percent: 0.2,
     range: {
       color: getColor(0.2)
@@ -5108,7 +5108,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new _g2plot.Pie('container-64', {
+  var piePlot = new G2Plot.Pie('container-64', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -5168,7 +5168,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     return data;
   }
 
-  var line = new _g2plot.Line('container-65', {
+  var line = new G2Plot.Line('container-65', {
     data: getData(),
     padding: 'auto',
     xField: 'x',
@@ -5225,7 +5225,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new _g2plot.Pie('container-66', {
+  var piePlot = new G2Plot.Pie('container-66', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -5305,7 +5305,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }).reduce(function (a, b) {
       return a + b;
     }, 0) / data.length;
-    var line = new _g2plot.Line('container-67', {
+    var line = new G2Plot.Line('container-67', {
       data: data,
       padding: 'auto',
       xField: 'Date',
@@ -5395,7 +5395,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/89729b32-1592-44ae-ba96-1e296638f5f7.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new _g2plot.Line('container-68', {
+    var line = new G2Plot.Line('container-68', {
       data: data,
       padding: 'auto',
       xField: 'date',
@@ -5508,7 +5508,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     month: '12',
     value: 597
   }];
-  var line = new _g2plot.Line('container-69', {
+  var line = new G2Plot.Line('container-69', {
     data: data,
     padding: 'auto',
     xField: 'month',
@@ -5602,7 +5602,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     month: '12',
     value: 597
   }];
-  var columnPlot = new _g2plot.Column('container-70', {
+  var columnPlot = new G2Plot.Column('container-70', {
     data: data,
     padding: 'auto',
     xField: 'month',
@@ -5669,7 +5669,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new _g2plot.Pie('container-71', {
+  var piePlot = new G2Plot.Pie('container-71', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -5729,7 +5729,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new _g2plot.Pie('container-72', {
+  var piePlot = new G2Plot.Pie('container-72', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -5773,13 +5773,13 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot, _util) {
   "use strict";
 
-  var theme = _g2plot.G2.getTheme('dark');
+  var theme = G2Plot.G2.getTheme('dark');
 
   document.getElementById('container-73').style.background = theme.background;
   fetch('https://gw.alipayobjects.com/os/bmw-prod/be63e0a2-d2be-4c45-97fd-c00f752a66d4.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var column = new _g2plot.Column('container-73', {
+    var column = new G2Plot.Column('container-73', {
       data: data,
       xField: '城市',
       yField: '销售额',
@@ -5848,7 +5848,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new _g2plot.Pie('container-74', {
+  var piePlot = new G2Plot.Pie('container-74', {
     appendPadding: 10,
     data: data,
     theme: 'dark',
@@ -5910,7 +5910,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var registerTheme = _g2plot.G2.registerTheme;
+  var registerTheme = G2Plot.G2.registerTheme;
   registerTheme('custom-theme', {
     colors10: ['#025DF4', '#DB6BCF', '#2498D1', '#BBBDE6', '#4045B2', '#21A97A', '#FF745A', '#007E99', '#FFA8A8', '#2391FF'],
     colors20: ['#025DF4', '#DB6BCF', '#2498D1', '#BBBDE6', '#4045B2', '#21A97A', '#FF745A', '#007E99', '#FFA8A8', '#2391FF', '#FFC328', '#A0DC2C', '#946DFF', '#626681', '#EB4185', '#CD8150', '#36BCCB', '#327039', '#803488', '#83BC99']
@@ -5934,7 +5934,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new _g2plot.Pie('container-75', {
+  var piePlot = new G2Plot.Pie('container-75', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -5969,7 +5969,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/basement_prod/a719cd4e-bd40-4878-a4b4-df8a6b531dfe.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var heatmapPlot = new _g2plot.Heatmap(document.getElementById('container-76'), {
+    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-76'), {
       width: 650,
       height: 500,
       autoFit: false,
@@ -6001,7 +6001,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  _g2plot.G2.registerShape('polygon', 'boundary-polygon', {
+  G2Plot.G2.registerShape('polygon', 'boundary-polygon', {
     draw: function draw(cfg, container) {
       var group = container.addGroup();
       var attrs = {
@@ -6047,7 +6047,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/github-commit.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var heatmapPlot = new _g2plot.Heatmap(document.getElementById('container-77'), {
+    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-77'), {
       data: data,
       height: 400,
       autoFit: false,
@@ -6133,7 +6133,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/68d3f380-089e-4683-ab9e-4493200198f9.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var heatmapPlot = new _g2plot.Heatmap(document.getElementById('container-78'), {
+    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-78'), {
       data: data,
       xField: 'name',
       yField: 'country',
@@ -6169,7 +6169,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/68d3f380-089e-4683-ab9e-4493200198f9.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var heatmapPlot = new _g2plot.Heatmap(document.getElementById('container-79'), {
+    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-79'), {
       data: data,
       xField: 'name',
       yField: 'country',
@@ -6205,7 +6205,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/heatmap.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var heatmapPlot = new _g2plot.Heatmap(document.getElementById('container-80'), {
+    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-80'), {
       data: data,
       type: 'density',
       xField: 'g',
@@ -6242,7 +6242,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new _g2plot.Line('container-81', {
+    var line = new G2Plot.Line('container-81', {
       data: data,
       padding: 'auto',
       xField: 'Date',
@@ -6316,7 +6316,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     year: '1999',
     value: 13
   }];
-  var line = new _g2plot.Line('container-82', {
+  var line = new G2Plot.Line('container-82', {
     data: data,
     xField: 'year',
     yField: 'value',
@@ -6365,7 +6365,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new _g2plot.Line('container-83', {
+    var line = new G2Plot.Line('container-83', {
       data: data,
       padding: 'auto',
       xField: 'Date',
@@ -6395,7 +6395,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  _g2plot.G2.registerShape('point', 'breath-point', {
+  G2Plot.G2.registerShape('point', 'breath-point', {
     draw: function draw(cfg, container) {
       var data = cfg.data;
       var point = {
@@ -6484,7 +6484,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/cpu-data.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var plot = new _g2plot.Line('container-84', {
+    var plot = new G2Plot.Line('container-84', {
       autoFit: true,
       height: 500,
       data: data,
@@ -6527,7 +6527,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new _g2plot.Line('container-85', {
+    var line = new G2Plot.Line('container-85', {
       data: data,
       padding: 'auto',
       xField: 'Date',
@@ -6557,7 +6557,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new _g2plot.Line('container-86', {
+    var line = new G2Plot.Line('container-86', {
       data: data,
       padding: 'auto',
       xField: 'Date',
@@ -6588,7 +6588,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/55424a73-7cb8-4f79-b60d-3ab627ac5698.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new _g2plot.Line('container-87', {
+    var line = new G2Plot.Line('container-87', {
       data: data,
       xField: 'year',
       yField: 'value',
@@ -6625,7 +6625,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/55424a73-7cb8-4f79-b60d-3ab627ac5698.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new _g2plot.Line('container-88', {
+    var line = new G2Plot.Line('container-88', {
       data: data.slice(data.length - 90, data.length).filter(function (item) {
         return item.category === 'Gas fuel' || item.category === 'Cement production';
       }),
@@ -6837,7 +6837,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/e00d52f4-2fa6-47ee-a0d7-105dd95bde20.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var linePlot = new _g2plot.Line('container-89', {
+    var linePlot = new G2Plot.Line('container-89', {
       data: data,
       xField: 'year',
       yField: 'gdp',
@@ -6881,7 +6881,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/55424a73-7cb8-4f79-b60d-3ab627ac5698.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new _g2plot.Line('container-90', {
+    var line = new G2Plot.Line('container-90', {
       data: data,
       xField: 'year',
       yField: 'value',
@@ -6922,7 +6922,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   }).then(function (data) {
     var COLOR_PLATE_10 = ['#5B8FF9', '#5AD8A6', '#5D7092', '#F6BD16', '#E8684A', '#6DC8EC', '#9270CA', '#FF9D4D', '#269A99', '#FF99C3'];
     var container = document.getElementById('container-91');
-    var line = new _g2plot.Line(container, {
+    var line = new G2Plot.Line(container, {
       data: data,
       xField: 'year',
       yField: 'value',
@@ -6972,7 +6972,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/c48dbbb1-fccf-4a46-b68f-a3ddb4908b68.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new _g2plot.Line('container-92', {
+    var line = new G2Plot.Line('container-92', {
       data: data,
       xField: 'date',
       yField: 'value',
@@ -7120,7 +7120,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     key: 'series2',
     value: 56
   }];
-  var line = new _g2plot.Line('container-93', {
+  var line = new G2Plot.Line('container-93', {
     data: data,
     xField: 'month',
     yField: 'value',
@@ -7175,7 +7175,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     year: '1999',
     value: 8
   }];
-  var linePlot = new _g2plot.Line('container-94', {
+  var linePlot = new G2Plot.Line('container-94', {
     data: data,
     xField: 'year',
     yField: 'value',
@@ -7239,7 +7239,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     '2016年转基因种植面积': 72.9
   }];
   _exports.data = data;
-  var BidirectionalBarPlot = new _g2plot.BidirectionalBar('container-95', {
+  var BidirectionalBarPlot = new G2Plot.BidirectionalBar('container-95', {
     data: data,
     xField: 'country',
     xAxis: {
@@ -7312,7 +7312,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     '2016年转基因种植面积': 72.9
   }];
   _exports.data = data;
-  var BidirectionalBarPlot = new _g2plot.BidirectionalBar('container-96', {
+  var BidirectionalBarPlot = new G2Plot.BidirectionalBar('container-96', {
     data: data,
     layout: 'vertical',
     xField: 'country',
@@ -7404,7 +7404,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     q3: 13,
     high: 16
   }];
-  var boxPlot = new _g2plot.Box('container-97', {
+  var boxPlot = new G2Plot.Box('container-97', {
     width: 400,
     height: 500,
     data: data,
@@ -7494,7 +7494,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 2.5,
     _bin: [1.4, 1.8, 2, 2.3, 2.5]
   }];
-  var groupBoxPlot = new _g2plot.Box('container-98', {
+  var groupBoxPlot = new G2Plot.Box('container-98', {
     data: data,
     xField: 'type',
     yField: '_bin',
@@ -7581,7 +7581,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     high: 110000,
     outliers: [57000, 54000]
   }];
-  var outliersBoxPlot = new _g2plot.Box('container-99', {
+  var outliersBoxPlot = new G2Plot.Box('container-99', {
     data: data,
     xField: 'x',
     yField: ['low', 'q1', 'median', 'q3', 'high'],
@@ -7622,7 +7622,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     stage: '入职人数',
     number: 59
   }];
-  var funnelPlot = new _g2plot.Funnel('container-100', {
+  var funnelPlot = new G2Plot.Funnel('container-100', {
     data: data,
     xField: 'stage',
     yField: 'number',
@@ -7637,7 +7637,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     },
     conversionTag: {
       formatter: function formatter(datum) {
-        return (datum[_g2plot.FUNNEL_CONVERSATION_FIELD][1] / datum[_g2plot.FUNNEL_CONVERSATION_FIELD][0]).toFixed(2);
+        return (datum[G2Plot.FUNNEL_CONVERSATION_FIELD][1] / datum[G2Plot.FUNNEL_CONVERSATION_FIELD][0]).toFixed(2);
       }
     },
     tooltip: {
@@ -7681,7 +7681,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     stage: '入职人数',
     number: 59
   }];
-  var funnelPlot = new _g2plot.Funnel('container-101', {
+  var funnelPlot = new G2Plot.Funnel('container-101', {
     data: data,
     xField: 'stage',
     yField: 'number',
@@ -7744,7 +7744,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     number: 79,
     company: 'B公司'
   }];
-  var funnelPlot = new _g2plot.Funnel('container-102', {
+  var funnelPlot = new G2Plot.Funnel('container-102', {
     data: data,
     xField: 'stage',
     yField: 'number',
@@ -7816,7 +7816,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     number: 79,
     company: 'B公司'
   }];
-  var funnelPlot = new _g2plot.Funnel('container-103', {
+  var funnelPlot = new G2Plot.Funnel('container-103', {
     data: data,
     xField: 'stage',
     yField: 'number',
@@ -7875,7 +7875,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     stage: '入职人数',
     number: 59
   }];
-  var funnelPlot = new _g2plot.Funnel('container-104', {
+  var funnelPlot = new G2Plot.Funnel('container-104', {
     data: data,
     xField: 'stage',
     yField: 'number',
@@ -7915,7 +7915,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     stage: '入职人数',
     number: 59
   }];
-  var funnelPlot = new _g2plot.Funnel('container-105', {
+  var funnelPlot = new G2Plot.Funnel('container-105', {
     data: data,
     xField: 'stage',
     yField: 'number',
@@ -7979,7 +7979,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     number: 79,
     company: 'B公司'
   }];
-  var funnelPlot = new _g2plot.Funnel('container-106', {
+  var funnelPlot = new G2Plot.Funnel('container-106', {
     data: data,
     xField: 'stage',
     yField: 'number',
@@ -8055,7 +8055,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     number: 79,
     company: 'B公司'
   }];
-  var funnelPlot = new _g2plot.Funnel('container-107', {
+  var funnelPlot = new G2Plot.Funnel('container-107', {
     data: data,
     xField: 'stage',
     yField: 'number',
@@ -8092,7 +8092,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/RoliHq%2453S/histogram.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var histogramPlot = new _g2plot.Histogram('container-108', {
+    var histogramPlot = new G2Plot.Histogram('container-108', {
       data: data,
       binField: 'value',
       binWidth: 2
@@ -8223,7 +8223,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   }, {
     value: 23.4
   }];
-  var histogramPlot = new _g2plot.Histogram('container-109', {
+  var histogramPlot = new G2Plot.Histogram('container-109', {
     data: data,
     binField: 'value',
     binWidth: 4,
@@ -8266,7 +8266,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/diamond.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var histogramPlot = new _g2plot.Histogram('container-110', {
+    var histogramPlot = new G2Plot.Histogram('container-110', {
       data: data,
       binField: 'depth',
       binWidth: 2,
@@ -8300,7 +8300,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var radarPlot = new _g2plot.Radar('container-111', {
+    var radarPlot = new G2Plot.Radar('container-111', {
       data: data,
       xField: 'item',
       yField: 'score',
@@ -8363,7 +8363,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var radarPlot = new _g2plot.Radar('container-112', {
+    var radarPlot = new G2Plot.Radar('container-112', {
       data: data,
       xField: 'item',
       yField: 'score',
@@ -8425,7 +8425,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var radarPlot = new _g2plot.Radar('container-113', {
+    var radarPlot = new G2Plot.Radar('container-113', {
       data: data,
       xField: 'item',
       yField: 'score',
@@ -8495,7 +8495,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     name: 'G2Plot',
     star: 1626
   }];
-  var radarPlot = new _g2plot.Radar('container-114', {
+  var radarPlot = new G2Plot.Radar('container-114', {
     data: data.map(function (d) {
       return { ...d,
         star: Math.sqrt(d.star)
@@ -8548,7 +8548,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var radarPlot = new _g2plot.Radar('container-115', {
+    var radarPlot = new G2Plot.Radar('container-115', {
       data: data,
       xField: 'item',
       yField: 'score',
@@ -8609,7 +8609,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var radarPlot = new _g2plot.Radar('container-116', {
+    var radarPlot = new G2Plot.Radar('container-116', {
       data: data,
       xField: 'item',
       yField: 'score',
@@ -8669,7 +8669,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var radarPlot = new _g2plot.Radar('container-117', {
+    var radarPlot = new G2Plot.Radar('container-117', {
       data: data,
       xField: 'item',
       yField: 'score',
@@ -8739,7 +8739,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     name: 'G2',
     star: 10178
   }];
-  var bar = new _g2plot.RadialBar('container-118', {
+  var bar = new G2Plot.RadialBar('container-118', {
     data: data,
     xField: 'name',
     yField: 'star',
@@ -8796,7 +8796,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     name: 'G2',
     star: 10178
   }];
-  var bar = new _g2plot.RadialBar('container-119', {
+  var bar = new G2Plot.RadialBar('container-119', {
     data: data,
     xField: 'name',
     yField: 'star',
@@ -8872,7 +8872,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     term: 'The Olivia Experiment',
     count: 1
   }];
-  var bar = new _g2plot.RadialBar('container-120', {
+  var bar = new G2Plot.RadialBar('container-120', {
     data: data,
     xField: 'term',
     yField: 'count',
@@ -8936,7 +8936,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     name: 'G2',
     star: 10178
   }];
-  var bar = new _g2plot.RadialBar('container-121', {
+  var bar = new G2Plot.RadialBar('container-121', {
     data: data,
     xField: 'name',
     yField: 'star',
@@ -9163,7 +9163,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     vol: 274804844,
     amount: 334526327.4
   }];
-  var stockPlot = new _g2plot.Stock('container-122', {
+  var stockPlot = new G2Plot.Stock('container-122', {
     width: 400,
     height: 500,
     data: data,
@@ -9189,7 +9189,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/sunburst.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var sunburstPlot = new _g2plot.Sunburst('container-123', {
+    var sunburstPlot = new G2Plot.Sunburst('container-123', {
       data: data,
       seriesField: 'sum',
       colorField: 'label',
@@ -9222,7 +9222,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       name: 'root',
       children: fetchData
     };
-    var sunburstPlot = new _g2plot.Sunburst('container-124', {
+    var sunburstPlot = new G2Plot.Sunburst('container-124', {
       data: data,
       type: 'treemap',
       seriesField: 'value',
@@ -9323,7 +9323,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       value: 16
     }]
   };
-  var treemapPlot = new _g2plot.Treemap('container-125', {
+  var treemapPlot = new G2Plot.Treemap('container-125', {
     data: data,
     colorField: 'name'
   });
@@ -9361,7 +9361,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       s.children = childrenArray;
       rootData.children.push(s);
     });
-    var treemapPlot = new _g2plot.Treemap('container-126', {
+    var treemapPlot = new G2Plot.Treemap('container-126', {
       data: rootData,
       colorField: 'name',
       interactions: [{
@@ -9392,7 +9392,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       name: 'root',
       children: fetchData
     };
-    var treemapPlot = new _g2plot.Treemap('container-127', {
+    var treemapPlot = new G2Plot.Treemap('container-127', {
       data: data,
       colorField: 'brand'
     });
@@ -9450,7 +9450,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     month: '十二月',
     value: 5100000
   }];
-  var waterfallPlot = new _g2plot.Waterfall('container-128', {
+  var waterfallPlot = new G2Plot.Waterfall('container-128', {
     data: data,
     padding: 'auto',
     appendPadding: [20, 0, 0, 0],
@@ -9545,7 +9545,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     return v + d.value;
   }, 0);
-  var waterfallPlot = new _g2plot.Waterfall('container-129', {
+  var waterfallPlot = new G2Plot.Waterfall('container-129', {
     data: data,
     padding: 'auto',
     appendPadding: [20, 0, 0, 0],
@@ -9617,7 +9617,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '红包收入',
     money: -2000
   }];
-  var waterfallPlot = new _g2plot.Waterfall('container-130', {
+  var waterfallPlot = new G2Plot.Waterfall('container-130', {
     data: data,
     xField: 'type',
     yField: 'money',
@@ -9705,7 +9705,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     month: 'Dec',
     value: 5100000
   }];
-  var waterfallPlot = new _g2plot.Waterfall('container-131', {
+  var waterfallPlot = new G2Plot.Waterfall('container-131', {
     data: data,
     padding: 'auto',
     appendPadding: [20, 0, 0, 0],
@@ -9813,7 +9813,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/world-population.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var wordCloud = new _g2plot.WordCloud('container-132', {
+    var wordCloud = new G2Plot.WordCloud('container-132', {
       data: data,
       wordField: 'x',
       weightField: 'value',
@@ -9855,7 +9855,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/antv-keywords.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var wordCloud = new _g2plot.WordCloud('container-133', {
+    var wordCloud = new G2Plot.WordCloud('container-133', {
       data: data,
       wordField: 'name',
       weightField: 'value',
@@ -9886,7 +9886,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/%24IWXp5slbE/2020-movie-from-douban.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var wordCloud = new _g2plot.WordCloud('container-134', {
+    var wordCloud = new G2Plot.WordCloud('container-134', {
       data: data,
       wordField: 'title',
       weightField: 'rate',
@@ -9927,7 +9927,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/antv-keywords.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var wordCloud = new _g2plot.WordCloud('container-135', {
+    var wordCloud = new G2Plot.WordCloud('container-135', {
       data: data,
       wordField: 'name',
       weightField: 'value',
@@ -9958,7 +9958,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/antv-keywords.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var wordCloud = new _g2plot.WordCloud('container-136', {
+    var wordCloud = new G2Plot.WordCloud('container-136', {
       data: data,
       wordField: 'name',
       weightField: 'value',
@@ -9992,7 +9992,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       value: 1
     };
   });
-  var wordCloud = new _g2plot.WordCloud('container-137', {
+  var wordCloud = new G2Plot.WordCloud('container-137', {
     data: data,
     wordField: 'name',
     weightField: 'value',
@@ -10031,7 +10031,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/antv-keywords.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var wordCloud = new _g2plot.WordCloud('container-138', {
+    var wordCloud = new G2Plot.WordCloud('container-138', {
       data: data,
       wordField: 'name',
       weightField: 'value',
@@ -10083,7 +10083,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new _g2plot.Pie('container-139', {
+  var piePlot = new G2Plot.Pie('container-139', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -10140,7 +10140,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new _g2plot.Pie('container-140', {
+  var piePlot = new G2Plot.Pie('container-140', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -10191,7 +10191,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new _g2plot.Pie('container-141', {
+  var piePlot = new G2Plot.Pie('container-141', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -10227,7 +10227,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     sex: '女',
     sold: 0.55
   }];
-  var piePlot = new _g2plot.Pie('container-142', {
+  var piePlot = new G2Plot.Pie('container-142', {
     appendPadding: 10,
     data: data,
     angleField: 'sold',
@@ -10296,7 +10296,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new _g2plot.Pie('container-143', {
+  var piePlot = new G2Plot.Pie('container-143', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -10355,7 +10355,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new _g2plot.Pie('container-144', {
+  var piePlot = new G2Plot.Pie('container-144', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -10407,7 +10407,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new _g2plot.Pie('container-145', {
+  var piePlot = new G2Plot.Pie('container-145', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -10458,7 +10458,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  _g2plot.G2.registerInteraction('custom-association-filter', {
+  G2Plot.G2.registerInteraction('custom-association-filter', {
     showEnable: [{
       trigger: 'element:mouseenter',
       action: 'cursor:pointer'
@@ -10494,7 +10494,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/HkxWvFrZuC/association-data.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var plot = new _g2plot.MultiView('container-146', {
+    var plot = new G2Plot.MultiView('container-146', {
       // 关闭 chart 上的 tooltip，子 view 开启 tooltip
       tooltip: false,
       plots: [{
@@ -10584,7 +10584,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/HkxWvFrZuC/association-data.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var plot = new _g2plot.MultiView('container-147', {
+    var plot = new G2Plot.MultiView('container-147', {
       // 关闭 chart 上的 tooltip，子 view 开启 tooltip
       tooltip: false,
       plots: [{
@@ -10723,7 +10723,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/fKTgtjKdaN/association-pie.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var plot = new _g2plot.MultiView('container-148', {
+    var plot = new G2Plot.MultiView('container-148', {
       // 关闭 chart 上的 tooltip，子 view 开启 tooltip
       tooltip: false,
       legend: true,
@@ -10811,7 +10811,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
   // 自定义图形
-  _g2plot.G2.registerShape('interval', 'hill', {
+  G2Plot.G2.registerShape('interval', 'hill', {
     draw: function draw(info, container) {
       var points = info.points,
           style = info.style,
@@ -10852,7 +10852,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       return typeof columnStyle === 'function' ? columnStyle((_columnStyle = {}, _defineProperty(_columnStyle, xField, x), _defineProperty(_columnStyle, yField, y), _columnStyle)) : columnStyle;
     }); // 设置重叠比率
 
-    chart.theme((0, _util.deepMix)({}, (0, _util.isObject)(theme) ? theme : _g2plot.G2.getTheme(theme), {
+    chart.theme((0, _util.deepMix)({}, (0, _util.isObject)(theme) ? theme : G2Plot.G2.getTheme(theme), {
       columnWidthRatio: columnWidthRatio
     }));
     var gap = 1 / data.length / 2 * columnWidthRatio; // 左右预留
@@ -10882,7 +10882,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     genre: 'Other',
     sold: 150
   }];
-  var hill = new _g2plot.P('container-149', {
+  var hill = new G2Plot.P('container-149', {
     data: data,
     appendPadding: 16,
     meta: {
@@ -10918,7 +10918,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   // 定义新的交互
-  _g2plot.G2.registerInteraction('other-visible', {
+  G2Plot.G2.registerInteraction('other-visible', {
     showEnable: [{
       trigger: 'plot:mouseenter',
       action: 'cursor:crosshair'
@@ -10972,7 +10972,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     return res.json();
   }).then(function (data) {
     var subData = data.slice(0, 400);
-    var plot = new _g2plot.MultiView('container-150', {
+    var plot = new G2Plot.MultiView('container-150', {
       tooltip: false,
       views: [{
         region: {
@@ -11055,7 +11055,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 
   var data = [['Cosmopolitan', 51, 45, 6], ['Martini', 67, 39, 28], ['Mojito', 19, 11, 8], ['Margarita', 47, 33, 14], ['Mai Tai', 32, 20, 12], ['Beer', 70, 20, 50]];
   var yearData = [['2010', 60, 176, 35, 25], ['2011', 51, 136, 25, 26], ['2012', 73, 196, 35, 38], ['2013', 84, 315, 43, 41], ['2014', 79, 203, 36, 33], ['2015', 89, 286, 41, 48]];
-  var plot = new _g2plot.MultiView('container-151', {
+  var plot = new G2Plot.MultiView('container-151', {
     height: 500,
     padding: 'auto',
     tooltip: {
@@ -11266,7 +11266,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   }).then(function (data) {
     var data1 = data.area,
         data2 = data.line;
-    var rangeAreaPlot = new _g2plot.MultiView('container-152', {
+    var rangeAreaPlot = new G2Plot.MultiView('container-152', {
       appendPadding: 8,
       syncViewPadding: true,
       tooltip: {
@@ -11381,7 +11381,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   }];
   var defaultGrey = '#BFBFBF'; // Step 2: 创建图表
 
-  var plot = new _g2plot.MultiView('container-153', {
+  var plot = new G2Plot.MultiView('container-153', {
     appendPadding: 8,
     tooltip: {
       showMarkers: false
@@ -11651,7 +11651,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     measures: [80],
     target: 85
   }];
-  var bulletPlot = new _g2plot.Bullet('container-154', {
+  var bulletPlot = new G2Plot.Bullet('container-154', {
     data: data,
     measureField: 'measures',
     rangeField: 'ranges',
@@ -11715,7 +11715,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     measures: [80],
     target: 85
   }];
-  var bulletPlot = new _g2plot.Bullet('container-155', {
+  var bulletPlot = new G2Plot.Bullet('container-155', {
     data: data,
     measureField: 'measures',
     rangeField: 'ranges',
@@ -11827,7 +11827,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     measures: [50],
     target: 100
   }];
-  var bulletPlot = new _g2plot.Bullet('container-156', {
+  var bulletPlot = new G2Plot.Bullet('container-156', {
     data: data,
     measureField: 'measures',
     rangeField: 'ranges',
@@ -11930,7 +11930,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     target: 85
   }]; // @TODO 差一张垂直方向的缩略图
 
-  var bulletPlot = new _g2plot.Bullet('container-157', {
+  var bulletPlot = new G2Plot.Bullet('container-157', {
     data: data,
     measureField: 'measures',
     rangeField: 'ranges',
@@ -12003,7 +12003,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     measures: [30, 50],
     target: 85
   }];
-  var bulletPlot = new _g2plot.Bullet('container-158', {
+  var bulletPlot = new G2Plot.Bullet('container-158', {
     data: data,
     measureField: 'measures',
     rangeField: 'ranges',
@@ -12113,7 +12113,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var gauge = new _g2plot.Gauge('container-159', {
+  var gauge = new G2Plot.Gauge('container-159', {
     percent: 0.75,
     range: {
       color: '#30BF78'
@@ -12170,7 +12170,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 
   var ticks = [0, 1 / 3, 2 / 3, 1];
   var color = ['#F4664A', '#FAAD14', '#30BF78'];
-  var gauge = new _g2plot.Gauge('container-160', {
+  var gauge = new G2Plot.Gauge('container-160', {
     percent: 0,
     range: {
       ticks: [0, 1],
@@ -12249,7 +12249,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var gauge = new _g2plot.Gauge('container-161', {
+  var gauge = new G2Plot.Gauge('container-161', {
     percent: 0.75,
     range: {
       ticks: [0, 1 / 3, 2 / 3, 1],
@@ -12294,7 +12294,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 
   var ticks = [0, 1 / 3, 2 / 3, 1];
   var color = ['#F4664A', '#FAAD14', '#30BF78'];
-  var gauge = new _g2plot.Gauge('container-162', {
+  var gauge = new G2Plot.Gauge('container-162', {
     percent: 0,
     innerRadius: 0.75,
     type: 'meter',
@@ -12380,7 +12380,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var gauge = new _g2plot.Gauge('container-163', {
+  var gauge = new G2Plot.Gauge('container-163', {
     percent: 0.75,
     type: 'meter',
     innerRadius: 0.75,
@@ -12425,7 +12425,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var gauge = new _g2plot.Gauge('container-164', {
+  var gauge = new G2Plot.Gauge('container-164', {
     percent: 0.75,
     range: {
       color: 'l(0) 0:#B8E1FF 1:#3D76DD'
@@ -12472,7 +12472,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var liquidPlot = new _g2plot.Liquid('container-165', {
+  var liquidPlot = new G2Plot.Liquid('container-165', {
     percent: 0.25,
     outline: {
       border: 4,
@@ -12551,7 +12551,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     target: '北京',
     value: 32
   }];
-  var chord = new _g2plot.Chord('container-166', {
+  var chord = new G2Plot.Chord('container-166', {
     data: DATA,
     sourceField: 'source',
     targetField: 'target',
@@ -12630,7 +12630,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     target: '其他流向',
     value: 45
   }];
-  var sankey = new _g2plot.Sankey('container-167', {
+  var sankey = new G2Plot.Sankey('container-167', {
     data: DATA,
     sourceField: 'source',
     targetField: 'target',
@@ -12657,7 +12657,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/fa3414cc-75ed-47b4-8306-f2ffe8c40127.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var sankey = new _g2plot.Sankey('container-168', {
+    var sankey = new G2Plot.Sankey('container-168', {
       data: data,
       sourceField: 'source',
       targetField: 'target',
@@ -12704,7 +12704,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var rosePlot = new _g2plot.Rose('container-169', {
+  var rosePlot = new G2Plot.Rose('container-169', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -12749,7 +12749,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var rosePlot = new _g2plot.Rose('container-170', {
+  var rosePlot = new G2Plot.Rose('container-170', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -12794,7 +12794,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var rosePlot = new _g2plot.Rose('container-171', {
+  var rosePlot = new G2Plot.Rose('container-171', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -12842,7 +12842,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var rosePlot = new _g2plot.Rose('container-172', {
+  var rosePlot = new G2Plot.Rose('container-172', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -12930,7 +12930,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     user: '用户二'
   }]; // 分组玫瑰图
 
-  var rosePlot = new _g2plot.Rose('container-173', {
+  var rosePlot = new G2Plot.Rose('container-173', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -13011,7 +13011,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     user: '用户二'
   }]; // 堆叠玫瑰图
 
-  var rosePlot = new _g2plot.Rose('container-174', {
+  var rosePlot = new G2Plot.Rose('container-174', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -13052,7 +13052,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       return item;
     });
     var labels = ['Airline Pilots, Copilots and Flight Engineers', 'Benefits Managers'];
-    var scatterPlot = new _g2plot.Scatter('container-175', {
+    var scatterPlot = new G2Plot.Scatter('container-175', {
       appendPadding: 30,
       data: processData,
       xField: 'probability',
@@ -13166,7 +13166,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/t81X1wXdoj/scatter-data.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var scatterPlot = new _g2plot.Scatter('container-176', {
+    var scatterPlot = new G2Plot.Scatter('container-176', {
       appendPadding: 30,
       data: data,
       xField: 'x',
@@ -13219,7 +13219,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/0b37279d-1674-42b4-b285-29683747ad9a.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var scatterPlot = new _g2plot.Scatter('container-177', {
+    var scatterPlot = new G2Plot.Scatter('container-177', {
       appendPadding: 30,
       data: data,
       xField: 'change in female rate',
@@ -13290,7 +13290,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/aao6XnO5pW/IMDB.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var scatterPlot = new _g2plot.Scatter('container-178', {
+    var scatterPlot = new G2Plot.Scatter('container-178', {
       appendPadding: 10,
       data: data,
       xField: 'Revenue (Millions)',
@@ -13340,7 +13340,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   // 注册主体有 point | interval | polygon | line 等，详细参考 G2: https://g2.antv.vision/
-  _g2plot.G2.registerShape('point', 'custom-shape', {
+  G2Plot.G2.registerShape('point', 'custom-shape', {
     draw: function draw(cfg, group) {
       var cx = cfg.x;
       var cy = cfg.y;
@@ -13359,7 +13359,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/3e4db10a-9da1-4b44-80d8-c128f42764a8.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var scatterPlot = new _g2plot.Scatter('container-179', {
+    var scatterPlot = new G2Plot.Scatter('container-179', {
       appendPadding: 30,
       data: data,
       xField: 'xG conceded',
@@ -13416,7 +13416,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/3e4db10a-9da1-4b44-80d8-c128f42764a8.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var scatterPlot = new _g2plot.Scatter('container-180', {
+    var scatterPlot = new G2Plot.Scatter('container-180', {
       appendPadding: 30,
       data: data,
       xField: 'xG conceded',
@@ -13562,7 +13562,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     x: 31,
     y: 6.938
   }];
-  var scatterPlot = new _g2plot.Scatter('container-181', {
+  var scatterPlot = new G2Plot.Scatter('container-181', {
     data: data,
     xField: 'x',
     yField: 'y',
@@ -13593,7 +13593,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var progress = new _g2plot.Progress('container-182', {
+  var progress = new G2Plot.Progress('container-182', {
     height: 100,
     width: 300,
     autoFit: false,
@@ -13617,7 +13617,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var progress = new _g2plot.Progress('container-183', {
+  var progress = new G2Plot.Progress('container-183', {
     height: 100,
     width: 300,
     autoFit: false,
@@ -13640,7 +13640,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var ringProgress = new _g2plot.RingProgress('container-184', {
+  var ringProgress = new G2Plot.RingProgress('container-184', {
     height: 100,
     width: 100,
     autoFit: false,
@@ -13677,7 +13677,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var ringProgress = new _g2plot.RingProgress('container-185', {
+  var ringProgress = new G2Plot.RingProgress('container-185', {
     height: 100,
     width: 100,
     autoFit: false,
@@ -13701,7 +13701,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   var data = [264, 417, 438, 887, 309, 397, 550, 575, 563, 430, 525, 592, 492, 467, 513, 546, 983, 340, 539, 243, 226, 192];
-  var tinyArea = new _g2plot.TinyArea('container-186', {
+  var tinyArea = new G2Plot.TinyArea('container-186', {
     height: 60,
     autoFit: false,
     data: data,
@@ -13762,7 +13762,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   var data = [264, 417, 438, 887, 309, 397, 550, 575, 563, 430, 525, 592, 492, 467, 513, 546, 983, 340, 539, 243, 226, 192];
-  var tinyArea = new _g2plot.TinyArea('container-187', {
+  var tinyArea = new G2Plot.TinyArea('container-187', {
     height: 60,
     autoFit: false,
     data: data,
@@ -13785,7 +13785,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   var data = [264, 417, 438, 887, 309, 397, 550, 575, 563, 430, 525, 592, 492, 467, 513, 546, 983, 340, 539, 243, 226, 192];
-  var tinyArea = new _g2plot.TinyArea('container-188', {
+  var tinyArea = new G2Plot.TinyArea('container-188', {
     height: 60,
     autoFit: false,
     data: data,
@@ -13811,7 +13811,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   var data = [274, 337, 81, 497, 666, 219, 269];
-  var tinyColumn = new _g2plot.TinyColumn('container-189', {
+  var tinyColumn = new G2Plot.TinyColumn('container-189', {
     height: 64,
     autoFit: false,
     data: data,
@@ -13838,7 +13838,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   var data = [274, 337, 81, 497, 666, 219, 269];
-  var tinyColumn = new _g2plot.TinyColumn('container-190', {
+  var tinyColumn = new G2Plot.TinyColumn('container-190', {
     height: 64,
     autoFit: false,
     data: data,
@@ -13880,7 +13880,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   var data = [264, 417, 438, 887, 309, 397, 550, 575, 563, 430, 525, 592, 492, 467, 513, 546, 983, 340, 539, 243, 226, 192];
-  var tinyLine = new _g2plot.TinyLine('container-191', {
+  var tinyLine = new G2Plot.TinyLine('container-191', {
     height: 60,
     autoFit: false,
     data: data,
@@ -13903,7 +13903,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   var data = [264, 417, 438, 887, 309, 397, 550, 575, 563, 430, 525, 592, 492, 467, 513, 546, 983, 340, 539, 243, 226, 192];
-  var tinyLine = new _g2plot.TinyLine('container-192', {
+  var tinyLine = new G2Plot.TinyLine('container-192', {
     height: 60,
     autoFit: false,
     data: data,
