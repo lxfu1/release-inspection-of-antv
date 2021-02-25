@@ -2,7 +2,7 @@
  * @version: 0.0.1
  * @Author: fujin
  * @Date: 2021-02-25 14:44:27
- * @LastEditTime: 2021-02-25 15:52:21
+ * @LastEditTime: 2021-02-25 16:40:53
  */
 import React, { useState, useEffect } from 'react';
 import { worker } from '../worker';
@@ -17,7 +17,6 @@ const CountDownTimer: React.FC<Props> = ({ endTime, onEnd }: Props) => {
 	const [time, setTime] = useState(initTime);
 
 	worker.onmessage = e => {
-		console.log(e.data);
 		if (e.data <= 0) {
 			worker.postMessage({ state: 'stop' });
 			return;

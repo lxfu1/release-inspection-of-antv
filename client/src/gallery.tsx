@@ -3,7 +3,7 @@
  * @version: 0.0.1
  * @Author: fujin
  * @Date: 2021-02-24 15:42:12
- * @LastEditTime: 2021-02-25 15:33:10
+ * @LastEditTime: 2021-02-25 16:45:11
  */
 import React, { Fragment, useEffect, useRef } from 'react';
 import html2canvas from 'html2canvas';
@@ -56,12 +56,12 @@ const PlayGround: React.FC = () => {
 
 	return (
 		<Fragment>
-			<CountTime
+			{/* <CountTime
 				endTime={new Date().getTime() + RenderTime}
 				onEnd={() => {
 					renderCanvas();
 				}}
-			/>
+			/> */}
 			<div className="charts-container" ref={containerRef}>
 				{codes.map(item => (
 					<div key={item.fileName + item.fileIndex} id={`box-${item.fileIndex}`}>

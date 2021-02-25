@@ -7,7 +7,7 @@ const cors = require('koa-cors');
 const json = require('koa-json');
 const { exec } = require('child_process');
 const chalk = require('chalk');
-const { templating } = require('./utils');
+const { templating, createBrowser } = require('./utils');
 const staticCache = require('koa-static-cache');
 const compress = require('koa-compress');
 const koaBody = require('koa-body');
@@ -114,4 +114,5 @@ app.on('error', (err, ctx) => {
 app.listen(BaseConfig.port);
 console.log(chalk.green('\n启动成功' + BaseConfig.port));
 
-exec(`open http://localhost:3000/`);
+// exec(`open http://localhost:3000/`);
+createBrowser();

@@ -33,6 +33,8 @@
   },
   "devDependencies": {
     "chalk": "^4.1.0",
-    "nodemon": "^1.18.5"
+    "delay": "^5.0.0",
+    "nodemon": "^1.18.5",
+    "puppeteer": "^7.1.0"
   }
 }

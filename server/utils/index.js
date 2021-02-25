@@ -4,6 +4,7 @@ const jsonMiddle = require('./jsonMiddle');
 const upload = require('./upFile');
 const { getUrl, MD5 } = require('./util');
 const checkPort = require('./port-use');
+const createBrowser = require('./create-browser');
 
 module.exports = {
 	templating,
@@ -13,4 +14,5 @@ module.exports = {
 	getUrl,
 	MD5,
 	checkPort,
+	createBrowser,
 };
