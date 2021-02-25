@@ -3,6 +3,7 @@
 # dependencies
 /server/node_modules
 /client/node_modules
+/client/static
 /npm-debug.log*
 /yarn-error.log
 /yarn.lock

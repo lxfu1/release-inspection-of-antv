@@ -1,20 +1,20 @@
 /*
- * @Descripttion: 返回今天资源
+ * @Descripttion: 返回静态资源
  * @version: 0.0.1
  * @Author: fujin
  * @Date: 2020-05-20 14:58:02
- * @LastEditTime: 2021-02-24 23:44:10
+ * @LastEditTime: 2021-02-25 12:50:45
  */
 /**
  * 存放公共类
  * */
-const nunjucks = require('nunjucks')
+const nunjucks = require('nunjucks');
 
 function createEnv(path, opts) {
-	var autoescape = opts.autoescape === undefined ? true : opts.autoescape
-	var noCache = opts.noCache || false
-	var watch = opts.watch || false
-	var throwOnUndefined = opts.throwOnUndefined || false
+	var autoescape = opts.autoescape === undefined ? true : opts.autoescape;
+	var noCache = opts.noCache || false;
+	var watch = opts.watch || false;
+	var throwOnUndefined = opts.throwOnUndefined || false;
 	var env = new nunjucks.Environment(
 		new nunjucks.FileSystemLoader(path || 'static', {
 			noCache: noCache,
@@ -24,30 +24,30 @@ function createEnv(path, opts) {
 			autoescape: autoescape,
 			throwOnUndefined: throwOnUndefined,
 		}
-	)
+	);
 
 	if (opts.filters) {
 		for (var f in opts.filters) {
-			env.addFilter(f, opts.filters[f])
+			env.addFilter(f, opts.filters[f]);
 		}
 	}
 
-	return env
+	return env;
 }
 
 function templating(path, opts) {
-	var env = createEnv(path, opts)
+	var env = createEnv(path, opts);
 
 	return async (ctx, next) => {
 		// 给ctx绑定render函数
 		ctx.render = function (view, model) {
-			ctx.response.body = env.render(view, Object.assign({}, ctx.state || {}, model || {}))
-			ctx.response.type = 'text/html'
-		}
+			ctx.response.body = env.render(view, Object.assign({}, ctx.state || {}, model || {}));
+			ctx.response.type = 'text/html';
+		};
 
 		// 继续处理请求
-		await next()
-	}
+		await next();
+	};
 }
 
-module.exports = templating
+module.exports = templating;
