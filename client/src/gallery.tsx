@@ -3,22 +3,16 @@
  * @version: 0.0.1
  * @Author: fujin
  * @Date: 2021-02-24 15:42:12
- * @LastEditTime: 2021-02-25 14:24:09
+ * @LastEditTime: 2021-02-25 15:33:10
  */
-import React, { useEffect, useRef } from 'react';
+import React, { Fragment, useEffect, useRef } from 'react';
 import html2canvas from 'html2canvas';
+import CountTime from './components/countTime';
 import { codes } from './code';
 import { uploadCanvas } from './upload';
-//@ts-ignore
-window.g2plot = require('@antv/g2plot');
-//@ts-ignore
-window.util = require('@antv/util');
-//@ts-ignore
-window.insertCss = require('insert-css');
-//@ts-ignore
-window.dataSet = require('@antv/data-set');
 
-const RenderTime = 5000;
+const RenderTime = 20000;
+
 const execute = (code: string, node: HTMLDivElement) => {
 	const script = document.createElement('script');
 	script.innerHTML = `
@@ -33,32 +27,16 @@ const execute = (code: string, node: HTMLDivElement) => {
 
 const PlayGround: React.FC = () => {
 	const containerRef = useRef<HTMLDivElement | null>(null);
-	const onCodeChange = (code: string, index: number) => {
-		try {
-			execute(code, document.querySelector(`#box-${index}`) as HTMLDivElement);
-		} catch (e) {
-			console.error(e); // eslint-disable-line no-console
-			return;
-		}
-	};
 
 	useEffect(() => {
 		codes.forEach(item => {
-			onCodeChange(
+			execute(
 				item.code.replace(/\(\*\*\)/g, '`').replace(/s1(\S*)s1/g, (_, sign: string) => {
 					return '${' + sign + '}';
 				}),
-				item.fileIndex
+				document.querySelector(`#box-${item.fileIndex}`) as HTMLDivElement
 			);
 		});
-		const time = setTimeout(() => {
-			renderCanvas();
-		}, RenderTime);
-		return () => {
-			if (time) {
-				clearTimeout(time);
-			}
-		};
 	}, []);
 
 	const renderCanvas = () => {
@@ -77,13 +55,21 @@ const PlayGround: React.FC = () => {
 	};
 
 	return (
-		<div className="charts-container" ref={containerRef}>
-			{codes.map(item => (
-				<div key={item.fileName + item.fileIndex} id={`box-${item.fileIndex}`}>
-					<div id={`container-${item.fileIndex}`}></div>
-				</div>
-			))}
-		</div>
+		<Fragment>
+			<CountTime
+				endTime={new Date().getTime() + RenderTime}
+				onEnd={() => {
+					renderCanvas();
+				}}
+			/>
+			<div className="charts-container" ref={containerRef}>
+				{codes.map(item => (
+					<div key={item.fileName + item.fileIndex} id={`box-${item.fileIndex}`}>
+						<div id={`container-${item.fileIndex}`}></div>
+					</div>
+				))}
+			</div>
+		</Fragment>
 	);
 };
 
