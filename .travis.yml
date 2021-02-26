@@ -15,8 +15,7 @@ install:
 script:
   - npm run build
 
-
-before_script
- - cd ..
- - git clone https://github.com/antvis/G2Plot.git
- - cd ./release-inspection-of-antv
+before_script:
+  - cd ..
+  - git clone https://github.com/antvis/G2Plot.git
+  - cd ./release-inspection-of-antv
