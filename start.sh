@@ -3,7 +3,7 @@
  # @version: 0.0.1
  # @Author: fujin
  # @Date: 2020-09-11 15:49:29
- # @LastEditTime: 2021-02-26 15:45:30
+ # @LastEditTime: 2021-02-26 15:48:09
 ### 
 export PATH=$PATH:/bin:/sbin:/usr/bin:/usr/sbin::/usr/local/bin
 # set -e;
@@ -53,3 +53,5 @@ git add .
 git commit -m "build"
 
 git push --set-upstream origin "${time}"
+
+echo "\033[49;32m \n******* 比对结束，请到 github 上查看，分支：${time} *******\n \033[0m"
