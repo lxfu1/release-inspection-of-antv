@@ -3,7 +3,7 @@
  # @version: 0.0.1
  # @Author: fujin
  # @Date: 2020-09-11 15:49:29
- # @LastEditTime: 2021-02-26 15:48:09
+ # @LastEditTime: 2021-02-26 16:03:21
 ### 
 export PATH=$PATH:/bin:/sbin:/usr/bin:/usr/sbin::/usr/local/bin
 # set -e;
@@ -40,7 +40,7 @@ echo "\033[49;32m \n******* server installing *******\n \033[0m"
 
 npm start
 
-echo "\033[49;32m \n******* server starting *******\n \033[0m"
+# echo "\033[49;32m \n******* server starting *******\n \033[0m"
 
 cd ..
 
