@@ -1,0 +1,24 @@
+{
+  "name": "release-inspection-of-antv",
+  "version": "1.0.0",
+  "description": "release inspection",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx sh start.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lxfu1/release-inspection-of-antv.git"
+  },
+  "keywords": [
+    "compare",
+    "screenshot",
+    "antv"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lxfu1/release-inspection-of-antv/issues"
+  },
+  "homepage": "https://github.com/lxfu1/release-inspection-of-antv#readme"
+}
