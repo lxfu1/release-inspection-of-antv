@@ -16,11 +16,17 @@ script:
   - npm run build
 
 before_script:
-  - git config user.name "${U_NAME}"
-  - git config user.email "${U_EMAIL}"
   - cd ..
   - git clone https://github.com/antvis/G2Plot.git
   - cd ./release-inspection-of-antv
+
+after_script:
+  - git config user.name "${U_NAME}"
+  - git config user.email "${U_EMAIL}"
+  - git checkout -b ${D_BRANCH}
+  - git add .
+  - git commit -m "Deploy by Travis CI"
+  - git push --set-upstream origin ${D_BRANCH} -f
 
 branches:
   only:

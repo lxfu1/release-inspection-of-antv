@@ -3,7 +3,7 @@
  # @version: 0.0.1
  # @Author: fujin
  # @Date: 2020-09-11 15:49:29
- # @LastEditTime: 2021-02-26 16:03:21
+ # @LastEditTime: 2021-02-26 16:30:21
 ### 
 export PATH=$PATH:/bin:/sbin:/usr/bin:/usr/sbin::/usr/local/bin
 # set -e;
@@ -42,16 +42,16 @@ npm start
 
 # echo "\033[49;32m \n******* server starting *******\n \033[0m"
 
-cd ..
+# cd ..
 
-time=$(date "+%Y-%m-%d-%H-%M-%S")
+# time=$(date "+%Y-%m-%d-%H-%M-%S")
 
-git checkout -b "${time}"
+# git checkout -b "${time}"
 
-git add .
+# git add .
 
-git commit -m "build"
+# git commit -m "build"
 
-git push --set-upstream origin "${time}"
+# git push --set-upstream origin "${time}"
 
-echo "\033[49;32m \n******* 比对结束，请到 github 上查看，分支：${time} *******\n \033[0m"
+# echo "\033[49;32m \n******* 比对结束，请到 github 上查看，分支：${time} *******\n \033[0m"
