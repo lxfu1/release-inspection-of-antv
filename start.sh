@@ -3,7 +3,7 @@
  # @version: 0.0.1
  # @Author: fujin
  # @Date: 2020-09-11 15:49:29
- # @LastEditTime: 2021-02-26 14:22:03
+ # @LastEditTime: 2021-02-26 15:45:30
 ### 
 export PATH=$PATH:/bin:/sbin:/usr/bin:/usr/sbin::/usr/local/bin
 # set -e;
@@ -11,8 +11,6 @@ export PATH=$PATH:/bin:/sbin:/usr/bin:/usr/sbin::/usr/local/bin
 echo $PATH
 
 # project_name=release-inspection-of-antv
-# time=$(date "+%Y%m%d-%H%M%S")
-# echo "-------------------${project_name=}--------------------"
 
 cd ../G2Plot
 
@@ -43,3 +41,15 @@ echo "\033[49;32m \n******* server installing *******\n \033[0m"
 npm start
 
 echo "\033[49;32m \n******* server starting *******\n \033[0m"
+
+cd ..
+
+time=$(date "+%Y-%m-%d-%H-%M-%S")
+
+git checkout -b "${time}"
+
+git add .
+
+git commit -m "build"
+
+git push --set-upstream origin "${time}"

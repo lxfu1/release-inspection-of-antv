@@ -2,8 +2,9 @@
  * @version: 0.0.1
  * @Author: fujin
  * @Date: 2021-02-25 16:16:41
- * @LastEditTime: 2021-02-25 20:48:10
+ * @LastEditTime: 2021-02-26 15:43:44
  */
+const fs = require('fs');
 const puppeteer = require('puppeteer');
 const delay = require('delay');
 const chalk = require('chalk');
@@ -11,6 +12,11 @@ const compareImage = require('./compare');
 
 const renderTime = 20000;
 const createBrowser = async () => {
+	const dateString = new Date().toLocaleDateString().replace(/\//g, '-');
+	const basePath = `static/file/${dateString}`;
+	if (!fs.existsSync(basePath)) {
+		fs.mkdirSync(basePath);
+	}
 	// 在线截图
 	console.log(chalk.green('\n****** 在线截图生成中 ******\n'));
 	const onlineBrowser = await puppeteer.launch();
@@ -22,7 +28,7 @@ const createBrowser = async () => {
 	});
 	await onlinePage.goto('http://localhost:3000');
 	await delay(renderTime);
-	const onlinePath = `static/file/${new Date().toLocaleDateString().replace(/\//g, '-')}-online.png`;
+	const onlinePath = `${basePath}/online.png`;
 	await onlinePage.screenshot({
 		path: onlinePath,
 	});
@@ -40,13 +46,13 @@ const createBrowser = async () => {
 	});
 	await localPage.goto('http://localhost:3000?env=local');
 	await delay(renderTime);
-	const localPath = `static/file/${new Date().toLocaleDateString().replace(/\//g, '-')}-local.png`;
+	const localPath = `${basePath}/local.png`;
 	await localPage.screenshot({
-		path: `static/file/${new Date().toLocaleDateString().replace(/\//g, '-')}-local.png`,
+		path: localPath,
 	});
 	console.log(chalk.green('\n****** 本地截图生成完成 ******\n'));
 	await localBrowser.close();
-	compareImage(onlinePath, localPath);
+	compareImage(onlinePath, localPath, basePath);
 };
 
 module.exports = createBrowser;

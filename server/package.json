@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "tnpm run start",
-    "start": "set NODE_ENV=development&&nodemon index.js",
-    "start:pro": "set NODE_ENV=production&&nodemon index.js"
+    "start": "set NODE_ENV=development&&node index.js",
+    "start:watch": "set NODE_ENV=development&&nodemon index.js",
+    "start:pro": "set NODE_ENV=production&&node index.js"
   },
   "author": "kn",
   "license": "ISC",
