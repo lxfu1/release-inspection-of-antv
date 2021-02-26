@@ -16,6 +16,8 @@ script:
   - npm run build
 
 before_script:
+  - git config user.name "${U_NAME}"
+  - git config user.email "${U_EMAIL}"
   - cd ..
   - git clone https://github.com/antvis/G2Plot.git
   - cd ./release-inspection-of-antv
