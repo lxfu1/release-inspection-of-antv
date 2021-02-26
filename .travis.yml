@@ -19,3 +19,7 @@ before_script:
   - cd ..
   - git clone https://github.com/antvis/G2Plot.git
   - cd ./release-inspection-of-antv
+
+branches:
+  only:
+    - master
