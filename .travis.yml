@@ -18,15 +18,11 @@ before_script:
 - cd ./release-inspection-of-antv
 
 after_script:
-- echo ${U_NAME}
-- git branch
 - git config --global user.name ${U_NAME}
 - git config --global user.email ${U_EMAIL}
 - git config core.filemode false
-- git add .
-- git commit -m "Deploy by Travis CI"
-- git push -f
 - git checkout -b ${D_BRANCH}
+- git branch
 - git add .
 - git commit -m "Deploy by Travis CI"
 # - git push --set-upstream origin ${D_BRANCH} -f
