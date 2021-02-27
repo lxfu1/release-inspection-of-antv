@@ -23,25 +23,10 @@ script:
 - npm run build
 
 before_script:
-- composer config --global github-oauth.github.com "$GH_TOKEN"
 - cd ..
-# - git clone https://github.com/antvis/G2Plot.git
+- git clone https://github.com/antvis/G2Plot.git
 - cd ./release-inspection-of-antv
-
-after_script:
-# - git config --global user.name ${U_NAME}
-# - git config --global user.email ${U_EMAIL}
-# - git config core.filemode false
-# - git checkout -b ${D_BRANCH}
-# - git branch
-# - git add .
-# - git commit -m "Deploy by Travis CI"
-# - git config --list
-# # https://github.com/[secure]/release-inspection-of-antv.git
-# - git push --set-upstream origin ${D_BRANCH} -f
-# - git remote add origin-pages https://${GH_TOKEN}@github.com/release-inspection-of-antv.git > /dev/null 2>&1
-# - git push --force
-# - git push --quiet --set-upstream ${U_EMAIL}
+- composer config --global github-oauth.github.com "$GH_TOKEN"
 
 branches:
   only:
