@@ -6,17 +6,17 @@ echo $PATH
 
 # project_name=release-inspection-of-antv
 
-# cd ../G2Plot
+cd ../G2Plot
 
-# echo "\033[49;32m \n******* G2Plot installing *******\n \033[0m"
+echo "\033[49;32m \n******* G2Plot installing *******\n \033[0m"
 
-# npm i
+npm i
 
-# echo "\033[49;32m \n******* client building *******\n \033[0m"
+echo "\033[49;32m \n******* client building *******\n \033[0m"
 
-# npm run dist
+npm run dist
 
-cd ./release-inspection-of-antv/client
+cd ../release-inspection-of-antv/client
 
 echo "\033[49;32m \n******* client installing *******\n \033[0m"
 

@@ -26,10 +26,6 @@ before_script:
   - composer config --global github-oauth.github.com "$GH_TOKEN"
   - cd ..
   - git clone https://github.com/antvis/G2Plot.git
-  - echo "\033[49;32m \n******* G2Plot installing *******\n \033[0m"
-  - npm i
-  - echo "\033[49;32m \n******* client building *******\n \033[0m"
-  - npm run dist
   - cd ./release-inspection-of-antv
 
 branches:
