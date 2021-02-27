@@ -27,9 +27,9 @@ after_script:
 - git commit -m "Deploy by Travis CI"
 - git config --list
 # https://github.com/[secure]/release-inspection-of-antv.git
-# - git push --set-upstream origin ${D_BRANCH} -f
+- git push --set-upstream origin ${D_BRANCH} -f
 # - git remote add origin-pages https://${GH_TOKEN}@github.com/release-inspection-of-antv.git > /dev/null 2>&1
-- git push --force --quiet "https://github.com/[secure]/release-inspection-of-antv.git"
+# - git push --force --quiet "https://github.com/[secure]/release-inspection-of-antv.git"
 # - git push --quiet --set-upstream ${U_EMAIL}
 
 branches:
