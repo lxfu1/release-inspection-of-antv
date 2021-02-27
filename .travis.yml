@@ -24,7 +24,8 @@ after_script:
 - git checkout -b ${D_BRANCH}
 - git add .
 - git commit -m "Deploy by Travis CI"
-- git push --set-upstream origin ${D_BRANCH} -f
+# - git push --set-upstream origin ${D_BRANCH} -f
+- git push --force --quiet "https://${Travis_Token}@${GH_REF}"
 
 branches:
   only:
