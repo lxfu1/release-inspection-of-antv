@@ -23,6 +23,7 @@ before_script:
 after_script:
   - git config user.name "${U_NAME}"
   - git config user.email "${U_EMAIL}"
+  - git config core.filemode false
   - git checkout -b ${D_BRANCH}
   - git add .
   - git commit -m "Deploy by Travis CI"
