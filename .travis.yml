@@ -21,9 +21,11 @@ before_script:
   - cd ./release-inspection-of-antv
 
 after_script:
+  - pwd
   - git config user.name "${U_NAME}"
   - git config user.email "${U_EMAIL}"
   - git config core.filemode false
+  - gi config --list
   - git checkout -b ${D_BRANCH}
   - git add .
   - git commit -m "Deploy by Travis CI"
