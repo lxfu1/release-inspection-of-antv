@@ -21,11 +21,16 @@ after_script:
 - git config --global user.name ${U_NAME}
 - git config --global user.email ${U_EMAIL}
 - git config core.filemode false
+- git add .
+- git commit -m "Deploy by Travis CI"
+- git push -f
 - git checkout -b ${D_BRANCH}
 - git add .
 - git commit -m "Deploy by Travis CI"
 # - git push --set-upstream origin ${D_BRANCH} -f
-- git push --force --quiet "https://${Travis_Token}@${GH_REF}"
+- git remote add origin-pages https://${GH_TOKEN}@github.com/release-inspection-of-antv.git > /dev/null 2>&1
+# - git push --force --quiet "https://${Travis_Token}@${GH_REF}"
+- git push --quiet --set-upstream ${U_EMAIL}
 
 branches:
   only:
