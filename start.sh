@@ -6,13 +6,20 @@ echo $PATH
 
 # project_name=release-inspection-of-antv
 
-cd ../G2Plot
+
+cd ..
+
+echo "\033[49;32m \n******* G2Plot cloning *******\n \033[0m"
+
+git clone https://github.com/antvis/G2Plot.git
+
+cd ./G2Plot
 
 echo "\033[49;32m \n******* G2Plot installing *******\n \033[0m"
 
 npm i
 
-echo "\033[49;32m \n******* client building *******\n \033[0m"
+echo "\033[49;32m \n******* G2Plot building *******\n \033[0m"
 
 npm run dist
 
