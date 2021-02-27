@@ -4,15 +4,15 @@ node_js: 14.8.0
 
 cache:
   directories:
-  - node_modules
-  - server/node_modules
-  - client/node_modules
+  # - node_modules
+  # - server/node_modules
+  # - client/node_modules
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GH_TOKEN # Set in the settings page of your repository, as a secure variable
-  keep_history: true
+  keep_history: false
   on:
     branch: master
 
@@ -23,10 +23,14 @@ script:
 - npm run build
 
 before_script:
-- cd ..
-- git clone https://github.com/antvis/G2Plot.git
-- cd ./release-inspection-of-antv
-- composer config --global github-oauth.github.com "$GH_TOKEN"
+  - composer config --global github-oauth.github.com "$GH_TOKEN"
+  - cd ..
+  - git clone https://github.com/antvis/G2Plot.git
+  - echo "\033[49;32m \n******* G2Plot installing *******\n \033[0m"
+  - npm i
+  - echo "\033[49;32m \n******* client building *******\n \033[0m"
+  - npm run dist
+  - cd ./release-inspection-of-antv
 
 branches:
   only:
