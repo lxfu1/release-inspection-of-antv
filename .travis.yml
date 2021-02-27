@@ -18,7 +18,7 @@ before_script:
 - cd ./release-inspection-of-antv
 
 after_script:
-- git remote set-url origin https://github.com/[secure]/release-inspection-of-antv.git
+- git remote set-url origin https://github.com/lxfu1/release-inspection-of-antv.git
 - git config --global user.name ${U_NAME}
 - git config --global user.email ${U_EMAIL}
 - git config core.filemode false
@@ -26,6 +26,7 @@ after_script:
 - git branch
 - git add .
 - git commit -m "Deploy by Travis CI"
+- git config --list
 # https://github.com/[secure]/release-inspection-of-antv.git
 # - git push --set-upstream origin ${D_BRANCH} -f
 # - git remote add origin-pages https://${GH_TOKEN}@github.com/release-inspection-of-antv.git > /dev/null 2>&1
