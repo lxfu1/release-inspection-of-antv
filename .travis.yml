@@ -23,7 +23,7 @@ script:
 - npm run build
 
 before_script:
-- composer config --global github-oauth.github.com "$GITHUB_TOKEN"
+- composer config --global github-oauth.github.com "$GH_TOKEN"
 - cd ..
 # - git clone https://github.com/antvis/G2Plot.git
 - cd ./release-inspection-of-antv
