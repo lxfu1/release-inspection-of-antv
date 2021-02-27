@@ -5,27 +5,31 @@ cache:
   - node_modules
   - server/node_modules
   - client/node_modules
+
 install:
 - npm i
+
 script:
 - npm run build
+
 before_script:
 - cd ..
 - git clone https://github.com/antvis/G2Plot.git
 - cd ./release-inspection-of-antv
+
 after_script:
-- pwd
 - git config --global user.name ${U_NAME}
 - git config --global user.email ${U_EMAIL}
 - git config core.filemode false
-- git config --list
 - git checkout -b ${D_BRANCH}
 - git add .
 - git commit -m "Deploy by Travis CI"
 - git push --set-upstream origin ${D_BRANCH} -f
+
 branches:
   only:
   - master
+
 env:
   global:
     secure: F9HPnb16dWyNr2kbzInp4MV/Wl77JE8eQwN70Qro8QgQ0E2LO1ApRQUQy5C7BRtjo23feagv8YchPD4aF35or2fGI6aG6I2dJoEol4RlrMVpXU+hdQQcsS2hxYtjt4vikKxJPARy2mcWJ/JOpPDZ8osNNG3ggcIVjbvZeZruqBDdpRxaBnCYdnOsPwMINqVCXNknb1/PDjiN6NVvTjTFhqIYwdsA4MkvpgW+l0pYvUlASxHiQn63WYeq9/fFLksfYu/X5+xR2bZpYSZTB+WpVY6/DEiVV/mb2e6W0Pg0nDnvB8aRV9ZJVEhOCaauWjY6J+hLFDVy/fNAiqU8WWwYnXd4f13H/v9A5dVRn4zUS+EL41fu3i91RE8Qi0Xztdy4mnGXKnEo7tzwFxxmAsU/0afyQgNDennGzqRI5xa2DS9/QxU4h50CaZtZuHhAKTX9dhtfeTdk2aHSLA+IGWIVITw5YZwkC9bVkSiKz14lmr7BsOMCw31tcp04LGJd1AAxqQSkhfLqzS7E/9kjVEGyPAC0Nb9KXMjEYAubHuXsshueUAbbabCEtDR4B/9FtMaMPlRAKXUkfxOMaO83drG7lJo/+op89H40xLGc2Fdoi1eP7JU2j9kSV4urY0+1ZWvihAsWg9gaLBH8eCX+1cYZfYf4+RWhF5xAOcAIFqJnsig=
