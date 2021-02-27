@@ -1,10 +1,24 @@
 language: node_js
+
 node_js: 14.8.0
+
 cache:
   directories:
   - node_modules
   - server/node_modules
   - client/node_modules
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: ${Travis_Token}  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  target_branch: ${D_BRANCH}
+  email: ${U_EMAIL}
+  name: ${U_NAME}
+  on:
+    branch: 
+      - ${D_BRANCH}
 
 install:
 - npm i
