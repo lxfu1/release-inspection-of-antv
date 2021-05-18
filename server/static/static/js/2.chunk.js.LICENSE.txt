@@ -2995,7 +2995,7 @@ object-assign
         !*** ./node_modules/_d3-composite-projections@1.4.0@d3-composite-projections/d3-composite-projections.js ***!
         \***********************************************************************************************************/
 
-/** @license React v17.0.1
+/** @license React v17.0.2
  * react-jsx-runtime.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.

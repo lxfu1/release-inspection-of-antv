@@ -1,10 +1,3 @@
-/*
- * @Descripttion: Gallery
- * @version: 0.0.1
- * @Author: fujin
- * @Date: 2021-02-24 15:42:12
- * @LastEditTime: 2021-02-25 18:52:29
- */
 import React, { Fragment, useEffect, useRef } from 'react';
 import html2canvas from 'html2canvas';
 import CountTime from './components/countTime';

@@ -776,7 +776,170 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   stackedBarPlot.render();
-});`},{fileName: "basic.ts", fileIndex: 17, code: `(function (global, factory) {
+});`},{fileName: "dodge-padding.ts", fileIndex: 17, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.dodgePadding = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  var data = [{
+    label: 'Mon.',
+    type: 'series1',
+    value: 2800
+  }, {
+    label: 'Mon.',
+    type: 'series2',
+    value: 2260
+  }, {
+    label: 'Tues.',
+    type: 'series1',
+    value: 1800
+  }, {
+    label: 'Tues.',
+    type: 'series2',
+    value: 1300
+  }, {
+    label: 'Wed.',
+    type: 'series1',
+    value: 950
+  }, {
+    label: 'Wed.',
+    type: 'series2',
+    value: 900
+  }, {
+    label: 'Thur.',
+    type: 'series1',
+    value: 500
+  }, {
+    label: 'Thur.',
+    type: 'series2',
+    value: 390
+  }, {
+    label: 'Fri.',
+    type: 'series1',
+    value: 170
+  }, {
+    label: 'Fri.',
+    type: 'series2',
+    value: 100
+  }];
+  var stackedBarPlot = new G2Plot.Bar('container-17', {
+    data: data,
+    isGroup: true,
+    xField: 'value',
+    yField: 'label',
+    seriesField: 'type',
+    dodgePadding: 4,
+    label: {
+      // 可手动配置 label 数据标签位置
+      position: 'middle',
+      // 'left', 'middle', 'right'
+      // 可配置附加的布局方法
+      layout: [// 柱形图数据标签位置自动调整
+      {
+        type: 'interval-adjust-position'
+      }, // 数据标签防遮挡
+      {
+        type: 'interval-hide-overlap'
+      }, // 数据标签文颜色自动调整
+      {
+        type: 'adjust-color'
+      }]
+    }
+  });
+  stackedBarPlot.render();
+});`},{fileName: "interval-padding.ts", fileIndex: 18, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.intervalPadding = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  var data = [{
+    label: 'Mon.',
+    type: 'series1',
+    value: 2800
+  }, {
+    label: 'Mon.',
+    type: 'series2',
+    value: 2260
+  }, {
+    label: 'Tues.',
+    type: 'series1',
+    value: 1800
+  }, {
+    label: 'Tues.',
+    type: 'series2',
+    value: 1300
+  }, {
+    label: 'Wed.',
+    type: 'series1',
+    value: 950
+  }, {
+    label: 'Wed.',
+    type: 'series2',
+    value: 900
+  }, {
+    label: 'Thur.',
+    type: 'series1',
+    value: 500
+  }, {
+    label: 'Thur.',
+    type: 'series2',
+    value: 390
+  }, {
+    label: 'Fri.',
+    type: 'series1',
+    value: 170
+  }, {
+    label: 'Fri.',
+    type: 'series2',
+    value: 100
+  }];
+  var stackedBarPlot = new G2Plot.Bar('container-18', {
+    data: data,
+    isGroup: true,
+    xField: 'value',
+    yField: 'label',
+    seriesField: 'type',
+    dodgePadding: 4,
+    intervalPadding: 20,
+    label: {
+      // 可手动配置 label 数据标签位置
+      position: 'middle',
+      // 'left', 'middle', 'right'
+      // 可配置附加的布局方法
+      layout: [// 柱形图数据标签位置自动调整
+      {
+        type: 'interval-adjust-position'
+      }, // 数据标签防遮挡
+      {
+        type: 'interval-hide-overlap'
+      }, // 数据标签文颜色自动调整
+      {
+        type: 'adjust-color'
+      }]
+    }
+  });
+  stackedBarPlot.render();
+});`},{fileName: "basic.ts", fileIndex: 19, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -876,7 +1039,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     year: '2050',
     value: 628
   }];
-  var barPlot = new G2Plot.Bar('container-17', {
+  var barPlot = new G2Plot.Bar('container-19', {
     data: data,
     xField: 'value',
     yField: 'year',
@@ -897,7 +1060,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   barPlot.render();
-});`},{fileName: "basic.ts", fileIndex: 18, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 20, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -937,7 +1100,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '分类八',
     values: [18, 34]
   }];
-  var barPlot = new G2Plot.Bar('container-18', {
+  var barPlot = new G2Plot.Bar('container-20', {
     data: data.reverse(),
     xField: 'values',
     yField: 'type',
@@ -950,7 +1113,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   barPlot.render();
-});`},{fileName: "basic.ts", fileIndex: 19, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 21, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -1038,7 +1201,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 13,
     type: 'Bor'
   }];
-  var stackedBarPlot = new G2Plot.Bar('container-19', {
+  var stackedBarPlot = new G2Plot.Bar('container-21', {
     data: data.reverse(),
     isStack: true,
     xField: 'value',
@@ -1062,7 +1225,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   stackedBarPlot.render();
-});`},{fileName: "customize-tooltip.ts", fileIndex: 20, code: `(function (global, factory) {
+});`},{fileName: "customize-tooltip.ts", fileIndex: 22, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot", "@antv/util"], factory);
   } else if (typeof exports !== "undefined") {
@@ -1097,7 +1260,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       return ['United States', 'France', 'Germany', 'Austria', 'Japan', 'Sweden'].includes(d.country);
     });
   }).then(function (data) {
-    var line = new G2Plot.Line('container-20', {
+    var line = new G2Plot.Line('container-22', {
       padding: 'auto',
       appendPadding: [8, 10, 0, 10],
       data: data,
@@ -1178,7 +1341,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     })));
     line.chart.showTooltip(point);
   });
-});`},{fileName: "desire-heatmap.ts", fileIndex: 21, code: `(function (global, factory) {
+});`},{fileName: "desire-heatmap.ts", fileIndex: 23, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -1201,7 +1364,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     var ROWS = 10;
 
     function getSizeFactor() {
-      var box = document.getElementById('container-21').getBoundingClientRect();
+      var box = document.getElementById('container-23').getBoundingClientRect();
       var size = Math.min(box.width / COLS, box.height / ROWS);
       return {
         width: size * COLS,
@@ -1215,7 +1378,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
         height = _getSizeFactor.height,
         size = _getSizeFactor.size;
 
-    var plot = new G2Plot.Heatmap('container-21', {
+    var plot = new G2Plot.Heatmap('container-23', {
       data: data,
       autoFit: false,
       width: width,
@@ -1292,14 +1455,14 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
             }],
             style: {
               fontWeight: 700,
-              fontSize: size < 32 ? size * 0.46 : size < 40 ? 0.48 : 0.3
+              fontSize: 14 * (size < 32 ? 0.8 : size < 40 ? 1.48 : 1.3)
             }
           }
         });
       }
     });
   });
-});`},{fileName: "line.ts", fileIndex: 22, code: `(function (global, factory) {
+});`},{fileName: "line.ts", fileIndex: 24, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -1322,7 +1485,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 
   function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-  function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+  function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
   function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -1367,7 +1530,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
         referringSites: d
       };
     });
-    var plot = new G2Plot.MultiView('container-22', {
+    var plot = new G2Plot.Mix('container-24', {
       height: 140,
       appendPadding: [20, 0, 0, 0],
       tooltip: false,
@@ -1680,60 +1843,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     plot.render();
   });
-});`},{fileName: "funnel.ts", fileIndex: 23, code: `(function (global, factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["@antv/g2plot", "insert-css"], factory);
-  } else if (typeof exports !== "undefined") {
-    factory(require("@antv/g2plot"), require("insert-css"));
-  } else {
-    var mod = {
-      exports: {}
-    };
-    factory(global.g2plot, global.insertCss);
-    global.funnel = mod.exports;
-  }
-})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot, _insertCss) {
-  "use strict";
-
-  var data = [{
-    stage: '触达次数',
-    times: 789,
-    uv: 1000,
-    conversionUV: 0
-  }, {
-    stage: '响应次数',
-    times: 453,
-    uv: 800,
-    conversionUV: 600
-  }, {
-    stage: '分享次数',
-    times: 193,
-    uv: 600,
-    conversionUV: 200
-  }];
-  (0, _insertCss.insertCss)("  .container{    margin: 16px -8px; display: flex;  }  .box{    padding: 0px 16px;  }  .title{    font-weight: bold;  }  .tooltip-item{    margin-top: 12px;    display: flex;    width: 120px;    justify-content: space-between;  }  .link{    display: inline-block;    margin-top: 12px;    color: #5B8FF9;    text-decoration: none;    cursor: pointer;  }  .link:hover{    color: #5D7092;  }");
-  var funnelPlot = new G2Plot.Funnel('container-23', {
-    data: data,
-    xField: 'stage',
-    yField: 'times',
-    legend: false,
-    conversionTag: false,
-    interactions: [{
-      type: 'element-active'
-    }],
-    tooltip: {
-      follow: true,
-      enterable: true,
-      offset: 5,
-      customContent: function customContent(value, items) {
-        if (!items || items.length <= 0) return;
-        var itemData = items[0].data;
-        return "<div class='container'>" + "<div class='box' style='border-right: 1px solid #c2c2c2'>" + "<div class='title'>u8F6Cu5316</div>" + "<div class='tooltip-item'><span>u8F6Cu5316u4EBAu6570</span><span>".concat(itemData.conversionUV, "</span></div>") + "<div class='tooltip-item'><span>u8F6Cu5316u7387</span><span>".concat((itemData.conversionUV / itemData.uv * 100).toFixed(0), "%</span></div>") + "<a class='link'>u67E5u770Bu8F6Cu5316u8BE6u60C5</a>" + "</div>" + "<div class='box'>" + "<div class='title'>u672Au8F6Cu5316</div>" + "<div class='tooltip-item'><span>u672Au8F6Cu5316u4EBAu6570</span><span>".concat(itemData.uv - itemData.conversionUV, "</span></div>") + "<div class='tooltip-item'><span>u672Au8F6Cu5316u7387</span><span>".concat(((1 - itemData.conversionUV / itemData.uv) * 100).toFixed(0), "%</span></div>") + "<a class='link'>u67E5u770Bu672Au8F6Cu5316u8BE6u60C5</a>" + "</div>" + "</div>";
-      }
-    }
-  });
-  funnelPlot.render();
-});`},{fileName: "pie.ts", fileIndex: 24, code: `(function (global, factory) {
+});`},{fileName: "pie.ts", fileIndex: 25, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -1767,7 +1877,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new G2Plot.Pie('container-24', {
+  var piePlot = new G2Plot.Pie('container-25', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -1827,7 +1937,60 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   piePlot.render();
-});`},{fileName: "basic.ts", fileIndex: 25, code: `(function (global, factory) {
+});`},{fileName: "trend-funnel.ts", fileIndex: 26, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot", "insert-css"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"), require("insert-css"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot, global.insertCss);
+    global.trendFunnel = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot, _insertCss) {
+  "use strict";
+
+  var data = [{
+    stage: '触达次数',
+    times: 789,
+    uv: 1000,
+    conversionUV: 0
+  }, {
+    stage: '响应次数',
+    times: 453,
+    uv: 800,
+    conversionUV: 600
+  }, {
+    stage: '分享次数',
+    times: 193,
+    uv: 600,
+    conversionUV: 200
+  }];
+  (0, _insertCss.insertCss)("  .container{    margin: 16px -8px; display: flex;  }  .box{    padding: 0px 16px;  }  .title{    font-weight: bold;  }  .tooltip-item{    margin-top: 12px;    display: flex;    width: 120px;    justify-content: space-between;  }  .link{    display: inline-block;    margin-top: 12px;    color: #5B8FF9;    text-decoration: none;    cursor: pointer;  }  .link:hover{    color: #5D7092;  }");
+  var funnelPlot = new G2Plot.Funnel('container-26', {
+    data: data,
+    xField: 'stage',
+    yField: 'times',
+    legend: false,
+    conversionTag: false,
+    interactions: [{
+      type: 'element-active'
+    }],
+    tooltip: {
+      follow: true,
+      enterable: true,
+      offset: 5,
+      customContent: function customContent(value, items) {
+        if (!items || items.length <= 0) return;
+        var itemData = items[0].data;
+        return "<div class='container'>" + "<div class='box' style='border-right: 1px solid #c2c2c2'>" + "<div class='title'>u8F6Cu5316</div>" + "<div class='tooltip-item'><span>u8F6Cu5316u4EBAu6570</span><span>".concat(itemData.conversionUV, "</span></div>") + "<div class='tooltip-item'><span>u8F6Cu5316u7387</span><span>".concat((itemData.conversionUV / itemData.uv * 100).toFixed(0), "%</span></div>") + "<a class='link'>u67E5u770Bu8F6Cu5316u8BE6u60C5</a>" + "</div>" + "<div class='box'>" + "<div class='title'>u672Au8F6Cu5316</div>" + "<div class='tooltip-item'><span>u672Au8F6Cu5316u4EBAu6570</span><span>".concat(itemData.uv - itemData.conversionUV, "</span></div>") + "<div class='tooltip-item'><span>u672Au8F6Cu5316u7387</span><span>".concat(((1 - itemData.conversionUV / itemData.uv) * 100).toFixed(0), "%</span></div>") + "<a class='link'>u67E5u770Bu672Au8F6Cu5316u8BE6u60C5</a>" + "</div>" + "</div>";
+      }
+    }
+  });
+  funnelPlot.render();
+});`},{fileName: "basic.ts", fileIndex: 27, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -1867,7 +2030,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '家庭清洁',
     sales: 38
   }];
-  var columnPlot = new G2Plot.Column('container-25', {
+  var columnPlot = new G2Plot.Column('container-27', {
     data: data,
     xField: 'type',
     yField: 'sales',
@@ -1897,7 +2060,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   columnPlot.render();
-});`},{fileName: "color.ts", fileIndex: 26, code: `(function (global, factory) {
+});`},{fileName: "color.ts", fileIndex: 28, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -1939,7 +2102,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   }];
   var paletteSemanticRed = '#F4664A';
   var brandColor = '#5B8FF9';
-  var columnPlot = new G2Plot.Column('container-26', {
+  var columnPlot = new G2Plot.Column('container-28', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -1972,7 +2135,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   columnPlot.render();
-});`},{fileName: "conversion-tag.ts", fileIndex: 27, code: `(function (global, factory) {
+});`},{fileName: "conversion-tag.ts", fileIndex: 29, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2003,7 +2166,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     action: '完成交易',
     pv: 8500
   }];
-  var columnPlot = new G2Plot.Column('container-27', {
+  var columnPlot = new G2Plot.Column('container-29', {
     data: data,
     xField: 'action',
     yField: 'pv',
@@ -2016,7 +2179,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   columnPlot.render();
-});`},{fileName: "region-annotation.ts", fileIndex: 28, code: `(function (global, factory) {
+});`},{fileName: "region-annotation.ts", fileIndex: 30, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2068,7 +2231,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     month: '12',
     value: 597
   }];
-  var columnPlot = new G2Plot.Column('container-28', {
+  var columnPlot = new G2Plot.Column('container-30', {
     data: data,
     padding: 'auto',
     xField: 'month',
@@ -2105,7 +2268,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   columnPlot.render();
-});`},{fileName: "scrollbar.ts", fileIndex: 29, code: `(function (global, factory) {
+});`},{fileName: "scrollbar.ts", fileIndex: 31, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2123,7 +2286,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/be63e0a2-d2be-4c45-97fd-c00f752a66d4.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var column = new G2Plot.Column('container-29', {
+    var column = new G2Plot.Column('container-31', {
       data: data,
       xField: '城市',
       yField: '销售额',
@@ -2138,7 +2301,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     column.render();
   });
-});`},{fileName: "slider.ts", fileIndex: 30, code: `(function (global, factory) {
+});`},{fileName: "slider.ts", fileIndex: 32, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2156,7 +2319,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/be63e0a2-d2be-4c45-97fd-c00f752a66d4.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var column = new G2Plot.Column('container-30', {
+    var column = new G2Plot.Column('container-32', {
       data: data,
       xField: '城市',
       yField: '销售额',
@@ -2172,7 +2335,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     column.render();
   });
-});`},{fileName: "width-ratio.ts", fileIndex: 31, code: `(function (global, factory) {
+});`},{fileName: "width-ratio.ts", fileIndex: 33, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2212,7 +2375,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '家庭清洁',
     sales: 38
   }];
-  var columnPlot = new G2Plot.Column('container-31', {
+  var columnPlot = new G2Plot.Column('container-33', {
     data: data,
     xField: 'type',
     yField: 'sales',
@@ -2233,7 +2396,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   columnPlot.render();
-});`},{fileName: "width.ts", fileIndex: 32, code: `(function (global, factory) {
+});`},{fileName: "width.ts", fileIndex: 34, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2273,7 +2436,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '家庭清洁',
     sales: 38
   }];
-  var columnPlot = new G2Plot.Column('container-32', {
+  var columnPlot = new G2Plot.Column('container-34', {
     data: data,
     xField: 'type',
     yField: 'sales',
@@ -2295,7 +2458,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     maxColumnWidth: 20
   });
   columnPlot.render();
-});`},{fileName: "basic.ts", fileIndex: 33, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 35, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2375,7 +2538,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     月份: 'Aug.',
     月均降雨量: 42.4
   }];
-  var stackedColumnPlot = new G2Plot.Column('container-33', {
+  var stackedColumnPlot = new G2Plot.Column('container-35', {
     data: data,
     isGroup: true,
     xField: '月份',
@@ -2405,7 +2568,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   stackedColumnPlot.render();
-});`},{fileName: "corner-radius.ts", fileIndex: 34, code: `(function (global, factory) {
+});`},{fileName: "corner-radius.ts", fileIndex: 36, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2423,7 +2586,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/PC3daFYjNw/column-data.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var column = new G2Plot.Column('container-34', {
+    var column = new G2Plot.Column('container-36', {
       data: data,
       xField: 'city',
       yField: 'value',
@@ -2435,7 +2598,99 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     column.render();
   });
-});`},{fileName: "stacked.ts", fileIndex: 35, code: `(function (global, factory) {
+});`},{fileName: "dodge-padding.ts", fileIndex: 37, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.dodgePadding = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  fetch('https://gw.alipayobjects.com/os/antfincdn/iPY8JFnxdb/dodge-padding.json').then(function (data) {
+    return data.json();
+  }).then(function (data) {
+    var plot = new G2Plot.Column('container-37', {
+      data: data,
+      isGroup: true,
+      xField: '月份',
+      yField: '月均降雨量',
+      seriesField: 'name',
+      // 分组柱状图 组内柱子间的间距 (像素级别)
+      dodgePadding: 2,
+      label: {
+        // 可手动配置 label 数据标签位置
+        position: 'middle',
+        // 'top', 'middle', 'bottom'
+        // 可配置附加的布局方法
+        layout: [// 柱形图数据标签位置自动调整
+        {
+          type: 'interval-adjust-position'
+        }, // 数据标签防遮挡
+        {
+          type: 'interval-hide-overlap'
+        }, // 数据标签文颜色自动调整
+        {
+          type: 'adjust-color'
+        }]
+      }
+    });
+    plot.render();
+  });
+});`},{fileName: "interval-padding.ts", fileIndex: 38, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.intervalPadding = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  fetch('https://gw.alipayobjects.com/os/antfincdn/iPY8JFnxdb/dodge-padding.json').then(function (data) {
+    return data.json();
+  }).then(function (data) {
+    var plot = new G2Plot.Column('container-38', {
+      data: data,
+      isGroup: true,
+      xField: '月份',
+      yField: '月均降雨量',
+      seriesField: 'name',
+      // 分组柱状图 组内柱子间的间距 (像素级别)
+      dodgePadding: 2,
+      // 分组柱状图 组间的间距 (像素级别)
+      intervalPadding: 20,
+      label: {
+        // 可手动配置 label 数据标签位置
+        position: 'middle',
+        // 'top', 'middle', 'bottom'
+        // 可配置附加的布局方法
+        layout: [// 柱形图数据标签位置自动调整
+        {
+          type: 'interval-adjust-position'
+        }, // 数据标签防遮挡
+        {
+          type: 'interval-hide-overlap'
+        }, // 数据标签文颜色自动调整
+        {
+          type: 'adjust-color'
+        }]
+      }
+    });
+    plot.render();
+  });
+});`},{fileName: "stacked.ts", fileIndex: 39, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2453,7 +2708,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/mor%26R5yBI9/stack-group-column.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var column = new G2Plot.Column('container-35', {
+    var column = new G2Plot.Column('container-39', {
       data: data,
       xField: 'product_type',
       yField: 'order_amt',
@@ -2464,7 +2719,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     column.render();
   });
-});`},{fileName: "stacked2.ts", fileIndex: 36, code: `(function (global, factory) {
+});`},{fileName: "stacked2.ts", fileIndex: 40, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2482,7 +2737,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/cK%24sTxSsah/stack-group-column.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var column = new G2Plot.Column('container-36', {
+    var column = new G2Plot.Column('container-40', {
       data: data,
       xField: 'month',
       yField: 'value',
@@ -2493,7 +2748,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     column.render();
   });
-});`},{fileName: "basic.ts", fileIndex: 37, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 41, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2593,7 +2848,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     year: '2050',
     value: 628
   }];
-  var columnPlot = new G2Plot.Column('container-37', {
+  var columnPlot = new G2Plot.Column('container-41', {
     data: data,
     xField: 'year',
     yField: 'value',
@@ -2611,7 +2866,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   columnPlot.render();
-});`},{fileName: "interaction.ts", fileIndex: 38, code: `(function (global, factory) {
+});`},{fileName: "interaction.ts", fileIndex: 42, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2640,7 +2895,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/jSRiL%26YNql/percent-column.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var columnPlot = new G2Plot.Column('container-38', {
+    var columnPlot = new G2Plot.Column('container-42', {
       data: data,
       xField: 'year',
       yField: 'value',
@@ -2671,7 +2926,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     columnPlot.render();
   });
-});`},{fileName: "basic.ts", fileIndex: 39, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 43, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2711,7 +2966,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '分类八',
     values: [18, 34]
   }];
-  var barPlot = new G2Plot.Column('container-39', {
+  var barPlot = new G2Plot.Column('container-43', {
     data: data,
     xField: 'type',
     yField: 'values',
@@ -2724,7 +2979,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   barPlot.render();
-});`},{fileName: "basic.ts", fileIndex: 40, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 44, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2742,7 +2997,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/8elHX%26irfq/stack-column-data.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var stackedColumnPlot = new G2Plot.Column('container-40', {
+    var stackedColumnPlot = new G2Plot.Column('container-44', {
       data: data,
       isStack: true,
       xField: 'year',
@@ -2767,7 +3022,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     stackedColumnPlot.render();
   });
-});`},{fileName: "column-background.ts", fileIndex: 41, code: `(function (global, factory) {
+});`},{fileName: "column-background.ts", fileIndex: 45, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2785,7 +3040,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/8elHX%26irfq/stack-column-data.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var stackedColumnPlot = new G2Plot.Column('container-41', {
+    var stackedColumnPlot = new G2Plot.Column('container-45', {
       data: data,
       isStack: true,
       xField: 'year',
@@ -2808,7 +3063,569 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     stackedColumnPlot.render();
   });
-});`},{fileName: "column-line.ts", fileIndex: 42, code: `(function (global, factory) {
+});`},{fileName: "area-with-line-annotation.ts", fileIndex: 46, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.areaWithLineAnnotation = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json').then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    var plot = new G2Plot.Area('container-46', {
+      data: data,
+      padding: 'auto',
+      xField: 'Date',
+      yField: 'scales',
+      meta: {
+        Date: {
+          range: [0.02, 0.98]
+        }
+      },
+      yAxis: {
+        grid: null
+      },
+      smooth: true,
+      annotations: [{
+        type: 'line',
+
+        /** 起始位置 */
+        start: ['min', 'median'],
+
+        /** 结束位置 */
+        end: ['max', 'median'],
+        text: {
+          content: '中位线',
+          position: 'right',
+          offsetY: 18,
+          style: {
+            textAlign: 'right'
+          }
+        },
+        style: {
+          lineWidth: 0.5,
+          lineDash: [4, 4]
+        }
+      }]
+    });
+    plot.render();
+  });
+});`},{fileName: "image-annotation.ts", fileIndex: 47, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.imageAnnotation = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  var data = [{
+    type: '分类一',
+    value: 27
+  }, {
+    type: '分类二',
+    value: 25
+  }, {
+    type: '分类三',
+    value: 18
+  }, {
+    type: '分类四',
+    value: 15
+  }, {
+    type: '分类五',
+    value: 10
+  }, {
+    type: '其他',
+    value: 5
+  }];
+  var piePlot = new G2Plot.Pie('container-47', {
+    appendPadding: 10,
+    data: data,
+    angleField: 'value',
+    colorField: 'type',
+    radius: 0.8,
+    innerRadius: 0.64,
+    label: {
+      type: 'inner',
+      offset: '-50%',
+      content: function content(_ref) {
+        var percent = _ref.percent;
+        return "".concat((percent * 100).toFixed(0), "%");
+      },
+      style: {
+        fill: '#fff',
+        fontSize: 14,
+        textAlign: 'center'
+      }
+    },
+    statistic: null,
+    annotations: [{
+      type: 'image',
+      src: 'https://gw.alipayobjects.com/mdn/rms_2274c3/afts/img/A*ELYbTIVCgPoAAAAAAAAAAABkARQnAQ',
+
+      /** 位置 */
+      position: ['50%', '50%'],
+
+      /** 图形样式属性 */
+      style: {
+        width: 50,
+        height: 50
+      },
+
+      /** x 方向的偏移量 */
+      offsetX: -25,
+
+      /** y 方向的偏移量 */
+      offsetY: 40
+    }]
+  });
+  piePlot.render();
+});`},{fileName: "line-annotation.ts", fileIndex: 48, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.lineAnnotation = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+  function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.In order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+  function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+  function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+  function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+  function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+  fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json').then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    var maxValue = Math.max.apply(Math, _toConsumableArray(data.map(function (d) {
+      return d.scales;
+    })));
+    var averageValue = data.map(function (d) {
+      return d.scales;
+    }).reduce(function (a, b) {
+      return a + b;
+    }, 0) / data.length;
+    var line = new G2Plot.Line('container-48', {
+      data: data,
+      padding: 'auto',
+      xField: 'Date',
+      yField: 'scales',
+      xAxis: {
+        tickCount: 5
+      },
+      smooth: true,
+      annotations: [{
+        type: 'line',
+
+        /** 起始位置 */
+        start: ['min', maxValue],
+
+        /** 结束位置 */
+        end: ['max', maxValue],
+        text: {
+          content: '最大值',
+          position: 'right',
+          offsetY: 18,
+          style: {
+            textAlign: 'right'
+          }
+        },
+        style: {
+          lineDash: [4, 4]
+        }
+      }, {
+        type: 'line',
+
+        /** 起始位置 */
+        start: ['min', averageValue],
+
+        /** 结束位置 */
+        end: ['max', averageValue],
+        text: {
+          content: '平均值线',
+          position: 'right',
+          offsetY: -6,
+          style: {
+            textAlign: 'right',
+            fill: 'lightblue'
+          }
+        },
+        style: {
+          lineDash: [4, 4],
+          stroke: 'lightblue'
+        }
+      }]
+    });
+    line.render();
+  });
+});`},{fileName: "line-annotation1.ts", fileIndex: 49, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.lineAnnotation1 = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  fetch('https://gw.alipayobjects.com/os/bmw-prod/89729b32-1592-44ae-ba96-1e296638f5f7.json').then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    var line = new G2Plot.Line('container-49', {
+      data: data,
+      padding: 'auto',
+      xField: 'date',
+      yField: 'value',
+      meta: {
+        date: {
+          formatter: function formatter(v) {
+            return v.split(' ') ? v.split(' ')[1] : '';
+          }
+        },
+        value: {
+          min: 0,
+          max: Math.pow(10, 7),
+          tickCount: 10,
+          formatter: function formatter(v) {
+            return "".concat(v / Math.pow(10, 6), "M");
+          }
+        }
+      },
+      lineStyle: {
+        lineCap: 'round'
+      },
+      interactions: [{
+        type: 'brush'
+      }]
+    });
+    line.render();
+    var yScale = line.chart.getScaleByField('value');
+    var coordinate = line.chart.getCoordinate();
+
+    var getDimYPosition = function getDimYPosition(value) {
+      return coordinate.convertDim(yScale.scale(value), 'y');
+    };
+
+    line.update({ ...line.options,
+      annotations: [{
+        type: 'line',
+        start: {
+          date: 'January 1991',
+          value: 2549000
+        },
+        end: ['August 1990', 3850000],
+        text: {
+          // 旅游萧条 标注
+          content: 'The UK recession of 1991',
+          rotate: 0,
+          autoRotate: false,
+          offsetY: getDimYPosition(3850000) - getDimYPosition(2549000) - 10,
+          style: {
+            textAlign: 'center',
+            textBaseline: 'bottom'
+          }
+        },
+        style: {
+          stroke: '#000',
+          lineDash: [2, 4]
+        }
+      }]
+    });
+  });
+});`},{fileName: "region-and-data-marker.ts", fileIndex: 50, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.regionAndDataMarker = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  var data = [{
+    month: '1',
+    value: 1078
+  }, {
+    month: '2',
+    value: 1216
+  }, {
+    month: '3',
+    value: 758
+  }, {
+    month: '4',
+    value: 623
+  }, {
+    month: '5',
+    value: 319
+  }, {
+    month: '6',
+    value: 422
+  }, {
+    month: '7',
+    value: -4
+  }, {
+    month: '8',
+    value: -217
+  }, {
+    month: '9',
+    value: -358
+  }, {
+    month: '10',
+    value: 1513
+  }, {
+    month: '11',
+    value: 1388
+  }, {
+    month: '12',
+    value: 597
+  }];
+  var line = new G2Plot.Line('container-50', {
+    data: data,
+    padding: 'auto',
+    xField: 'month',
+    yField: 'value',
+    meta: {
+      value: {
+        max: 2000,
+        min: -1000
+      },
+      month: {
+        formatter: function formatter(val) {
+          return "".concat(val, " u6708");
+        }
+      }
+    },
+    annotations: [{
+      type: 'region',
+      start: ['7', 'min'],
+      end: ['9', 'max']
+    }, {
+      type: 'dataMarker',
+      position: ['2', 1216],
+      text: {
+        content: '2月份因逢春节水产销售需求旺盛，需求大增',
+        style: {
+          textAlign: 'left'
+        }
+      },
+      line: {
+        length: 20
+      },
+      point: {
+        style: {
+          fill: '#f5222d',
+          stroke: '#f5222d'
+        }
+      },
+      autoAdjust: false
+    }]
+  });
+  line.render();
+});`},{fileName: "region-annotation.ts", fileIndex: 51, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.regionAnnotation = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  var data = [{
+    month: '1',
+    value: 1078
+  }, {
+    month: '2',
+    value: 1216
+  }, {
+    month: '3',
+    value: 758
+  }, {
+    month: '4',
+    value: 623
+  }, {
+    month: '5',
+    value: 319
+  }, {
+    month: '6',
+    value: 422
+  }, {
+    month: '7',
+    value: -4
+  }, {
+    month: '8',
+    value: -217
+  }, {
+    month: '9',
+    value: -358
+  }, {
+    month: '10',
+    value: 1513
+  }, {
+    month: '11',
+    value: 1388
+  }, {
+    month: '12',
+    value: 597
+  }];
+  var columnPlot = new G2Plot.Column('container-51', {
+    data: data,
+    padding: 'auto',
+    xField: 'month',
+    yField: 'value',
+    meta: {
+      value: {
+        max: 2000,
+        min: -1000
+      },
+      month: {
+        formatter: function formatter(val) {
+          return "".concat(val, " u6708");
+        }
+      }
+    },
+    annotations: [{
+      type: 'region',
+      // @ts-ignore todo 修复 G2 类型定义
+      start: function start(xScale) {
+        var ratio = xScale.ticks ? 1 / xScale.ticks.length : 1;
+        var x = xScale.scale('7') - ratio / 2;
+        return ["".concat(x * 100, "%"), '0%'];
+      },
+      // @ts-ignore todo 修复 G2 类型定义
+      end: function end(xScale) {
+        var ratio = xScale.ticks ? 1 / xScale.ticks.length : 1;
+        var x = xScale.scale('9') + ratio / 2;
+        return ["".concat(x * 100, "%"), '100%'];
+      }
+    }]
+  });
+  columnPlot.render();
+});`},{fileName: "legend-focus.ts", fileIndex: 52, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.legendFocus = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  fetch('https://gw.alipayobjects.com/os/antfincdn/PC3daFYjNw/column-data.json').then(function (data) {
+    return data.json();
+  }).then(function (data) {
+    var plot = new G2Plot.Column('container-52', {
+      data: data,
+      xField: 'city',
+      yField: 'value',
+      seriesField: 'type',
+      isGroup: 'true',
+      legend: {
+        selected: {
+          // 默认置灰
+          茶叶: false
+        }
+      }
+    });
+    plot.render();
+  });
+});`},{fileName: "legend-item-value.ts", fileIndex: 53, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.legendItemValue = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  fetch('https://gw.alipayobjects.com/os/antfincdn/PC3daFYjNw/column-data.json').then(function (data) {
+    return data.json();
+  }).then(function (data) {
+    var plot = new G2Plot.Column('container-53', {
+      data: data,
+      xField: 'city',
+      yField: 'value',
+      seriesField: 'type',
+      isGroup: 'true',
+      legend: {
+        position: 'right-top',
+        offsetX: 8,
+        title: {
+          text: '产品类别 (平均销售量）',
+          spacing: 8
+        },
+        itemValue: {
+          formatter: function formatter(text, item) {
+            var items = data.filter(function (d) {
+              return d.type === item.value;
+            });
+            return items.length ? items.reduce(function (a, b) {
+              return a + b.value;
+            }, 0) / items.length : '-';
+          },
+          style: {
+            opacity: 0.65
+          }
+        }
+      }
+    });
+    plot.render();
+  });
+});`},{fileName: "column-line.ts", fileIndex: 54, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2844,7 +3661,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 470,
     count: 220
   }];
-  var dualAxes = new G2Plot.DualAxes('container-42', {
+  var dualAxes = new G2Plot.DualAxes('container-54', {
     data: [data, data],
     xField: 'time',
     yField: ['value', 'count'],
@@ -2858,7 +3675,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   dualAxes.render();
-});`},{fileName: "column-multi-line.ts", fileIndex: 43, code: `(function (global, factory) {
+});`},{fileName: "column-multi-line.ts", fileIndex: 55, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2950,7 +3767,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     count: 200,
     name: 'c'
   }];
-  var dualAxes = new G2Plot.DualAxes('container-43', {
+  var dualAxes = new G2Plot.DualAxes('container-55', {
     data: [uvData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -2963,7 +3780,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   dualAxes.render();
-});`},{fileName: "custom-column-line.ts", fileIndex: 44, code: `(function (global, factory) {
+});`},{fileName: "custom-column-line.ts", fileIndex: 56, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2999,7 +3816,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 470,
     count: 220
   }];
-  var dualAxes = new G2Plot.DualAxes('container-44', {
+  var dualAxes = new G2Plot.DualAxes('container-56', {
     data: [data, data],
     xField: 'time',
     yField: ['value', 'count'],
@@ -3057,7 +3874,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   dualAxes.render();
-});`},{fileName: "demo-more-1.ts", fileIndex: 45, code: `(function (global, factory) {
+});`},{fileName: "demo-more-1.ts", fileIndex: 57, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3193,7 +4010,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     consumeTime: 10424,
     completeTime: 753.583
   }];
-  var dualAxes = new G2Plot.DualAxes('container-45', {
+  var dualAxes = new G2Plot.DualAxes('container-57', {
     data: [data, data],
     xField: 'time',
     yField: ['consumeTime', 'completeTime'],
@@ -3284,7 +4101,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   dualAxes.render();
-});`},{fileName: "range-column-line.ts", fileIndex: 46, code: `(function (global, factory) {
+});`},{fileName: "range-column-line.ts", fileIndex: 58, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3320,7 +4137,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: [500, 550],
     count: 220
   }];
-  var dualAxes = new G2Plot.DualAxes('container-46', {
+  var dualAxes = new G2Plot.DualAxes('container-58', {
     data: [data, data],
     xField: 'time',
     yField: ['value', 'count'],
@@ -3338,7 +4155,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   dualAxes.render();
-});`},{fileName: "slider-culumn-line.ts", fileIndex: 47, code: `(function (global, factory) {
+});`},{fileName: "slider-column-line.ts", fileIndex: 59, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3348,7 +4165,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       exports: {}
     };
     factory(global.g2plot);
-    global.sliderCulumnLine = mod.exports;
+    global.sliderColumnLine = mod.exports;
   }
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
@@ -3474,7 +4291,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     consumeTime: 10424,
     completeTime: 753.583
   }];
-  var dualAxes = new G2Plot.DualAxes('container-47', {
+  var dualAxes = new G2Plot.DualAxes('container-59', {
     data: [data, data],
     xField: 'time',
     yField: ['consumeTime', 'completeTime'],
@@ -3495,7 +4312,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   dualAxes.render();
-});`},{fileName: "custom-dual-line.ts", fileIndex: 48, code: `(function (global, factory) {
+});`},{fileName: "custom-dual-line.ts", fileIndex: 60, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3547,7 +4364,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 13,
     count: 20
   }];
-  var dualAxes = new G2Plot.DualAxes('container-48', {
+  var dualAxes = new G2Plot.DualAxes('container-60', {
     data: [data, data],
     xField: 'year',
     yField: ['value', 'count'],
@@ -3589,7 +4406,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   dualAxes.render();
-});`},{fileName: "dual-line.ts", fileIndex: 49, code: `(function (global, factory) {
+});`},{fileName: "dual-line.ts", fileIndex: 61, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3641,7 +4458,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 13,
     count: 20
   }];
-  var dualAxes = new G2Plot.DualAxes('container-49', {
+  var dualAxes = new G2Plot.DualAxes('container-61', {
     data: [data, data],
     xField: 'year',
     yField: ['value', 'count'],
@@ -3654,7 +4471,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   dualAxes.render();
-});`},{fileName: "dual-multi-line.ts", fileIndex: 50, code: `(function (global, factory) {
+});`},{fileName: "dual-multi-line.ts", fileIndex: 62, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3771,7 +4588,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     count: 200,
     name: 'c'
   }];
-  var dualAxes = new G2Plot.DualAxes('container-50', {
+  var dualAxes = new G2Plot.DualAxes('container-62', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -3790,7 +4607,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   dualAxes.render();
-});`},{fileName: "dual-step-line.ts", fileIndex: 51, code: `(function (global, factory) {
+});`},{fileName: "dual-step-line.ts", fileIndex: 63, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3842,7 +4659,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 13,
     count: 20
   }];
-  var dualAxes = new G2Plot.DualAxes('container-51', {
+  var dualAxes = new G2Plot.DualAxes('container-63', {
     data: [data, data],
     xField: 'year',
     yField: ['value', 'count'],
@@ -3858,7 +4675,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   dualAxes.render();
-});`},{fileName: "custom-grouped-column-line.ts", fileIndex: 52, code: `(function (global, factory) {
+});`},{fileName: "custom-grouped-column-line.ts", fileIndex: 64, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3930,7 +4747,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     time: '2019-07',
     count: 220
   }];
-  var dualAxes = new G2Plot.DualAxes('container-52', {
+  var dualAxes = new G2Plot.DualAxes('container-64', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -3982,7 +4799,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   dualAxes.render();
-});`},{fileName: "grouped-column-line.ts", fileIndex: 53, code: `(function (global, factory) {
+});`},{fileName: "grouped-column-line.ts", fileIndex: 65, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4054,7 +4871,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     time: '2019-07',
     count: 220
   }];
-  var dualAxes = new G2Plot.DualAxes('container-53', {
+  var dualAxes = new G2Plot.DualAxes('container-65', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -4070,7 +4887,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   dualAxes.render();
-});`},{fileName: "grouped-column-multi-line.ts", fileIndex: 54, code: `(function (global, factory) {
+});`},{fileName: "grouped-column-multi-line.ts", fileIndex: 66, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4187,7 +5004,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     count: 200,
     name: 'c'
   }];
-  var dualAxes = new G2Plot.DualAxes('container-54', {
+  var dualAxes = new G2Plot.DualAxes('container-66', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -4216,7 +5033,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   dualAxes.render();
-});`},{fileName: "stacked-grouped-column-line.ts", fileIndex: 55, code: `(function (global, factory) {
+});`},{fileName: "stacked-grouped-column-line.ts", fileIndex: 67, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4363,7 +5180,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 5.4,
     type: '高数'
   }];
-  var dualAxes = new G2Plot.DualAxes('container-55', {
+  var dualAxes = new G2Plot.DualAxes('container-67', {
     data: [columnData, lineData],
     xField: 'month',
     yField: ['value', 'value'],
@@ -4382,7 +5199,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     tooltip: false
   });
   dualAxes.render();
-});`},{fileName: "custom-stacked-column-line.ts", fileIndex: 56, code: `(function (global, factory) {
+});`},{fileName: "custom-stacked-column-line.ts", fileIndex: 68, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4461,7 +5278,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     time: '2019-07',
     count: 220
   }];
-  var dualAxes = new G2Plot.DualAxes('container-56', {
+  var dualAxes = new G2Plot.DualAxes('container-68', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -4504,7 +5321,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     theme: 'custom-theme'
   });
   dualAxes.render();
-});`},{fileName: "stacked-column-line.ts", fileIndex: 57, code: `(function (global, factory) {
+});`},{fileName: "stacked-column-line.ts", fileIndex: 69, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4576,7 +5393,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     time: '2019-07',
     count: 220
   }];
-  var dualAxes = new G2Plot.DualAxes('container-57', {
+  var dualAxes = new G2Plot.DualAxes('container-69', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -4589,7 +5406,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   dualAxes.render();
-});`},{fileName: "stacked-column-multi-line.ts", fileIndex: 58, code: `(function (global, factory) {
+});`},{fileName: "stacked-column-multi-line.ts", fileIndex: 70, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4706,7 +5523,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     count: 200,
     name: 'c'
   }];
-  var dualAxes = new G2Plot.DualAxes('container-58', {
+  var dualAxes = new G2Plot.DualAxes('container-70', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -4735,7 +5552,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   dualAxes.render();
-});`},{fileName: "stacked-percent-column-line.ts", fileIndex: 59, code: `(function (global, factory) {
+});`},{fileName: "stacked-percent-column-line.ts", fileIndex: 71, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4807,7 +5624,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     time: '2019-07',
     count: 220
   }];
-  var dualAxes = new G2Plot.DualAxes('container-59', {
+  var dualAxes = new G2Plot.DualAxes('container-71', {
     data: [uvBillData, transformData],
     xField: 'time',
     yField: ['value', 'count'],
@@ -4821,7 +5638,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   dualAxes.render();
-});`},{fileName: "easing-effects.ts", fileIndex: 60, code: `(function (global, factory) {
+});`},{fileName: "easing-effects.ts", fileIndex: 72, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4890,12 +5707,12 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   }
 
-  var plot = new G2Plot.MultiView('container-60', {
+  var plot = new G2Plot.Mix('container-72', {
     tooltip: false,
     plots: plots
   });
   plot.render();
-});`},{fileName: "dynamic-area.ts", fileIndex: 61, code: `(function (global, factory) {
+});`},{fileName: "dynamic-area.ts", fileIndex: 73, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4914,7 +5731,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     return res.json();
   }).then(function (originalData) {
     var cnt = 2;
-    var area = new G2Plot.Area('container-61', {
+    var area = new G2Plot.Area('container-73', {
       data: originalData.slice(0, cnt),
       xField: 'timePeriod',
       yField: 'value',
@@ -4932,7 +5749,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       }
     }, 400);
   });
-});`},{fileName: "dynamic-column.ts", fileIndex: 62, code: `(function (global, factory) {
+});`},{fileName: "dynamic-column.ts", fileIndex: 74, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4974,7 +5791,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   }];
   var paletteSemanticRed = '#F4664A';
   var brandColor = '#5B8FF9';
-  var columnPlot = new G2Plot.Column('container-62', {
+  var columnPlot = new G2Plot.Column('container-74', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -4998,7 +5815,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       };
     }));
   }, 1200);
-});`},{fileName: "dynamic-gauge.ts", fileIndex: 63, code: `(function (global, factory) {
+});`},{fileName: "dynamic-gauge.ts", fileIndex: 75, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5019,7 +5836,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     return percent < 0.4 ? color[0] : percent < 0.6 ? color[1] : color[2];
   };
 
-  var gauge = new G2Plot.Gauge('container-63', {
+  var gauge = new G2Plot.Gauge('container-75', {
     percent: 0.2,
     range: {
       color: getColor(0.2)
@@ -5074,7 +5891,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       });
     }
   }, 100);
-});`},{fileName: "dynamic-pie.ts", fileIndex: 64, code: `(function (global, factory) {
+});`},{fileName: "dynamic-pie.ts", fileIndex: 76, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5108,7 +5925,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new G2Plot.Pie('container-64', {
+  var piePlot = new G2Plot.Pie('container-76', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -5138,7 +5955,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       };
     }));
   }, 1200);
-});`},{fileName: "dynamic-spline.ts", fileIndex: 65, code: `(function (global, factory) {
+});`},{fileName: "dynamic-spline.ts", fileIndex: 77, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5168,7 +5985,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     return data;
   }
 
-  var line = new G2Plot.Line('container-65', {
+  var line = new G2Plot.Line('container-77', {
     data: getData(),
     padding: 'auto',
     xField: 'x',
@@ -5191,7 +6008,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     line.changeData(newData);
   }, 1000);
-});`},{fileName: "image-annotation.ts", fileIndex: 66, code: `(function (global, factory) {
+});`},{fileName: "conversion-tag-with-link.ts", fileIndex: 78, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5201,441 +6018,82 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       exports: {}
     };
     factory(global.g2plot);
-    global.imageAnnotation = mod.exports;
+    global.conversionTagWithLink = mod.exports;
   }
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var data = [{
-    type: '分类一',
-    value: 27
-  }, {
-    type: '分类二',
-    value: 25
-  }, {
-    type: '分类三',
-    value: 18
-  }, {
-    type: '分类四',
-    value: 15
-  }, {
-    type: '分类五',
-    value: 10
-  }, {
-    type: '其他',
-    value: 5
-  }];
-  var piePlot = new G2Plot.Pie('container-66', {
-    appendPadding: 10,
-    data: data,
-    angleField: 'value',
-    colorField: 'type',
-    radius: 0.8,
-    innerRadius: 0.64,
-    label: {
-      type: 'inner',
-      offset: '-50%',
-      content: function content(_ref) {
-        var percent = _ref.percent;
-        return "".concat((percent * 100).toFixed(0), "%");
-      },
-      style: {
-        fill: '#fff',
-        fontSize: 14,
-        textAlign: 'center'
-      }
-    },
-    statistic: null,
-    annotations: [{
-      type: 'image',
-      src: 'https://gw.alipayobjects.com/mdn/rms_2274c3/afts/img/A*ELYbTIVCgPoAAAAAAAAAAABkARQnAQ',
-
-      /** 位置 */
-      position: ['50%', '50%'],
-
-      /** 图形样式属性 */
-      style: {
-        width: 50,
-        height: 50
-      },
-
-      /** x 方向的偏移量 */
-      offsetX: -25,
-
-      /** y 方向的偏移量 */
-      offsetY: 40
+  G2Plot.G2.registerInteraction('conversion-tag-cursor', {
+    start: [{
+      trigger: 'conversion-tag-group:mouseenter',
+      action: 'cursor:pointer'
+    }],
+    end: [{
+      trigger: 'conversion-tag-group:mouseleave',
+      action: 'cursor:default'
     }]
   });
-  piePlot.render();
-});`},{fileName: "line-annotation.ts", fileIndex: 67, code: `(function (global, factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["@antv/g2plot"], factory);
-  } else if (typeof exports !== "undefined") {
-    factory(require("@antv/g2plot"));
-  } else {
-    var mod = {
-      exports: {}
-    };
-    factory(global.g2plot);
-    global.lineAnnotation = mod.exports;
-  }
-})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
-  "use strict";
-
-  function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-  function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.In order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-  function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-  function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
-  function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-  function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-  fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json').then(function (res) {
-    return res.json();
-  }).then(function (data) {
-    var maxValue = Math.max.apply(Math, _toConsumableArray(data.map(function (d) {
-      return d.scales;
-    })));
-    var averageValue = data.map(function (d) {
-      return d.scales;
-    }).reduce(function (a, b) {
-      return a + b;
-    }, 0) / data.length;
-    var line = new G2Plot.Line('container-67', {
-      data: data,
-      padding: 'auto',
-      xField: 'Date',
-      yField: 'scales',
-      xAxis: {
-        tickCount: 5
-      },
-      smooth: true,
-      annotations: [{
-        type: 'line',
-
-        /** 起始位置 */
-        start: ['min', 'median'],
-
-        /** 结束位置 */
-        end: ['max', 'median'],
-        text: {
-          content: '中位线',
-          position: 'right',
-          offsetY: 18,
-          style: {
-            textAlign: 'right'
-          }
-        },
-        style: {
-          lineDash: [4, 4]
-        }
-      }, {
-        type: 'line',
-
-        /** 起始位置 */
-        start: ['min', maxValue],
-
-        /** 结束位置 */
-        end: ['max', maxValue],
-        text: {
-          content: '最大值',
-          position: 'right',
-          offsetY: 18,
-          style: {
-            textAlign: 'right'
-          }
-        },
-        style: {
-          lineDash: [4, 4]
-        }
-      }, {
-        type: 'line',
-
-        /** 起始位置 */
-        start: ['min', averageValue],
-
-        /** 结束位置 */
-        end: ['max', averageValue],
-        text: {
-          content: '平均值线',
-          position: 'right',
-          offsetY: -6,
-          style: {
-            textAlign: 'right',
-            fill: 'lightblue'
-          }
-        },
-        style: {
-          lineDash: [4, 4],
-          stroke: 'lightblue'
-        }
-      }]
-    });
-    line.render();
-  });
-});`},{fileName: "line-annotation1.ts", fileIndex: 68, code: `(function (global, factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["@antv/g2plot"], factory);
-  } else if (typeof exports !== "undefined") {
-    factory(require("@antv/g2plot"));
-  } else {
-    var mod = {
-      exports: {}
-    };
-    factory(global.g2plot);
-    global.lineAnnotation1 = mod.exports;
-  }
-})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
-  "use strict";
-
-  fetch('https://gw.alipayobjects.com/os/bmw-prod/89729b32-1592-44ae-ba96-1e296638f5f7.json').then(function (res) {
-    return res.json();
-  }).then(function (data) {
-    var line = new G2Plot.Line('container-68', {
-      data: data,
-      padding: 'auto',
-      xField: 'date',
-      yField: 'value',
-      meta: {
-        date: {
-          formatter: function formatter(v) {
-            return v.split(' ') ? v.split(' ')[1] : '';
-          }
-        },
-        value: {
-          min: 0,
-          max: Math.pow(10, 7),
-          tickCount: 10,
-          formatter: function formatter(v) {
-            return "".concat(v / Math.pow(10, 6), "M");
-          }
-        }
-      },
-      lineStyle: {
-        lineCap: 'round'
-      },
-      interactions: [{
-        type: 'brush'
-      }]
-    });
-    line.render();
-    var yScale = line.chart.getScaleByField('value');
-    var coordinate = line.chart.getCoordinate();
-
-    var getDimYPosition = function getDimYPosition(value) {
-      return coordinate.convertDim(yScale.scale(value), 'y');
-    };
-
-    line.update({ ...line.options,
-      annotations: [{
-        type: 'line',
-        start: {
-          date: 'January 1991',
-          value: 2549000
-        },
-        end: ['August 1990', 3850000],
-        text: {
-          // 旅游萧条 标注
-          content: 'The UK recession of 1991',
-          rotate: 0,
-          autoRotate: false,
-          offsetY: getDimYPosition(3850000) - getDimYPosition(2549000) - 10,
-          style: {
-            textAlign: 'center',
-            textBaseline: 'bottom'
-          }
-        },
-        style: {
-          stroke: '#000',
-          lineDash: [2, 4]
-        }
-      }]
-    });
-  });
-});`},{fileName: "region-and-data-marker.ts", fileIndex: 69, code: `(function (global, factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["@antv/g2plot"], factory);
-  } else if (typeof exports !== "undefined") {
-    factory(require("@antv/g2plot"));
-  } else {
-    var mod = {
-      exports: {}
-    };
-    factory(global.g2plot);
-    global.regionAndDataMarker = mod.exports;
-  }
-})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
-  "use strict";
 
   var data = [{
-    month: '1',
-    value: 1078
+    action: '浏览网站',
+    pv: 50000
   }, {
-    month: '2',
-    value: 1216
+    action: '放入购物车',
+    pv: 35000
   }, {
-    month: '3',
-    value: 758
+    action: '生成订单',
+    pv: 25000
   }, {
-    month: '4',
-    value: 623
+    action: '支付订单',
+    pv: 15000
   }, {
-    month: '5',
-    value: 319
-  }, {
-    month: '6',
-    value: 422
-  }, {
-    month: '7',
-    value: -4
-  }, {
-    month: '8',
-    value: -217
-  }, {
-    month: '9',
-    value: -358
-  }, {
-    month: '10',
-    value: 1513
-  }, {
-    month: '11',
-    value: 1388
-  }, {
-    month: '12',
-    value: 597
+    action: '完成交易',
+    pv: 8500,
+    link: 'https://github.com/antvis/g2plot'
   }];
-  var line = new G2Plot.Line('container-69', {
+  var plot = new G2Plot.Column('container-78', {
     data: data,
-    padding: 'auto',
-    xField: 'month',
-    yField: 'value',
-    meta: {
-      value: {
-        max: 2000,
-        min: -1000
-      },
-      month: {
-        formatter: function formatter(val) {
-          return "".concat(val, " u6708");
-        }
+    xField: 'action',
+    yField: 'pv',
+    conversionTag: {},
+    xAxis: {
+      label: {
+        autoHide: true,
+        autoRotate: false
       }
     },
-    annotations: [{
-      type: 'region',
-      start: ['7', 'min'],
-      end: ['9', 'max']
-    }, {
-      type: 'dataMarker',
-      position: ['2', 1216],
-      text: {
-        content: '2月份因逢春节水产销售需求旺盛，需求大增',
-        style: {
-          textAlign: 'left'
-        }
-      },
-      line: {
-        length: 20
-      },
-      point: {
-        style: {
-          fill: '#f5222d',
-          stroke: '#f5222d'
-        }
-      },
-      autoAdjust: false
-    }]
-  });
-  line.render();
-});`},{fileName: "region-annotation.ts", fileIndex: 70, code: `(function (global, factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["@antv/g2plot"], factory);
-  } else if (typeof exports !== "undefined") {
-    factory(require("@antv/g2plot"));
-  } else {
-    var mod = {
-      exports: {}
-    };
-    factory(global.g2plot);
-    global.regionAnnotation = mod.exports;
-  }
-})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
-  "use strict";
+    interactions: [{
+      type: 'conversion-tag-cursor',
+      cfg: {
+        start: [{
+          trigger: 'conversion-tag-group:mouseenter',
+          action: function action(context) {
+            var event = context.event,
+                view = context.view;
+            var nextElement = event.data.nextElement;
+            var link = nextElement.getModel().data.link; // 根据实际情况修改，如果配置了链接跳转 则改变 cursor 样式
 
-  var data = [{
-    month: '1',
-    value: 1078
-  }, {
-    month: '2',
-    value: 1216
-  }, {
-    month: '3',
-    value: 758
-  }, {
-    month: '4',
-    value: 623
-  }, {
-    month: '5',
-    value: 319
-  }, {
-    month: '6',
-    value: 422
-  }, {
-    month: '7',
-    value: -4
-  }, {
-    month: '8',
-    value: -217
-  }, {
-    month: '9',
-    value: -358
-  }, {
-    month: '10',
-    value: 1513
-  }, {
-    month: '11',
-    value: 1388
-  }, {
-    month: '12',
-    value: 597
-  }];
-  var columnPlot = new G2Plot.Column('container-70', {
-    data: data,
-    padding: 'auto',
-    xField: 'month',
-    yField: 'value',
-    meta: {
-      value: {
-        max: 2000,
-        min: -1000
-      },
-      month: {
-        formatter: function formatter(val) {
-          return "".concat(val, " u6708");
-        }
-      }
-    },
-    annotations: [{
-      type: 'region',
-      // @ts-ignore todo 修复 G2 类型定义
-      start: function start(xScale) {
-        var ratio = xScale.ticks ? 1 / xScale.ticks.length : 1;
-        var x = xScale.scale('7') - ratio / 2;
-        return ["".concat(x * 100, "%"), '0%'];
-      },
-      // @ts-ignore todo 修复 G2 类型定义
-      end: function end(xScale) {
-        var ratio = xScale.ticks ? 1 / xScale.ticks.length : 1;
-        var x = xScale.scale('9') + ratio / 2;
-        return ["".concat(x * 100, "%"), '100%'];
+            if (link) {
+              view.getCanvas().setCursor('pointer');
+            }
+          }
+        }]
       }
     }]
   });
-  columnPlot.render();
-});`},{fileName: "custom-state-style.ts", fileIndex: 71, code: `(function (global, factory) {
+  plot.render();
+  plot.on('conversion-tag-group:click', function (evt) {
+    var target = evt.target;
+
+    if (target?.get('origin')) {
+      var _target$get = target?.get('origin'),
+          nextElement = _target$get.nextElement;
+
+      var link = nextElement.getModel().data.link;
+      window.open(link);
+    }
+  });
+});`},{fileName: "custom-state-style.ts", fileIndex: 79, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5669,7 +6127,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new G2Plot.Pie('container-71', {
+  var piePlot = new G2Plot.Pie('container-79', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -5695,7 +6153,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   piePlot.render();
-});`},{fileName: "set-state.ts", fileIndex: 72, code: `(function (global, factory) {
+});`},{fileName: "set-state.ts", fileIndex: 80, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5729,7 +6187,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new G2Plot.Pie('container-72', {
+  var piePlot = new G2Plot.Pie('container-80', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -5758,7 +6216,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   piePlot.setState('selected', function (data) {
     return data.type === '分类一' || data.type === '分类二';
   });
-});`},{fileName: "custom-theme.ts", fileIndex: 73, code: `(function (global, factory) {
+});`},{fileName: "custom-theme.ts", fileIndex: 81, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot", "@antv/util"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5775,11 +6233,11 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 
   var theme = G2Plot.G2.getTheme('dark');
 
-  document.getElementById('container-73').style.background = theme.background;
+  document.getElementById('container-81').style.background = theme.background;
   fetch('https://gw.alipayobjects.com/os/bmw-prod/be63e0a2-d2be-4c45-97fd-c00f752a66d4.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var column = new G2Plot.Column('container-73', {
+    var column = new G2Plot.Column('container-81', {
       data: data,
       xField: '城市',
       yField: '销售额',
@@ -5814,7 +6272,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     column.render();
   });
-});`},{fileName: "dark.ts", fileIndex: 74, code: `(function (global, factory) {
+});`},{fileName: "dark.ts", fileIndex: 82, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5848,7 +6306,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new G2Plot.Pie('container-74', {
+  var piePlot = new G2Plot.Pie('container-82', {
     appendPadding: 10,
     data: data,
     theme: 'dark',
@@ -5895,7 +6353,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   piePlot.render();
-});`},{fileName: "register-theme.ts", fileIndex: 75, code: `(function (global, factory) {
+});`},{fileName: "register-theme.ts", fileIndex: 83, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5934,7 +6392,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new G2Plot.Pie('container-75', {
+  var piePlot = new G2Plot.Pie('container-83', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -5951,7 +6409,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     theme: 'custom-theme'
   });
   piePlot.render();
-});`},{fileName: "basic.ts", fileIndex: 76, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 84, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5969,7 +6427,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/basement_prod/a719cd4e-bd40-4878-a4b4-df8a6b531dfe.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-76'), {
+    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-84'), {
       width: 650,
       height: 500,
       autoFit: false,
@@ -5986,7 +6444,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     heatmapPlot.render();
   });
-});`},{fileName: "calendar.ts", fileIndex: 77, code: `(function (global, factory) {
+});`},{fileName: "calendar.ts", fileIndex: 85, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6047,14 +6505,13 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/github-commit.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-77'), {
+    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-85'), {
       data: data,
       height: 400,
       autoFit: false,
       xField: 'week',
       yField: 'day',
       colorField: 'commits',
-      color: '#BAE7FF-#1890FF-#0050B3',
       reflect: 'y',
       shape: 'boundary-polygon',
       meta: {
@@ -6115,7 +6572,90 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     heatmapPlot.render();
   });
-});`},{fileName: "shape.ts", fileIndex: 78, code: `(function (global, factory) {
+});`},{fileName: "polar.ts", fileIndex: 86, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.polar = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/polar-heatmap.json').then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-86'), {
+      data: data,
+      xField: 'time',
+      yField: 'week',
+      colorField: 'value',
+      legend: true,
+      color: '#BAE7FF-#1890FF-#1028ff',
+      coordinate: {
+        // 坐标轴属性配置
+        type: 'polar',
+        // 极坐标
+        cfg: {
+          innerRadius: 0.2
+        }
+      },
+      heatmapStyle: {
+        stroke: '#f5f5f5',
+        opacity: 0.8
+      },
+      meta: {
+        time: {
+          type: 'cat'
+        },
+        value: {
+          min: 0,
+          max: 1
+        }
+      },
+      xAxis: {
+        line: null,
+        grid: null,
+        tickLine: null,
+        label: {
+          offset: 12,
+          style: {
+            fill: '#666',
+            fontSize: 12,
+            textBaseline: 'top'
+          }
+        }
+      },
+      yAxis: {
+        top: true,
+        line: null,
+        grid: null,
+        tickLine: null,
+        label: {
+          offset: 0,
+          style: {
+            fill: '#fff',
+            textAlign: 'center',
+            shadowBlur: 2,
+            shadowColor: 'rgba(0, 0, 0, .45)'
+          }
+        }
+      },
+      tooltip: {
+        showMarkers: false
+      },
+      interactions: [{
+        type: 'element-active'
+      }]
+    });
+    heatmapPlot.render();
+  });
+});`},{fileName: "shape.ts", fileIndex: 87, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6133,7 +6673,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/68d3f380-089e-4683-ab9e-4493200198f9.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-78'), {
+    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-87'), {
       data: data,
       xField: 'name',
       yField: 'country',
@@ -6151,7 +6691,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     heatmapPlot.render();
   });
-});`},{fileName: "size.ts", fileIndex: 79, code: `(function (global, factory) {
+});`},{fileName: "size.ts", fileIndex: 88, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6169,7 +6709,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/68d3f380-089e-4683-ab9e-4493200198f9.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-79'), {
+    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-88'), {
       data: data,
       xField: 'name',
       yField: 'country',
@@ -6187,7 +6727,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     heatmapPlot.render();
   });
-});`},{fileName: "basic.ts", fileIndex: 80, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 89, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6205,7 +6745,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/heatmap.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-80'), {
+    var heatmapPlot = new G2Plot.Heatmap(document.getElementById('container-89'), {
       data: data,
       type: 'density',
       xField: 'g',
@@ -6224,7 +6764,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     heatmapPlot.render();
   });
-});`},{fileName: "line-annotation.ts", fileIndex: 81, code: `(function (global, factory) {
+});`},{fileName: "line-annotation.ts", fileIndex: 90, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6242,7 +6782,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new G2Plot.Line('container-81', {
+    var line = new G2Plot.Line('container-90', {
       data: data,
       padding: 'auto',
       xField: 'Date',
@@ -6273,7 +6813,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     line.render();
   });
-});`},{fileName: "line-point-style.ts", fileIndex: 82, code: `(function (global, factory) {
+});`},{fileName: "line-point-style.ts", fileIndex: 91, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6316,7 +6856,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     year: '1999',
     value: 13
   }];
-  var line = new G2Plot.Line('container-82', {
+  var line = new G2Plot.Line('container-91', {
     data: data,
     xField: 'year',
     yField: 'value',
@@ -6347,7 +6887,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   line.render();
-});`},{fileName: "line-slider.ts", fileIndex: 83, code: `(function (global, factory) {
+});`},{fileName: "line-slider.ts", fileIndex: 92, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6365,7 +6905,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new G2Plot.Line('container-83', {
+    var line = new G2Plot.Line('container-92', {
       data: data,
       padding: 'auto',
       xField: 'Date',
@@ -6380,7 +6920,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     line.render();
   });
-});`},{fileName: "line-with-data-marker.ts", fileIndex: 84, code: `(function (global, factory) {
+});`},{fileName: "line-with-data-marker.ts", fileIndex: 93, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6484,7 +7024,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/cpu-data.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var plot = new G2Plot.Line('container-84', {
+    var plot = new G2Plot.Line('container-93', {
       autoFit: true,
       height: 500,
       data: data,
@@ -6509,7 +7049,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     plot.render();
   });
-});`},{fileName: "line.ts", fileIndex: 85, code: `(function (global, factory) {
+});`},{fileName: "line.ts", fileIndex: 94, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6527,7 +7067,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new G2Plot.Line('container-85', {
+    var line = new G2Plot.Line('container-94', {
       data: data,
       padding: 'auto',
       xField: 'Date',
@@ -6539,7 +7079,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     line.render();
   });
-});`},{fileName: "spline.ts", fileIndex: 86, code: `(function (global, factory) {
+});`},{fileName: "spline.ts", fileIndex: 95, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6557,7 +7097,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new G2Plot.Line('container-86', {
+    var line = new G2Plot.Line('container-95', {
       data: data,
       padding: 'auto',
       xField: 'Date',
@@ -6570,7 +7110,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     line.render();
   });
-});`},{fileName: "line-color.ts", fileIndex: 87, code: `(function (global, factory) {
+});`},{fileName: "line-color.ts", fileIndex: 96, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6588,7 +7128,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/55424a73-7cb8-4f79-b60d-3ab627ac5698.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new G2Plot.Line('container-87', {
+    var line = new G2Plot.Line('container-96', {
       data: data,
       xField: 'year',
       yField: 'value',
@@ -6607,7 +7147,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     line.render();
   });
-});`},{fileName: "line-grid.ts", fileIndex: 88, code: `(function (global, factory) {
+});`},{fileName: "line-grid.ts", fileIndex: 97, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6625,7 +7165,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/55424a73-7cb8-4f79-b60d-3ab627ac5698.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new G2Plot.Line('container-88', {
+    var line = new G2Plot.Line('container-97', {
       data: data.slice(data.length - 90, data.length).filter(function (item) {
         return item.category === 'Gas fuel' || item.category === 'Cement production';
       }),
@@ -6819,7 +7359,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     line.render();
   });
-});`},{fileName: "line-label.ts", fileIndex: 89, code: `(function (global, factory) {
+});`},{fileName: "line-label.ts", fileIndex: 98, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6837,7 +7377,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/e00d52f4-2fa6-47ee-a0d7-105dd95bde20.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var linePlot = new G2Plot.Line('container-89', {
+    var linePlot = new G2Plot.Line('container-98', {
       data: data,
       xField: 'year',
       yField: 'gdp',
@@ -6863,7 +7403,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     linePlot.render();
   });
-});`},{fileName: "line-large-data.ts", fileIndex: 90, code: `(function (global, factory) {
+});`},{fileName: "line-large-data.ts", fileIndex: 99, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6881,7 +7421,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/55424a73-7cb8-4f79-b60d-3ab627ac5698.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new G2Plot.Line('container-90', {
+    var line = new G2Plot.Line('container-99', {
       data: data,
       xField: 'year',
       yField: 'value',
@@ -6902,7 +7442,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     line.render();
   });
-});`},{fileName: "marker-active.ts", fileIndex: 91, code: `(function (global, factory) {
+});`},{fileName: "marker-active.ts", fileIndex: 100, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6921,7 +7461,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     return res.json();
   }).then(function (data) {
     var COLOR_PLATE_10 = ['#5B8FF9', '#5AD8A6', '#5D7092', '#F6BD16', '#E8684A', '#6DC8EC', '#9270CA', '#FF9D4D', '#269A99', '#FF99C3'];
-    var container = document.getElementById('container-91');
+    var container = document.getElementById('container-100');
     var line = new G2Plot.Line(container, {
       data: data,
       xField: 'year',
@@ -6954,7 +7494,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     line.render();
   });
-});`},{fileName: "style-callback.ts", fileIndex: 92, code: `(function (global, factory) {
+});`},{fileName: "style-callback.ts", fileIndex: 101, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6972,7 +7512,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/c48dbbb1-fccf-4a46-b68f-a3ddb4908b68.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var line = new G2Plot.Line('container-92', {
+    var line = new G2Plot.Line('container-101', {
       data: data,
       xField: 'date',
       yField: 'value',
@@ -7008,7 +7548,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     line.render();
   });
-});`},{fileName: "line-multiple.ts", fileIndex: 93, code: `(function (global, factory) {
+});`},{fileName: "line-multiple.ts", fileIndex: 102, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7120,7 +7660,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     key: 'series2',
     value: 56
   }];
-  var line = new G2Plot.Line('container-93', {
+  var line = new G2Plot.Line('container-102', {
     data: data,
     xField: 'month',
     yField: 'value',
@@ -7129,7 +7669,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     stepType: 'hvh'
   });
   line.render();
-});`},{fileName: "line.ts", fileIndex: 94, code: `(function (global, factory) {
+});`},{fileName: "line.ts", fileIndex: 103, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7175,14 +7715,14 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     year: '1999',
     value: 8
   }];
-  var linePlot = new G2Plot.Line('container-94', {
+  var linePlot = new G2Plot.Line('container-103', {
     data: data,
     xField: 'year',
     yField: 'value',
     stepType: 'vh'
   });
   linePlot.render();
-});`},{fileName: "basic.ts", fileIndex: 95, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 104, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["exports", "@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7239,7 +7779,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     '2016年转基因种植面积': 72.9
   }];
   _exports.data = data;
-  var BidirectionalBarPlot = new G2Plot.BidirectionalBar('container-95', {
+  var BidirectionalBarPlot = new G2Plot.BidirectionalBar('container-104', {
     data: data,
     xField: 'country',
     xAxis: {
@@ -7255,7 +7795,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   BidirectionalBarPlot.render();
-});`},{fileName: "layout.ts", fileIndex: 96, code: `(function (global, factory) {
+});`},{fileName: "layout.ts", fileIndex: 105, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["exports", "@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7312,7 +7852,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     '2016年转基因种植面积': 72.9
   }];
   _exports.data = data;
-  var BidirectionalBarPlot = new G2Plot.BidirectionalBar('container-96', {
+  var BidirectionalBarPlot = new G2Plot.BidirectionalBar('container-105', {
     data: data,
     layout: 'vertical',
     xField: 'country',
@@ -7332,7 +7872,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   BidirectionalBarPlot.render();
-});`},{fileName: "basic.ts", fileIndex: 97, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 106, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7404,7 +7944,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     q3: 13,
     high: 16
   }];
-  var boxPlot = new G2Plot.Box('container-97', {
+  var boxPlot = new G2Plot.Box('container-106', {
     width: 400,
     height: 500,
     data: data,
@@ -7418,7 +7958,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     animation: false
   });
   boxPlot.render();
-});`},{fileName: "group.ts", fileIndex: 98, code: `(function (global, factory) {
+});`},{fileName: "group.ts", fileIndex: 107, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7494,14 +8034,14 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     value: 2.5,
     _bin: [1.4, 1.8, 2, 2.3, 2.5]
   }];
-  var groupBoxPlot = new G2Plot.Box('container-98', {
+  var groupBoxPlot = new G2Plot.Box('container-107', {
     data: data,
     xField: 'type',
     yField: '_bin',
     groupField: 'Species'
   });
   groupBoxPlot.render();
-});`},{fileName: "outliers.ts", fileIndex: 99, code: `(function (global, factory) {
+});`},{fileName: "outliers.ts", fileIndex: 108, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7581,7 +8121,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     high: 110000,
     outliers: [57000, 54000]
   }];
-  var outliersBoxPlot = new G2Plot.Box('container-99', {
+  var outliersBoxPlot = new G2Plot.Box('container-108', {
     data: data,
     xField: 'x',
     yField: ['low', 'q1', 'median', 'q3', 'high'],
@@ -7591,7 +8131,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   outliersBoxPlot.render();
-});`},{fileName: "basic-transpose.ts", fileIndex: 100, code: `(function (global, factory) {
+});`},{fileName: "basic-transpose.ts", fileIndex: 109, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7622,7 +8162,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     stage: '入职人数',
     number: 59
   }];
-  var funnelPlot = new G2Plot.Funnel('container-100', {
+  var funnelPlot = new G2Plot.Funnel('container-109', {
     data: data,
     xField: 'stage',
     yField: 'number',
@@ -7650,7 +8190,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   funnelPlot.render();
-});`},{fileName: "basic.ts", fileIndex: 101, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 110, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7681,14 +8221,14 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     stage: '入职人数',
     number: 59
   }];
-  var funnelPlot = new G2Plot.Funnel('container-101', {
+  var funnelPlot = new G2Plot.Funnel('container-110', {
     data: data,
     xField: 'stage',
     yField: 'number',
     legend: false
   });
   funnelPlot.render();
-});`},{fileName: "compare-transpose.ts", fileIndex: 102, code: `(function (global, factory) {
+});`},{fileName: "compare-transpose.ts", fileIndex: 111, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7744,7 +8284,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     number: 79,
     company: 'B公司'
   }];
-  var funnelPlot = new G2Plot.Funnel('container-102', {
+  var funnelPlot = new G2Plot.Funnel('container-111', {
     data: data,
     xField: 'stage',
     yField: 'number',
@@ -7760,7 +8300,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     legend: false
   });
   funnelPlot.render();
-});`},{fileName: "compare.ts", fileIndex: 103, code: `(function (global, factory) {
+});`},{fileName: "compare.ts", fileIndex: 112, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7816,7 +8356,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     number: 79,
     company: 'B公司'
   }];
-  var funnelPlot = new G2Plot.Funnel('container-103', {
+  var funnelPlot = new G2Plot.Funnel('container-112', {
     data: data,
     xField: 'stage',
     yField: 'number',
@@ -7844,7 +8384,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     legend: false
   });
   funnelPlot.render();
-});`},{fileName: "dynamic-height-transpose.ts", fileIndex: 104, code: `(function (global, factory) {
+});`},{fileName: "dynamic-height-transpose.ts", fileIndex: 113, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7875,7 +8415,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     stage: '入职人数',
     number: 59
   }];
-  var funnelPlot = new G2Plot.Funnel('container-104', {
+  var funnelPlot = new G2Plot.Funnel('container-113', {
     data: data,
     xField: 'stage',
     yField: 'number',
@@ -7884,7 +8424,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     legend: false
   });
   funnelPlot.render();
-});`},{fileName: "dynamic-height.ts", fileIndex: 105, code: `(function (global, factory) {
+});`},{fileName: "dynamic-height.ts", fileIndex: 114, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7915,7 +8455,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     stage: '入职人数',
     number: 59
   }];
-  var funnelPlot = new G2Plot.Funnel('container-105', {
+  var funnelPlot = new G2Plot.Funnel('container-114', {
     data: data,
     xField: 'stage',
     yField: 'number',
@@ -7923,7 +8463,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     legend: false
   });
   funnelPlot.render();
-});`},{fileName: "facet-transpose.ts", fileIndex: 106, code: `(function (global, factory) {
+});`},{fileName: "facet-transpose.ts", fileIndex: 115, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7979,7 +8519,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     number: 79,
     company: 'B公司'
   }];
-  var funnelPlot = new G2Plot.Funnel('container-106', {
+  var funnelPlot = new G2Plot.Funnel('container-115', {
     data: data,
     xField: 'stage',
     yField: 'number',
@@ -7999,7 +8539,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     legend: false
   });
   funnelPlot.render();
-});`},{fileName: "facet.ts", fileIndex: 107, code: `(function (global, factory) {
+});`},{fileName: "facet.ts", fileIndex: 116, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8055,7 +8595,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     number: 79,
     company: 'B公司'
   }];
-  var funnelPlot = new G2Plot.Funnel('container-107', {
+  var funnelPlot = new G2Plot.Funnel('container-116', {
     data: data,
     xField: 'stage',
     yField: 'number',
@@ -8074,7 +8614,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     legend: false
   });
   funnelPlot.render();
-});`},{fileName: "basic.ts", fileIndex: 108, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 117, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8092,14 +8632,14 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/RoliHq%2453S/histogram.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var histogramPlot = new G2Plot.Histogram('container-108', {
+    var histogramPlot = new G2Plot.Histogram('container-117', {
       data: data,
       binField: 'value',
       binWidth: 2
     });
     histogramPlot.render();
   });
-});`},{fileName: "binWidth.ts", fileIndex: 109, code: `(function (global, factory) {
+});`},{fileName: "binWidth.ts", fileIndex: 118, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8223,7 +8763,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   }, {
     value: 23.4
   }];
-  var histogramPlot = new G2Plot.Histogram('container-109', {
+  var histogramPlot = new G2Plot.Histogram('container-118', {
     data: data,
     binField: 'value',
     binWidth: 4,
@@ -8248,7 +8788,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   histogramPlot.render();
-});`},{fileName: "stack.ts", fileIndex: 110, code: `(function (global, factory) {
+});`},{fileName: "stack.ts", fileIndex: 119, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8266,7 +8806,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/diamond.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var histogramPlot = new G2Plot.Histogram('container-110', {
+    var histogramPlot = new G2Plot.Histogram('container-119', {
       data: data,
       binField: 'depth',
       binWidth: 2,
@@ -8282,7 +8822,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     histogramPlot.render();
   });
-});`},{fileName: "area-alternate-grid.ts", fileIndex: 111, code: `(function (global, factory) {
+});`},{fileName: "area-alternate-grid.ts", fileIndex: 120, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8300,7 +8840,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var radarPlot = new G2Plot.Radar('container-111', {
+    var radarPlot = new G2Plot.Radar('container-120', {
       data: data,
       xField: 'item',
       yField: 'score',
@@ -8345,7 +8885,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     radarPlot.render();
   });
-});`},{fileName: "area-grid.ts", fileIndex: 112, code: `(function (global, factory) {
+});`},{fileName: "area-grid.ts", fileIndex: 121, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8363,7 +8903,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var radarPlot = new G2Plot.Radar('container-112', {
+    var radarPlot = new G2Plot.Radar('container-121', {
       data: data,
       xField: 'item',
       yField: 'score',
@@ -8407,7 +8947,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     radarPlot.render();
   });
-});`},{fileName: "area.ts", fileIndex: 113, code: `(function (global, factory) {
+});`},{fileName: "area.ts", fileIndex: 122, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8425,7 +8965,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var radarPlot = new G2Plot.Radar('container-113', {
+    var radarPlot = new G2Plot.Radar('container-122', {
       data: data,
       xField: 'item',
       yField: 'score',
@@ -8457,7 +8997,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     radarPlot.render();
   });
-});`},{fileName: "basic.ts", fileIndex: 114, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 123, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8495,7 +9035,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     name: 'G2Plot',
     star: 1626
   }];
-  var radarPlot = new G2Plot.Radar('container-114', {
+  var radarPlot = new G2Plot.Radar('container-123', {
     data: data.map(function (d) {
       return { ...d,
         star: Math.sqrt(d.star)
@@ -8530,7 +9070,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     area: {}
   });
   radarPlot.render();
-});`},{fileName: "line-alternate-grid.ts", fileIndex: 115, code: `(function (global, factory) {
+});`},{fileName: "line-alternate-grid.ts", fileIndex: 124, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8548,7 +9088,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var radarPlot = new G2Plot.Radar('container-115', {
+    var radarPlot = new G2Plot.Radar('container-124', {
       data: data,
       xField: 'item',
       yField: 'score',
@@ -8591,7 +9131,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     radarPlot.render();
   });
-});`},{fileName: "line-grid.ts", fileIndex: 116, code: `(function (global, factory) {
+});`},{fileName: "line-grid.ts", fileIndex: 125, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8609,7 +9149,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var radarPlot = new G2Plot.Radar('container-116', {
+    var radarPlot = new G2Plot.Radar('container-125', {
       data: data,
       xField: 'item',
       yField: 'score',
@@ -8651,7 +9191,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     radarPlot.render();
   });
-});`},{fileName: "line.ts", fileIndex: 117, code: `(function (global, factory) {
+});`},{fileName: "line.ts", fileIndex: 126, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8669,7 +9209,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var radarPlot = new G2Plot.Radar('container-117', {
+    var radarPlot = new G2Plot.Radar('container-126', {
       data: data,
       xField: 'item',
       yField: 'score',
@@ -8699,7 +9239,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     radarPlot.render();
   });
-});`},{fileName: "basic.ts", fileIndex: 118, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 127, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8739,7 +9279,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     name: 'G2',
     star: 10178
   }];
-  var bar = new G2Plot.RadialBar('container-118', {
+  var bar = new G2Plot.RadialBar('container-127', {
     data: data,
     xField: 'name',
     yField: 'star',
@@ -8756,7 +9296,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   bar.render();
-});`},{fileName: "color.ts", fileIndex: 119, code: `(function (global, factory) {
+});`},{fileName: "color.ts", fileIndex: 128, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8796,7 +9336,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     name: 'G2',
     star: 10178
   }];
-  var bar = new G2Plot.RadialBar('container-119', {
+  var bar = new G2Plot.RadialBar('container-128', {
     data: data,
     xField: 'name',
     yField: 'star',
@@ -8826,7 +9366,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   bar.render();
-});`},{fileName: "line.ts", fileIndex: 120, code: `(function (global, factory) {
+});`},{fileName: "line.ts", fileIndex: 129, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8872,7 +9412,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     term: 'The Olivia Experiment',
     count: 1
   }];
-  var bar = new G2Plot.RadialBar('container-120', {
+  var bar = new G2Plot.RadialBar('container-129', {
     data: data,
     xField: 'term',
     yField: 'count',
@@ -8896,7 +9436,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   bar.render();
-});`},{fileName: "round-corner.ts", fileIndex: 121, code: `(function (global, factory) {
+});`},{fileName: "round-corner.ts", fileIndex: 130, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8936,7 +9476,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     name: 'G2',
     star: 10178
   }];
-  var bar = new G2Plot.RadialBar('container-121', {
+  var bar = new G2Plot.RadialBar('container-130', {
     data: data,
     xField: 'name',
     yField: 'star',
@@ -8949,7 +9489,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   bar.render();
-});`},{fileName: "basic.ts", fileIndex: 122, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 131, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9163,7 +9703,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     vol: 274804844,
     amount: 334526327.4
   }];
-  var stockPlot = new G2Plot.Stock('container-122', {
+  var stockPlot = new G2Plot.Stock('container-131', {
     width: 400,
     height: 500,
     data: data,
@@ -9171,7 +9711,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     yField: ['open', 'close', 'high', 'low']
   });
   stockPlot.render();
-});`},{fileName: "basic.ts", fileIndex: 123, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 132, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9189,7 +9729,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/sunburst.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var sunburstPlot = new G2Plot.Sunburst('container-123', {
+    var sunburstPlot = new G2Plot.Sunburst('container-132', {
       data: data,
       seriesField: 'sum',
       colorField: 'label',
@@ -9200,7 +9740,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     sunburstPlot.render();
   });
-});`},{fileName: "reflect.ts", fileIndex: 124, code: `(function (global, factory) {
+});`},{fileName: "reflect.ts", fileIndex: 133, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9222,7 +9762,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       name: 'root',
       children: fetchData
     };
-    var sunburstPlot = new G2Plot.Sunburst('container-124', {
+    var sunburstPlot = new G2Plot.Sunburst('container-133', {
       data: data,
       type: 'treemap',
       seriesField: 'value',
@@ -9244,7 +9784,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     sunburstPlot.render();
   });
-});`},{fileName: "basic.ts", fileIndex: 125, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 134, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9323,12 +9863,12 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       value: 16
     }]
   };
-  var treemapPlot = new G2Plot.Treemap('container-125', {
+  var treemapPlot = new G2Plot.Treemap('container-134', {
     data: data,
     colorField: 'name'
   });
   treemapPlot.render();
-});`},{fileName: "drill-down.ts", fileIndex: 126, code: `(function (global, factory) {
+});`},{fileName: "drill-down.ts", fileIndex: 135, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot", "@antv/util"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9361,30 +9901,46 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       s.children = childrenArray;
       rootData.children.push(s);
     });
-    var treemapPlot = new G2Plot.Treemap('container-126', {
+    var treemapPlot = new G2Plot.Treemap('container-135', {
       data: rootData,
       colorField: 'name',
+      legend: {
+        position: 'top-left'
+      },
       interactions: [{
         type: 'treemap-drill-down'
-      }]
+      }],
+      tooltip: {
+        formatter: function formatter(v) {
+          var root = v.path[v.path.length - 1];
+          return {
+            name: v.name,
+            value: "".concat(v.value, "(u603Bu5360u6BD4").concat((v.value / root.value * 100).toFixed(2), "%)")
+          };
+        }
+      }
     });
     treemapPlot.render();
   });
-});`},{fileName: "treemap-nest.ts", fileIndex: 127, code: `(function (global, factory) {
+});`},{fileName: "treemap-nest.ts", fileIndex: 136, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["@antv/g2plot"], factory);
+    define(["@antv/g2plot", "insert-css"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(require("@antv/g2plot"));
+    factory(require("@antv/g2plot"), require("insert-css"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(global.g2plot);
+    factory(global.g2plot, global.insertCss);
     global.treemapNest = mod.exports;
   }
-})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot, _insertCss) {
   "use strict";
 
+  // 我们用 insert-css 演示引入自定义样式
+  // 推荐将样式添加到自己的样式文件中
+  // 若拷贝官方代码，别忘了 npm install insert-css
+  (0, _insertCss.insertCss)("  .container{    padding: 16px 0px;    width: 160px;    display: flex;    flex-direction: column;  }  .title{    font-weight: bold;  }  .tooltip-item{    margin-top: 12px;    display: flex;    width: 100%;    justify-content: space-between;  }");
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/mobile.json').then(function (res) {
     return res.json();
   }).then(function (fetchData) {
@@ -9392,13 +9948,31 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       name: 'root',
       children: fetchData
     };
-    var treemapPlot = new G2Plot.Treemap('container-127', {
+    var treemapPlot = new G2Plot.Treemap('container-136', {
       data: data,
-      colorField: 'brand'
+      colorField: 'brand',
+      // 为矩形树图增加缩放,拖拽交互
+      interactions: [{
+        type: 'view-zoom'
+      }, {
+        type: 'drag-move'
+      }],
+      tooltip: {
+        follow: true,
+        enterable: true,
+        offset: 5,
+        customContent: function customContent(value, items) {
+          if (!items || items.length <= 0) return;
+          var itemData = items[0].data;
+          var parent = itemData.path[1];
+          var root = itemData.path[itemData.path.length - 1];
+          return "<div class='container'>" + "<div class='title'>".concat(itemData.name, "</div>") + "<div class='tooltip-item'><span>u9500u91CF</span><span>".concat(itemData.value, "</span></div>") + "<div class='tooltip-item'><span>u54C1u724C</span><span>".concat(itemData.brand, "</span></div>") + "<div class='tooltip-item'><span>u54C1u724Cu5360u6BD4</span><span>".concat((itemData.value / parent.value * 100).toFixed(2), "%</span></div>") + "<div class='tooltip-item'><span>u5E02u573Au5360u6BD4</span><span>".concat((itemData.value / root.value * 100).toFixed(2), "%</span></div>") + "</div>";
+        }
+      }
     });
     treemapPlot.render();
   });
-});`},{fileName: "absolute-label.ts", fileIndex: 128, code: `(function (global, factory) {
+});`},{fileName: "absolute-label.ts", fileIndex: 137, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9450,7 +10024,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     month: '十二月',
     value: 5100000
   }];
-  var waterfallPlot = new G2Plot.Waterfall('container-128', {
+  var waterfallPlot = new G2Plot.Waterfall('container-137', {
     data: data,
     padding: 'auto',
     appendPadding: [20, 0, 0, 0],
@@ -9492,7 +10066,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   waterfallPlot.render();
-});`},{fileName: "annotation.ts", fileIndex: 129, code: `(function (global, factory) {
+});`},{fileName: "annotation.ts", fileIndex: 138, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9545,7 +10119,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     return v + d.value;
   }, 0);
-  var waterfallPlot = new G2Plot.Waterfall('container-129', {
+  var waterfallPlot = new G2Plot.Waterfall('container-138', {
     data: data,
     padding: 'auto',
     appendPadding: [20, 0, 0, 0],
@@ -9580,7 +10154,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     annotations: annotations
   });
   waterfallPlot.render();
-});`},{fileName: "basic.ts", fileIndex: 130, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 139, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9617,7 +10191,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '红包收入',
     money: -2000
   }];
-  var waterfallPlot = new G2Plot.Waterfall('container-130', {
+  var waterfallPlot = new G2Plot.Waterfall('container-139', {
     data: data,
     xField: 'type',
     yField: 'money',
@@ -9650,7 +10224,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   waterfallPlot.render();
-});`},{fileName: "custom-color.ts", fileIndex: 131, code: `(function (global, factory) {
+});`},{fileName: "custom-color.ts", fileIndex: 140, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9705,7 +10279,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     month: 'Dec',
     value: 5100000
   }];
-  var waterfallPlot = new G2Plot.Waterfall('container-131', {
+  var waterfallPlot = new G2Plot.Waterfall('container-140', {
     data: data,
     padding: 'auto',
     appendPadding: [20, 0, 0, 0],
@@ -9795,7 +10369,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   waterfallPlot.render();
-});`},{fileName: "basic.ts", fileIndex: 132, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 141, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9813,7 +10387,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/world-population.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var wordCloud = new G2Plot.WordCloud('container-132', {
+    var wordCloud = new G2Plot.WordCloud('container-141', {
       data: data,
       wordField: 'x',
       weightField: 'value',
@@ -9837,7 +10411,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     wordCloud.render();
   });
-});`},{fileName: "color-field.ts", fileIndex: 133, code: `(function (global, factory) {
+});`},{fileName: "color-field.ts", fileIndex: 142, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9855,7 +10429,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/antv-keywords.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var wordCloud = new G2Plot.WordCloud('container-133', {
+    var wordCloud = new G2Plot.WordCloud('container-142', {
       data: data,
       wordField: 'name',
       weightField: 'value',
@@ -9868,7 +10442,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     wordCloud.render();
   });
-});`},{fileName: "douban-2020-movie.ts", fileIndex: 134, code: `(function (global, factory) {
+});`},{fileName: "douban-2020-movie.ts", fileIndex: 143, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9886,7 +10460,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/%24IWXp5slbE/2020-movie-from-douban.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var wordCloud = new G2Plot.WordCloud('container-134', {
+    var wordCloud = new G2Plot.WordCloud('container-143', {
       data: data,
       wordField: 'title',
       weightField: 'rate',
@@ -9909,7 +10483,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     wordCloud.render();
   });
-});`},{fileName: "image-mask-base64.ts", fileIndex: 135, code: `(function (global, factory) {
+});`},{fileName: "image-mask-base64.ts", fileIndex: 144, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9927,7 +10501,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/antv-keywords.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var wordCloud = new G2Plot.WordCloud('container-135', {
+    var wordCloud = new G2Plot.WordCloud('container-144', {
       data: data,
       wordField: 'name',
       weightField: 'value',
@@ -9940,7 +10514,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     wordCloud.render();
   });
-});`},{fileName: "image-mask.ts", fileIndex: 136, code: `(function (global, factory) {
+});`},{fileName: "image-mask.ts", fileIndex: 145, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9958,7 +10532,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/antv-keywords.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var wordCloud = new G2Plot.WordCloud('container-136', {
+    var wordCloud = new G2Plot.WordCloud('container-145', {
       data: data,
       wordField: 'name',
       weightField: 'value',
@@ -9971,7 +10545,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     wordCloud.render();
   });
-});`},{fileName: "placement-strategy.ts", fileIndex: 137, code: `(function (global, factory) {
+});`},{fileName: "placement-strategy.ts", fileIndex: 146, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9992,7 +10566,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       value: 1
     };
   });
-  var wordCloud = new G2Plot.WordCloud('container-137', {
+  var wordCloud = new G2Plot.WordCloud('container-146', {
     data: data,
     wordField: 'name',
     weightField: 'value',
@@ -10013,7 +10587,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   wordCloud.render();
-});`},{fileName: "same-place.ts", fileIndex: 138, code: `(function (global, factory) {
+});`},{fileName: "same-place.ts", fileIndex: 147, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10031,7 +10605,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antvdemo/assets/data/antv-keywords.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var wordCloud = new G2Plot.WordCloud('container-138', {
+    var wordCloud = new G2Plot.WordCloud('container-147', {
       data: data,
       wordField: 'name',
       weightField: 'value',
@@ -10049,7 +10623,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     wordCloud.render();
   });
-});`},{fileName: "basic.ts", fileIndex: 139, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 148, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10083,7 +10657,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new G2Plot.Pie('container-139', {
+  var piePlot = new G2Plot.Pie('container-148', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -10106,7 +10680,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   piePlot.render();
-});`},{fileName: "legend-interaction.ts", fileIndex: 140, code: `(function (global, factory) {
+});`},{fileName: "legend-interaction.ts", fileIndex: 149, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10140,7 +10714,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new G2Plot.Pie('container-140', {
+  var piePlot = new G2Plot.Pie('container-149', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -10157,7 +10731,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   piePlot.render();
-});`},{fileName: "outer-label.ts", fileIndex: 141, code: `(function (global, factory) {
+});`},{fileName: "outer-label.ts", fileIndex: 150, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10191,7 +10765,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new G2Plot.Pie('container-141', {
+  var piePlot = new G2Plot.Pie('container-150', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -10205,7 +10779,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   piePlot.render();
-});`},{fileName: "pie-texture.ts", fileIndex: 142, code: `(function (global, factory) {
+});`},{fileName: "pie-texture.ts", fileIndex: 151, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10227,7 +10801,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     sex: '女',
     sold: 0.55
   }];
-  var piePlot = new G2Plot.Pie('container-142', {
+  var piePlot = new G2Plot.Pie('container-151', {
     appendPadding: 10,
     data: data,
     angleField: 'sold',
@@ -10262,7 +10836,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   piePlot.render();
-});`},{fileName: "quarter-circle.ts", fileIndex: 143, code: `(function (global, factory) {
+});`},{fileName: "quarter-circle.ts", fileIndex: 152, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10296,7 +10870,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new G2Plot.Pie('container-143', {
+  var piePlot = new G2Plot.Pie('container-152', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -10321,7 +10895,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   piePlot.render();
-});`},{fileName: "spider-label.ts", fileIndex: 144, code: `(function (global, factory) {
+});`},{fileName: "spider-label.ts", fileIndex: 153, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10355,7 +10929,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new G2Plot.Pie('container-144', {
+  var piePlot = new G2Plot.Pie('container-153', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -10373,7 +10947,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   piePlot.render();
-});`},{fileName: "basic.ts", fileIndex: 145, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 154, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10407,7 +10981,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var piePlot = new G2Plot.Pie('container-145', {
+  var piePlot = new G2Plot.Pie('container-154', {
     appendPadding: 10,
     data: data,
     angleField: 'value',
@@ -10443,7 +11017,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   piePlot.render();
-});`},{fileName: "association-filter.ts", fileIndex: 146, code: `(function (global, factory) {
+});`},{fileName: "association-filter.ts", fileIndex: 155, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10494,7 +11068,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/HkxWvFrZuC/association-data.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var plot = new G2Plot.MultiView('container-146', {
+    var plot = new G2Plot.Mix('container-155', {
       // 关闭 chart 上的 tooltip，子 view 开启 tooltip
       tooltip: false,
       plots: [{
@@ -10566,7 +11140,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     plot.render();
   });
-});`},{fileName: "association-highlight.ts", fileIndex: 147, code: `(function (global, factory) {
+});`},{fileName: "association-highlight.ts", fileIndex: 156, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10584,7 +11158,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/HkxWvFrZuC/association-data.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var plot = new G2Plot.MultiView('container-147', {
+    var plot = new G2Plot.Mix('container-156', {
       // 关闭 chart 上的 tooltip，子 view 开启 tooltip
       tooltip: false,
       plots: [{
@@ -10705,7 +11279,234 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     plot.render();
   });
-});`},{fileName: "association-pie.ts", fileIndex: 148, code: `(function (global, factory) {
+});`},{fileName: "association-line.ts", fileIndex: 157, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot", "@antv/util"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"), require("@antv/util"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot, global.util);
+    global.associationLine = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot, _util) {
+  "use strict";
+
+  fetch('https://gw.alipayobjects.com/os/antfincdn/HkxWvFrZuC/association-data.json').then(function (data) {
+    return data.json();
+  }).then(function (data) {
+    function getDataByArea(area) {
+      return (0, _util.get)((0, _util.groupBy)(data.line, 'area'), area, []).map(function (d) {
+        return {
+          time: d.time,
+          value: Math.random() * d.value,
+          area: area
+        };
+      });
+    }
+
+    var plot = new G2Plot.Mix('container-157', {
+      // 关闭 chart 上的 tooltip，子 view 开启 tooltip
+      tooltip: false,
+      plots: [{
+        type: 'line',
+        region: {
+          start: {
+            x: 0,
+            y: 0
+          },
+          end: {
+            x: 1,
+            y: 0.3
+          }
+        },
+        options: {
+          data: data.line,
+          xField: 'time',
+          yField: 'value',
+          seriesField: 'area',
+          point: {
+            style: {
+              r: 2.5
+            }
+          },
+          meta: {
+            time: {
+              range: [0, 1]
+            }
+          },
+          interactions: [{
+            type: 'association-active'
+          }, {
+            type: 'association-highlight'
+          }]
+        }
+      }, {
+        type: 'line',
+        region: {
+          start: {
+            x: 0,
+            y: 0.32
+          },
+          end: {
+            x: 0.5,
+            y: 0.65
+          }
+        },
+        options: {
+          data: getDataByArea('华东'),
+          xField: 'time',
+          yField: 'value',
+          seriesField: 'area',
+          interactions: [{
+            type: 'association-highlight'
+          }],
+          point: {
+            style: {
+              r: 2.5
+            },
+            state: {
+              active: {
+                style: {
+                  lineWidth: 1,
+                  r: 3
+                }
+              }
+            }
+          },
+          meta: {
+            time: {
+              range: [0, 1]
+            }
+          },
+          smooth: true,
+          tooltip: {
+            showCrosshairs: true,
+            shared: true
+          },
+          state: {
+            active: {
+              style: {
+                lineWidth: 3
+              }
+            }
+          }
+        }
+      }, {
+        type: 'line',
+        region: {
+          start: {
+            x: 0.5,
+            y: 0.32
+          },
+          end: {
+            x: 1,
+            y: 0.65
+          }
+        },
+        options: {
+          data: getDataByArea('华北'),
+          xField: 'time',
+          yField: 'value',
+          seriesField: 'area',
+          interactions: [{
+            type: 'association-highlight'
+          }],
+          point: {
+            style: {
+              r: 2.5
+            }
+          },
+          meta: {
+            time: {
+              range: [0, 1]
+            }
+          },
+          smooth: true,
+          tooltip: {
+            showCrosshairs: true,
+            shared: true
+          }
+        }
+      }, {
+        type: 'line',
+        region: {
+          start: {
+            x: 0,
+            y: 0.67
+          },
+          end: {
+            x: 0.5,
+            y: 1
+          }
+        },
+        options: {
+          data: getDataByArea('中南'),
+          xField: 'time',
+          yField: 'value',
+          seriesField: 'area',
+          interactions: [{
+            type: 'association-highlight'
+          }],
+          point: {
+            style: {
+              r: 2.5
+            }
+          },
+          meta: {
+            time: {
+              range: [0, 1]
+            }
+          },
+          smooth: true,
+          tooltip: {
+            showCrosshairs: true,
+            shared: true
+          }
+        }
+      }, {
+        type: 'line',
+        region: {
+          start: {
+            x: 0.5,
+            y: 0.67
+          },
+          end: {
+            x: 1,
+            y: 1
+          }
+        },
+        options: {
+          data: getDataByArea('西南'),
+          xField: 'time',
+          yField: 'value',
+          seriesField: 'area',
+          interactions: [{
+            type: 'association-highlight'
+          }],
+          point: {
+            style: {
+              r: 2.5
+            }
+          },
+          meta: {
+            time: {
+              range: [0, 1]
+            }
+          },
+          smooth: true,
+          tooltip: {
+            showCrosshairs: true,
+            shared: true
+          }
+        }
+      }]
+    });
+    plot.render();
+  });
+});`},{fileName: "association-pie.ts", fileIndex: 158, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10723,7 +11524,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/fKTgtjKdaN/association-pie.json').then(function (data) {
     return data.json();
   }).then(function (data) {
-    var plot = new G2Plot.MultiView('container-148', {
+    var plot = new G2Plot.Mix('container-158', {
       // 关闭 chart 上的 tooltip，子 view 开启 tooltip
       tooltip: false,
       legend: true,
@@ -10793,7 +11594,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     plot.render();
   });
-});`},{fileName: "hill-column.ts", fileIndex: 149, code: `(function (global, factory) {
+});`},{fileName: "hill-column.ts", fileIndex: 159, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/util", "@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10882,7 +11683,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     genre: 'Other',
     sold: 150
   }];
-  var hill = new G2Plot.P('container-149', {
+  var hill = new G2Plot.P('container-159', {
     data: data,
     appendPadding: 16,
     meta: {
@@ -10902,7 +11703,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   }, adaptor, defaultOptions); // 引入上述的封装，或者降上述代码发包
 
   hill.render();
-});`},{fileName: "brush-filter-record.ts", fileIndex: 150, code: `(function (global, factory) {
+});`},{fileName: "brush-filter-record.ts", fileIndex: 160, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10972,7 +11773,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     return res.json();
   }).then(function (data) {
     var subData = data.slice(0, 400);
-    var plot = new G2Plot.MultiView('container-150', {
+    var plot = new G2Plot.Mix('container-160', {
       tooltip: false,
       views: [{
         region: {
@@ -11038,7 +11839,182 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     plot.render();
   });
-});`},{fileName: "drinks.ts", fileIndex: 151, code: `(function (global, factory) {
+});`},{fileName: "combo-plot.ts", fileIndex: 161, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.comboPlot = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  var averageData = [{
+    date: '2015-02',
+    value: 21168
+  }, {
+    date: '2015-08',
+    value: 21781
+  }, {
+    date: '2016-01',
+    value: 23818
+  }, {
+    date: '2017-02',
+    value: 25316
+  }, {
+    date: '2018-01',
+    value: 26698
+  }, {
+    date: '2018-08',
+    value: 27890
+  }];
+  var plot = new G2Plot.Mix('container-161', {
+    appendPadding: 8,
+    tooltip: {
+      shared: true
+    },
+    syncViewPadding: true,
+    plots: [{
+      type: 'column',
+      options: {
+        data: [{
+          date: '2015-02',
+          value: 160
+        }, {
+          date: '2015-08',
+          value: 245
+        }, {
+          date: '2016-01',
+          value: 487
+        }, {
+          date: '2017-02',
+          value: 500
+        }, {
+          date: '2018-01',
+          value: 503
+        }, {
+          date: '2018-08',
+          value: 514
+        }],
+        xField: 'date',
+        yField: 'value',
+        yAxis: {
+          type: 'log',
+          max: 100000
+        },
+        meta: {
+          date: {
+            sync: true
+          },
+          value: {
+            alias: '店数(间)'
+          }
+        },
+        label: {
+          position: 'middle'
+        }
+      }
+    }, {
+      type: 'line',
+      options: {
+        data: averageData,
+        xField: 'date',
+        yField: 'value',
+        xAxis: false,
+        yAxis: {
+          type: 'log',
+          max: 100000
+        },
+        label: {
+          offsetY: -8
+        },
+        meta: {
+          value: {
+            alias: '平均租金(元)'
+          }
+        },
+        color: '#FF6B3B',
+        annotations: averageData.map(function (d) {
+          return {
+            type: 'dataMarker',
+            position: d,
+            point: {
+              style: {
+                stroke: '#FF6B3B',
+                lineWidth: 1.5
+              }
+            }
+          };
+        })
+      }
+    }, {
+      type: 'line',
+      options: {
+        data: [{
+          date: '2015-02',
+          value: null
+        }, {
+          date: '2015-08',
+          value: 0.029
+        }, {
+          date: '2016-01',
+          value: 0.094
+        }, {
+          date: '2017-02',
+          value: 0.148
+        }, {
+          date: '2018-01',
+          value: 0.055
+        }, {
+          date: '2018-08',
+          value: 0.045
+        }],
+        xField: 'date',
+        yField: 'value',
+        xAxis: false,
+        yAxis: {
+          line: null,
+          grid: null,
+          position: 'right',
+          max: 0.16,
+          tickCount: 8
+        },
+        meta: {
+          date: {
+            sync: 'date'
+          },
+          value: {
+            alias: '递增',
+            formatter: function formatter(v) {
+              return "".concat((v * 100).toFixed(1), "%");
+            }
+          }
+        },
+        smooth: true,
+        label: {
+          callback: function callback(value) {
+            return {
+              offsetY: value === 0.148 ? 36 : value === 0.055 ? 0 : 20,
+              style: {
+                fill: '#1AAF8B',
+                fontWeight: 700,
+                stroke: '#fff',
+                lineWidth: 1
+              }
+            };
+          }
+        },
+        color: '#1AAF8B'
+      }
+    }]
+  });
+  plot.render();
+});`},{fileName: "drinks.ts", fileIndex: 162, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/data-set", "@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11055,7 +12031,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 
   var data = [['Cosmopolitan', 51, 45, 6], ['Martini', 67, 39, 28], ['Mojito', 19, 11, 8], ['Margarita', 47, 33, 14], ['Mai Tai', 32, 20, 12], ['Beer', 70, 20, 50]];
   var yearData = [['2010', 60, 176, 35, 25], ['2011', 51, 136, 25, 26], ['2012', 73, 196, 35, 38], ['2013', 84, 315, 43, 41], ['2014', 79, 203, 36, 33], ['2015', 89, 286, 41, 48]];
-  var plot = new G2Plot.MultiView('container-151', {
+  var plot = new G2Plot.Mix('container-162', {
     height: 500,
     padding: 'auto',
     tooltip: {
@@ -11246,7 +12222,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   plot.render();
-});`},{fileName: "range-area.ts", fileIndex: 152, code: `(function (global, factory) {
+});`},{fileName: "range-area.ts", fileIndex: 163, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11266,7 +12242,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   }).then(function (data) {
     var data1 = data.area,
         data2 = data.line;
-    var rangeAreaPlot = new G2Plot.MultiView('container-152', {
+    var rangeAreaPlot = new G2Plot.Mix('container-163', {
       appendPadding: 8,
       syncViewPadding: true,
       tooltip: {
@@ -11337,7 +12313,128 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 
     rangeAreaPlot.render();
   });
-});`},{fileName: "series-columns.ts", fileIndex: 153, code: `(function (global, factory) {
+});`},{fileName: "sales-analysis.ts", fileIndex: 164, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/util", "@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/util"), require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.util, global.g2plot);
+    global.salesAnalysis = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_util, _g2plot) {
+  "use strict";
+
+  var datas = [[{
+    company: 'Apple',
+    type: '整体',
+    value: 30
+  }, {
+    company: 'Facebook',
+    type: '整体',
+    value: 35
+  }, {
+    company: 'Google',
+    type: '整体',
+    value: 28
+  }], [{
+    company: 'Apple',
+    type: '非技术岗',
+    value: 40
+  }, {
+    company: 'Facebook',
+    type: '非技术岗',
+    value: 65
+  }, {
+    company: 'Google',
+    type: '非技术岗',
+    value: 47
+  }], [{
+    company: 'Apple',
+    type: '技术岗',
+    value: 35
+  }, {
+    company: 'Facebook',
+    type: '技术岗',
+    value: 30
+  }, {
+    company: 'Google',
+    type: '技术岗',
+    value: 25
+  }]];
+  var plots = [];
+  var total = datas.length;
+  (0, _util.each)(datas, function (data, idx) {
+    var startX = idx / total;
+    plots.push({
+      type: 'column',
+      region: {
+        start: {
+          x: startX,
+          y: 0
+        },
+        end: {
+          x: (idx + 1) / total,
+          y: 1
+        }
+      },
+      options: {
+        data: data,
+        xField: 'company',
+        yField: 'value',
+        seriesField: 'company',
+        isGroup: true,
+        meta: {
+          value: {
+            sync: true
+          }
+        },
+        xAxis: {
+          label: {
+            autoRotate: true
+          }
+        },
+        yAxis: idx === 0 ? {
+          tickCount: 10
+        } : {
+          label: {
+            formatter: function formatter(v) {
+              return '';
+            }
+          },
+          tickCount: 10
+        },
+        tooltip: {
+          showMarkers: false,
+          fields: ['SalesTerritoryRegion', 'SalesAmount', 'quarter']
+        },
+        // fixme 设置 yAxis label false 会导致
+        // yAxis: idx === 0 ? {} : { label: false },
+        minColumnWidth: 24,
+        appendPadding: [20, 0],
+        annotations: [{
+          type: 'text',
+          content: data[0].type,
+          position: ['50%', '0%'],
+          offsetY: -15,
+          style: {
+            textAlign: 'center'
+          }
+        }]
+      }
+    });
+  });
+  var plot = new G2Plot.Mix('container-164', {
+    plots: plots,
+    syncViewPadding: true,
+    tooltip: false,
+    legend: {}
+  });
+  plot.render();
+});`},{fileName: "series-columns.ts", fileIndex: 165, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11358,7 +12455,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 
   function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-  function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+  function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
 
   function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 
@@ -11381,7 +12478,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   }];
   var defaultGrey = '#BFBFBF'; // Step 2: 创建图表
 
-  var plot = new G2Plot.MultiView('container-153', {
+  var plot = new G2Plot.Mix('container-165', {
     appendPadding: 8,
     tooltip: {
       showMarkers: false
@@ -11630,7 +12727,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   }); // Step 3: 渲染图表
 
   plot.render();
-});`},{fileName: "basic.ts", fileIndex: 154, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 166, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11651,7 +12748,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     measures: [80],
     target: 85
   }];
-  var bulletPlot = new G2Plot.Bullet('container-154', {
+  var bulletPlot = new G2Plot.Bullet('container-166', {
     data: data,
     measureField: 'measures',
     rangeField: 'ranges',
@@ -11665,7 +12762,14 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     xAxis: {
       line: null
     },
-    yAxis: false,
+    yAxis: {
+      tickMethod: function tickMethod(_ref) {
+        var max = _ref.max;
+        var interval = Math.ceil(max / 5); // 自定义刻度 ticks
+
+        return [0, interval, interval * 2, interval * 3, interval * 4, max];
+      }
+    },
     // 自定义 legend
     legend: {
       custom: true,
@@ -11694,7 +12798,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   bulletPlot.render();
-});`},{fileName: "color.ts", fileIndex: 155, code: `(function (global, factory) {
+});`},{fileName: "color.ts", fileIndex: 167, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11715,7 +12819,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     measures: [80],
     target: 85
   }];
-  var bulletPlot = new G2Plot.Bullet('container-155', {
+  var bulletPlot = new G2Plot.Bullet('container-167', {
     data: data,
     measureField: 'measures',
     rangeField: 'ranges',
@@ -11791,7 +12895,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   bulletPlot.render();
-});`},{fileName: "grouped.ts", fileIndex: 156, code: `(function (global, factory) {
+});`},{fileName: "grouped.ts", fileIndex: 168, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11827,7 +12931,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     measures: [50],
     target: 100
   }];
-  var bulletPlot = new G2Plot.Bullet('container-156', {
+  var bulletPlot = new G2Plot.Bullet('container-168', {
     data: data,
     measureField: 'measures',
     rangeField: 'ranges',
@@ -11908,7 +13012,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   bulletPlot.render();
-});`},{fileName: "layout.ts", fileIndex: 157, code: `(function (global, factory) {
+});`},{fileName: "layout.ts", fileIndex: 169, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11930,7 +13034,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     target: 85
   }]; // @TODO 差一张垂直方向的缩略图
 
-  var bulletPlot = new G2Plot.Bullet('container-157', {
+  var bulletPlot = new G2Plot.Bullet('container-169', {
     data: data,
     measureField: 'measures',
     rangeField: 'ranges',
@@ -11982,7 +13086,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   bulletPlot.render();
-});`},{fileName: "stacked.ts", fileIndex: 158, code: `(function (global, factory) {
+});`},{fileName: "stacked.ts", fileIndex: 170, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12003,7 +13107,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     measures: [30, 50],
     target: 85
   }];
-  var bulletPlot = new G2Plot.Bullet('container-158', {
+  var bulletPlot = new G2Plot.Bullet('container-170', {
     data: data,
     measureField: 'measures',
     rangeField: 'ranges',
@@ -12098,7 +13202,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   bulletPlot.render();
-});`},{fileName: "basic.ts", fileIndex: 159, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 171, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12113,7 +13217,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var gauge = new G2Plot.Gauge('container-159', {
+  var gauge = new G2Plot.Gauge('container-171', {
     percent: 0.75,
     range: {
       color: '#30BF78'
@@ -12145,15 +13249,16 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
         formatter: function formatter(_ref) {
           var percent = _ref.percent;
           return "Rate: ".concat((percent * 100).toFixed(0), "%");
+        },
+        style: {
+          color: 'rgba(0,0,0,0.65)',
+          fontSize: 48
         }
-      },
-      style: {
-        fontSize: 60
       }
     }
   });
   gauge.render();
-});`},{fileName: "complex.ts", fileIndex: 160, code: `(function (global, factory) {
+});`},{fileName: "complex.ts", fileIndex: 172, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12170,7 +13275,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 
   var ticks = [0, 1 / 3, 2 / 3, 1];
   var color = ['#F4664A', '#FAAD14', '#30BF78'];
-  var gauge = new G2Plot.Gauge('container-160', {
+  var gauge = new G2Plot.Gauge('container-172', {
     percent: 0,
     range: {
       ticks: [0, 1],
@@ -12234,7 +13339,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     data += 0.005;
     gauge.changeData(data > 1 ? data - 1 : data);
   }, 100);
-});`},{fileName: "custom-color.ts", fileIndex: 161, code: `(function (global, factory) {
+});`},{fileName: "custom-color.ts", fileIndex: 173, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12249,7 +13354,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var gauge = new G2Plot.Gauge('container-161', {
+  var gauge = new G2Plot.Gauge('container-173', {
     percent: 0.75,
     range: {
       ticks: [0, 1 / 3, 2 / 3, 1],
@@ -12277,7 +13382,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   gauge.render();
-});`},{fileName: "custom-meter-step.ts", fileIndex: 162, code: `(function (global, factory) {
+});`},{fileName: "custom-meter-step.ts", fileIndex: 174, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12294,7 +13399,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 
   var ticks = [0, 1 / 3, 2 / 3, 1];
   var color = ['#F4664A', '#FAAD14', '#30BF78'];
-  var gauge = new G2Plot.Gauge('container-162', {
+  var gauge = new G2Plot.Gauge('container-174', {
     percent: 0,
     innerRadius: 0.75,
     type: 'meter',
@@ -12365,7 +13470,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     data += 0.005;
     gauge.changeData(data > 1 ? data - 1 : data);
   }, 100);
-});`},{fileName: "meter-gauge.ts", fileIndex: 163, code: `(function (global, factory) {
+});`},{fileName: "meter-gauge.ts", fileIndex: 175, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12380,7 +13485,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var gauge = new G2Plot.Gauge('container-163', {
+  var gauge = new G2Plot.Gauge('container-175', {
     percent: 0.75,
     type: 'meter',
     innerRadius: 0.75,
@@ -12410,7 +13515,57 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   gauge.render();
-});`},{fileName: "single-gradient.ts", fileIndex: 164, code: `(function (global, factory) {
+});`},{fileName: "range-width.ts", fileIndex: 176, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.rangeWidth = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  var gauge = new G2Plot.Gauge('container-176', {
+    percent: 0.75,
+    radius: 0.75,
+    range: {
+      color: '#30BF78',
+      width: 12
+    },
+    indicator: {
+      pointer: {
+        style: {
+          stroke: '#D0D0D0'
+        }
+      },
+      pin: {
+        style: {
+          stroke: '#D0D0D0'
+        }
+      }
+    },
+    statistic: {
+      content: {
+        formatter: function formatter(_ref) {
+          var percent = _ref.percent;
+          return "Rate: ".concat((percent * 100).toFixed(0), "%");
+        }
+      },
+      style: {
+        fontSize: 60
+      }
+    },
+    gaugeStyle: {
+      lineCap: 'round'
+    }
+  });
+  gauge.render();
+});`},{fileName: "single-gradient.ts", fileIndex: 177, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12425,7 +13580,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var gauge = new G2Plot.Gauge('container-164', {
+  var gauge = new G2Plot.Gauge('container-177', {
     percent: 0.75,
     range: {
       color: 'l(0) 0:#B8E1FF 1:#3D76DD'
@@ -12457,7 +13612,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   gauge.render();
-});`},{fileName: "basic.ts", fileIndex: 165, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 178, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12472,7 +13627,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var liquidPlot = new G2Plot.Liquid('container-165', {
+  var liquidPlot = new G2Plot.Liquid('container-178', {
     percent: 0.25,
     outline: {
       border: 4,
@@ -12483,7 +13638,140 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   liquidPlot.render();
-});`},{fileName: "chord-population.ts", fileIndex: 166, code: `(function (global, factory) {
+});`},{fileName: "custom.ts", fileIndex: 179, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.custom = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  var liquidPlot = new G2Plot.Liquid('container-179', {
+    percent: 0.25,
+    shape: function shape(x, y, width, height) {
+      var r = width / 4;
+      var dx = x - width / 2;
+      var dy = y - height / 2;
+      return [['M', dx, dy + r * 2], ['A', r, r, 0, 0, 1, x, dy + r], ['A', r, r, 0, 0, 1, dx + width, dy + r * 2], ['L', x, dy + height], ['L', dx, dy + r * 2], ['Z']];
+    },
+    outline: {
+      border: 4,
+      distance: 8
+    },
+    wave: {
+      length: 128
+    }
+  });
+  liquidPlot.render();
+});`},{fileName: "diamond.ts", fileIndex: 180, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.diamond = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  var liquidPlot = new G2Plot.Liquid('container-180', {
+    percent: 0.25,
+    shape: 'diamond',
+    outline: {
+      border: 4,
+      distance: 8
+    },
+    wave: {
+      length: 128
+    }
+  });
+  liquidPlot.render();
+});`},{fileName: "outline-style.ts", fileIndex: 181, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.outlineStyle = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  var liquidPlot = new G2Plot.Liquid('container-181', {
+    percent: 0.25,
+    shape: function shape(x, y, width, height) {
+      var path = [];
+      var w = Math.min(width, height);
+
+      for (var i = 0; i < 5; i++) {
+        path.push([i === 0 ? 'M' : 'L', Math.cos((18 + i * 72) * Math.PI / 180) * w / 2 + x, -Math.sin((18 + i * 72) * Math.PI / 180) * w / 2 + y]);
+        path.push(['L', Math.cos((54 + i * 72) * Math.PI / 180) * w / 4 + x, -Math.sin((54 + i * 72) * Math.PI / 180) * w / 4 + y]);
+      }
+
+      path.push(['Z']);
+      return path;
+    },
+    outline: {
+      border: 2,
+      distance: 4,
+      style: {
+        stroke: '#FFC100',
+        strokeOpacity: 0.65
+      }
+    },
+    wave: {
+      length: 128
+    },
+    theme: {
+      styleSheet: {
+        brandColor: '#FAAD14'
+      }
+    }
+  });
+  liquidPlot.render();
+});`},{fileName: "rect.ts", fileIndex: 182, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.rect = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  var liquidPlot = new G2Plot.Liquid('container-182', {
+    percent: 0.25,
+    shape: 'rect',
+    outline: {
+      border: 2,
+      distance: 4
+    },
+    wave: {
+      length: 128
+    }
+  });
+  liquidPlot.render();
+});`},{fileName: "chord-population.ts", fileIndex: 183, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12551,14 +13839,14 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     target: '北京',
     value: 32
   }];
-  var chord = new G2Plot.Chord('container-166', {
+  var chord = new G2Plot.Chord('container-183', {
     data: DATA,
     sourceField: 'source',
     targetField: 'target',
     weightField: 'value'
   });
   chord.render();
-});`},{fileName: "alipay.ts", fileIndex: 167, code: `(function (global, factory) {
+});`},{fileName: "alipay.ts", fileIndex: 184, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12630,7 +13918,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     target: '其他流向',
     value: 45
   }];
-  var sankey = new G2Plot.Sankey('container-167', {
+  var sankey = new G2Plot.Sankey('container-184', {
     data: DATA,
     sourceField: 'source',
     targetField: 'target',
@@ -12639,7 +13927,69 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     nodePaddingRatio: 0.03
   });
   sankey.render();
-});`},{fileName: "energy.ts", fileIndex: 168, code: `(function (global, factory) {
+});`},{fileName: "draggable.ts", fileIndex: 185, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot);
+    global.draggable = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
+  "use strict";
+
+  /**
+   * @file Parallel sets are like parallel coordinates, but for categorical dimensions.
+   *
+   * Parallel Sets: Visual Analysis of Categorical Data. See more in https://kosara.net/publications/Bendix-InfoVis-2005.html
+   */
+  fetch('https://gw.alipayobjects.com/os/antfincdn/nokcOpy6fF/draggable-sankey.json').then(function (data) {
+    return data.json();
+  }).then(function (data) {
+    var sankeyData = [];
+    var keys = ['Survived', 'Sex', 'Age', 'Class'];
+    data.forEach(function (d) {
+      keys.reduce(function (a, b) {
+        if (a && b) {
+          sankeyData.push({
+            source: d[a],
+            target: d[b],
+            value: d.value,
+            path: "".concat(d[keys[0]], " -> ").concat(d[keys[1]], " -> ").concat(d[keys[2]], " -> ").concat(d[keys[3]])
+          });
+        }
+
+        return b;
+      });
+    });
+    var sankey = new G2Plot.Sankey('container-185', {
+      data: sankeyData,
+      sourceField: 'source',
+      targetField: 'target',
+      weightField: 'value',
+      nodeWidthRatio: 0.01,
+      nodePaddingRatio: 0.03,
+      nodeDraggable: true,
+      rawFields: ['path'],
+      tooltip: {
+        fields: ['path', 'value'],
+        formatter: function formatter(_ref) {
+          var path = _ref.path,
+              value = _ref.value;
+          return {
+            name: path,
+            value: value
+          };
+        }
+      }
+    });
+    sankey.render();
+  });
+});`},{fileName: "energy.ts", fileIndex: 186, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12657,7 +14007,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/fa3414cc-75ed-47b4-8306-f2ffe8c40127.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var sankey = new G2Plot.Sankey('container-168', {
+    var sankey = new G2Plot.Sankey('container-186', {
       data: data,
       sourceField: 'source',
       targetField: 'target',
@@ -12670,7 +14020,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     sankey.render();
   });
-});`},{fileName: "basic.ts", fileIndex: 169, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 187, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12704,7 +14054,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var rosePlot = new G2Plot.Rose('container-169', {
+  var rosePlot = new G2Plot.Rose('container-187', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -12715,7 +14065,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   rosePlot.render();
-});`},{fileName: "inner-label.ts", fileIndex: 170, code: `(function (global, factory) {
+});`},{fileName: "inner-label.ts", fileIndex: 188, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12749,7 +14099,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var rosePlot = new G2Plot.Rose('container-170', {
+  var rosePlot = new G2Plot.Rose('container-188', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -12760,7 +14110,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   rosePlot.render();
-});`},{fileName: "interaction.ts", fileIndex: 171, code: `(function (global, factory) {
+});`},{fileName: "interaction.ts", fileIndex: 189, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12794,7 +14144,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var rosePlot = new G2Plot.Rose('container-171', {
+  var rosePlot = new G2Plot.Rose('container-189', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -12808,7 +14158,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   rosePlot.render();
-});`},{fileName: "rose-state.ts", fileIndex: 172, code: `(function (global, factory) {
+});`},{fileName: "rose-state.ts", fileIndex: 190, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12842,7 +14192,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     type: '其他',
     value: 5
   }];
-  var rosePlot = new G2Plot.Rose('container-172', {
+  var rosePlot = new G2Plot.Rose('container-190', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -12865,7 +14215,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   rosePlot.render();
-});`},{fileName: "basic.ts", fileIndex: 173, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 191, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12930,7 +14280,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     user: '用户二'
   }]; // 分组玫瑰图
 
-  var rosePlot = new G2Plot.Rose('container-173', {
+  var rosePlot = new G2Plot.Rose('container-191', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -12946,7 +14296,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   rosePlot.render();
-});`},{fileName: "basic.ts", fileIndex: 174, code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 192, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13011,7 +14361,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     user: '用户二'
   }]; // 堆叠玫瑰图
 
-  var rosePlot = new G2Plot.Rose('container-174', {
+  var rosePlot = new G2Plot.Rose('container-192', {
     data: data,
     xField: 'type',
     yField: 'value',
@@ -13027,7 +14377,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   rosePlot.render();
-});`},{fileName: "axis-right.ts", fileIndex: 175, code: `(function (global, factory) {
+});`},{fileName: "axis-right.ts", fileIndex: 193, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13052,7 +14402,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
       return item;
     });
     var labels = ['Airline Pilots, Copilots and Flight Engineers', 'Benefits Managers'];
-    var scatterPlot = new G2Plot.Scatter('container-175', {
+    var scatterPlot = new G2Plot.Scatter('container-193', {
       appendPadding: 30,
       data: processData,
       xField: 'probability',
@@ -13148,7 +14498,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     scatterPlot.render();
   });
-});`},{fileName: "bubble-3d.ts", fileIndex: 176, code: `(function (global, factory) {
+});`},{fileName: "bubble-3d.ts", fileIndex: 194, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13166,7 +14516,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/t81X1wXdoj/scatter-data.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var scatterPlot = new G2Plot.Scatter('container-176', {
+    var scatterPlot = new G2Plot.Scatter('container-194', {
       appendPadding: 30,
       data: data,
       xField: 'x',
@@ -13201,7 +14551,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     scatterPlot.render();
   });
-});`},{fileName: "quadrant.ts", fileIndex: 177, code: `(function (global, factory) {
+});`},{fileName: "quadrant.ts", fileIndex: 195, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13219,7 +14569,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/0b37279d-1674-42b4-b285-29683747ad9a.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var scatterPlot = new G2Plot.Scatter('container-177', {
+    var scatterPlot = new G2Plot.Scatter('container-195', {
       appendPadding: 30,
       data: data,
       xField: 'change in female rate',
@@ -13272,7 +14622,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     scatterPlot.render();
   });
-});`},{fileName: "color-mapping.ts", fileIndex: 178, code: `(function (global, factory) {
+});`},{fileName: "color-mapping.ts", fileIndex: 196, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13290,7 +14640,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/antfincdn/aao6XnO5pW/IMDB.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var scatterPlot = new G2Plot.Scatter('container-178', {
+    var scatterPlot = new G2Plot.Scatter('container-196', {
       appendPadding: 10,
       data: data,
       xField: 'Revenue (Millions)',
@@ -13324,7 +14674,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     scatterPlot.render();
   });
-});`},{fileName: "custom-shape.ts", fileIndex: 179, code: `(function (global, factory) {
+});`},{fileName: "custom-shape.ts", fileIndex: 197, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13359,7 +14709,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/3e4db10a-9da1-4b44-80d8-c128f42764a8.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var scatterPlot = new G2Plot.Scatter('container-179', {
+    var scatterPlot = new G2Plot.Scatter('container-197', {
       appendPadding: 30,
       data: data,
       xField: 'xG conceded',
@@ -13398,7 +14748,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     scatterPlot.render();
   });
-});`},{fileName: "label.ts", fileIndex: 180, code: `(function (global, factory) {
+});`},{fileName: "label.ts", fileIndex: 198, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13416,7 +14766,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   fetch('https://gw.alipayobjects.com/os/bmw-prod/3e4db10a-9da1-4b44-80d8-c128f42764a8.json').then(function (res) {
     return res.json();
   }).then(function (data) {
-    var scatterPlot = new G2Plot.Scatter('container-180', {
+    var scatterPlot = new G2Plot.Scatter('container-198', {
       appendPadding: 30,
       data: data,
       xField: 'xG conceded',
@@ -13453,7 +14803,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     });
     scatterPlot.render();
   });
-});`},{fileName: "line.ts", fileIndex: 181, code: `(function (global, factory) {
+});`},{fileName: "line.ts", fileIndex: 199, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13562,7 +14912,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     x: 31,
     y: 6.938
   }];
-  var scatterPlot = new G2Plot.Scatter('container-181', {
+  var scatterPlot = new G2Plot.Scatter('container-199', {
     data: data,
     xField: 'x',
     yField: 'y',
@@ -13578,7 +14928,68 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   scatterPlot.render();
-});`},{fileName: "progress-style.ts", fileIndex: 182, code: `(function (global, factory) {
+});`},{fileName: "mapping-color-and-shape.ts", fileIndex: 200, code: `(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["@antv/g2plot", "@antv/util"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(require("@antv/g2plot"), require("@antv/util"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(global.g2plot, global.util);
+    global.mappingColorAndShape = mod.exports;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot, _util) {
+  "use strict";
+
+  fetch('https://gw.alipayobjects.com/os/antfincdn/rc7SYiIq8Z/scatter-color-shape.json').then(function (data) {
+    return data.json();
+  }).then(function (data) {
+    var plot = new G2Plot.Scatter('container-200', {
+      appendPadding: 10,
+      data: []
+    });
+    plot.update({
+      data: data,
+      xField: 'x',
+      yField: 'y',
+      colorField: 'city',
+      shapeField: 'area',
+      sizeField: 'value',
+      size: [4, 8],
+      color: function color(_ref) {
+        var city = _ref.city;
+
+        // 推荐业务自己传入主题色，不需要从 chart 中获取
+        var _plot$chart$getTheme = plot.chart.getTheme(),
+            colors10 = _plot$chart$getTheme.colors10; // custom colorMapping function
+
+
+        var idx = data.map(function (d) {
+          return d.city;
+        }).indexOf(city);
+        return colors10[idx + 1];
+      },
+      shape: function shape(_ref2) {
+        var area = _ref2.area;
+        var shapes = ['circle', 'square', 'triangle', 'hexagon', 'diamond', 'bowtie'];
+        var idx = (0, _util.uniq)(data.map(function (d) {
+          return d.area;
+        })).indexOf(area);
+        return shapes[idx] || 'circle';
+      },
+      yAxis: {
+        nice: true,
+        line: {
+          style: {
+            stroke: '#aaa'
+          }
+        }
+      }
+    });
+  });
+});`},{fileName: "progress-style.ts", fileIndex: 201, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13593,7 +15004,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var progress = new G2Plot.Progress('container-182', {
+  var progress = new G2Plot.Progress('container-201', {
     height: 100,
     width: 300,
     autoFit: false,
@@ -13602,7 +15013,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     color: ['#F4664A', '#E8EDF3']
   });
   progress.render();
-});`},{fileName: "progress.ts", fileIndex: 183, code: `(function (global, factory) {
+});`},{fileName: "progress.ts", fileIndex: 202, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13617,7 +15028,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var progress = new G2Plot.Progress('container-183', {
+  var progress = new G2Plot.Progress('container-202', {
     height: 100,
     width: 300,
     autoFit: false,
@@ -13625,7 +15036,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     color: ['#5B8FF9', '#E8EDF3']
   });
   progress.render();
-});`},{fileName: "ring-progress-style.ts", fileIndex: 184, code: `(function (global, factory) {
+});`},{fileName: "ring-progress-style.ts", fileIndex: 203, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13640,7 +15051,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var ringProgress = new G2Plot.RingProgress('container-184', {
+  var ringProgress = new G2Plot.RingProgress('container-203', {
     height: 100,
     width: 100,
     autoFit: false,
@@ -13662,7 +15073,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   ringProgress.render();
-});`},{fileName: "ring-progress.ts", fileIndex: 185, code: `(function (global, factory) {
+});`},{fileName: "ring-progress.ts", fileIndex: 204, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13677,7 +15088,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
 })(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_g2plot) {
   "use strict";
 
-  var ringProgress = new G2Plot.RingProgress('container-185', {
+  var ringProgress = new G2Plot.RingProgress('container-204', {
     height: 100,
     width: 100,
     autoFit: false,
@@ -13685,7 +15096,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     color: ['#5B8FF9', '#E8EDF3']
   });
   ringProgress.render();
-});`},{fileName: "area-annotation.ts", fileIndex: 186, code: `(function (global, factory) {
+});`},{fileName: "area-annotation.ts", fileIndex: 205, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13701,7 +15112,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   var data = [264, 417, 438, 887, 309, 397, 550, 575, 563, 430, 525, 592, 492, 467, 513, 546, 983, 340, 539, 243, 226, 192];
-  var tinyArea = new G2Plot.TinyArea('container-186', {
+  var tinyArea = new G2Plot.TinyArea('container-205', {
     height: 60,
     autoFit: false,
     data: data,
@@ -13746,7 +15157,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   tinyArea.render();
-});`},{fileName: "basic-area.ts", fileIndex: 187, code: `(function (global, factory) {
+});`},{fileName: "basic-area.ts", fileIndex: 206, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13762,14 +15173,14 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   var data = [264, 417, 438, 887, 309, 397, 550, 575, 563, 430, 525, 592, 492, 467, 513, 546, 983, 340, 539, 243, 226, 192];
-  var tinyArea = new G2Plot.TinyArea('container-187', {
+  var tinyArea = new G2Plot.TinyArea('container-206', {
     height: 60,
     autoFit: false,
     data: data,
     smooth: true
   });
   tinyArea.render();
-});`},{fileName: "filled-area.ts", fileIndex: 188, code: `(function (global, factory) {
+});`},{fileName: "filled-area.ts", fileIndex: 207, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13785,7 +15196,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   var data = [264, 417, 438, 887, 309, 397, 550, 575, 563, 430, 525, 592, 492, 467, 513, 546, 983, 340, 539, 243, 226, 192];
-  var tinyArea = new G2Plot.TinyArea('container-188', {
+  var tinyArea = new G2Plot.TinyArea('container-207', {
     height: 60,
     autoFit: false,
     data: data,
@@ -13795,7 +15206,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   tinyArea.render();
-});`},{fileName: "basic-column.ts", fileIndex: 189, code: `(function (global, factory) {
+});`},{fileName: "basic-column.ts", fileIndex: 208, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13811,7 +15222,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   var data = [274, 337, 81, 497, 666, 219, 269];
-  var tinyColumn = new G2Plot.TinyColumn('container-189', {
+  var tinyColumn = new G2Plot.TinyColumn('container-208', {
     height: 64,
     autoFit: false,
     data: data,
@@ -13822,7 +15233,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }
   });
   tinyColumn.render();
-});`},{fileName: "column-annotation.ts", fileIndex: 190, code: `(function (global, factory) {
+});`},{fileName: "column-annotation.ts", fileIndex: 209, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13838,7 +15249,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   var data = [274, 337, 81, 497, 666, 219, 269];
-  var tinyColumn = new G2Plot.TinyColumn('container-190', {
+  var tinyColumn = new G2Plot.TinyColumn('container-209', {
     height: 64,
     autoFit: false,
     data: data,
@@ -13864,7 +15275,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
     }]
   });
   tinyColumn.render();
-});`},{fileName: "basic-line.ts", fileIndex: 191, code: `(function (global, factory) {
+});`},{fileName: "basic-line.ts", fileIndex: 210, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13880,14 +15291,14 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   var data = [264, 417, 438, 887, 309, 397, 550, 575, 563, 430, 525, 592, 492, 467, 513, 546, 983, 340, 539, 243, 226, 192];
-  var tinyLine = new G2Plot.TinyLine('container-191', {
+  var tinyLine = new G2Plot.TinyLine('container-210', {
     height: 60,
     autoFit: false,
     data: data,
     smooth: true
   });
   tinyLine.render();
-});`},{fileName: "line-annotation.ts", fileIndex: 192, code: `(function (global, factory) {
+});`},{fileName: "line-annotation.ts", fileIndex: 211, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13903,7 +15314,7 @@ export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(fu
   "use strict";
 
   var data = [264, 417, 438, 887, 309, 397, 550, 575, 563, 430, 525, 592, 492, 467, 513, 546, 983, 340, 539, 243, 226, 192];
-  var tinyLine = new G2Plot.TinyLine('container-192', {
+  var tinyLine = new G2Plot.TinyLine('container-211', {
     height: 60,
     autoFit: false,
     data: data,

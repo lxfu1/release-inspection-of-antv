@@ -1,10 +1,3 @@
-/*
- * @Descripttion: 生成全量 demo 文件
- * @version: 0.0.1
- * @Author: fujin
- * @Date: 2021-02-24 16:55:09
- * @LastEditTime: 2021-02-25 18:50:16
- */
 const fs = require('fs');
 const path = require('path');
 const { transform } = require('@babel/standalone');
@@ -28,6 +21,7 @@ const filter = code => {
 		.replace(/\\/g, '')
 		.replace(`('container')`, `('container-${index}')`)
 		.replace(/\$\{(\S*|\S*\/S*)\}/g, function (_, sign) {
+			console.log(`s1${sign}s1`);
 			return `s1${sign}s1`;
 		});
 };
@@ -40,6 +34,7 @@ const specialFile = [
 	'nobel-prize.ts',
 	'style.ts',
 	'quadrant-tooltip.ts',
+	'html-tooltip.ts',
 ];
 
 const scanFiles = (foldPath, dir) => {
@@ -62,6 +57,7 @@ const scanFiles = (foldPath, dir) => {
 					plugins: ['transform-modules-umd'],
 				});
 				codes.push(`{fileName: "${fileName}", fileIndex: ${index}, code: ` + '`' + filter(code) + '`}');
+
 				index += 1;
 			}
 		});
