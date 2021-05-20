@@ -28,8 +28,8 @@ install:
 
 script:
   - npm run build
-  - git aa
-  - git cm 'stash site'
+  - git add .
+  - git commit -m 'stash site'
 
 before_script:
   - composer config --global github-oauth.github.com "$GH_TOKEN"
