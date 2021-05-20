@@ -1,10 +1,7 @@
 import React, { Fragment, useEffect, useRef } from 'react';
 import html2canvas from 'html2canvas';
-import CountTime from './components/countTime';
 import { codes } from './code';
 import { uploadCanvas } from './upload';
-
-const RenderTime = 20000;
 
 const execute = (code: string, node: HTMLDivElement) => {
 	const script = document.createElement('script');
@@ -49,13 +46,7 @@ const PlayGround: React.FC = () => {
 
 	return (
 		<Fragment>
-			{/* <CountTime
-				endTime={new Date().getTime() + RenderTime}
-				onEnd={() => {
-					renderCanvas();
-				}}
-			/> */}
-			<div className="charts-container" ref={containerRef}>
+			<div className="charts-container" data-length={codes.length} ref={containerRef}>
 				{codes.map(item => (
 					<div key={item.fileName + item.fileIndex} id={`box-${item.fileIndex}`}>
 						<div id={`container-${item.fileIndex}`}></div>

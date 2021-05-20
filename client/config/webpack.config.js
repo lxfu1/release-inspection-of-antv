@@ -641,28 +641,6 @@ module.exports = function (webpackEnv) {
 					// The formatter is invoked directly in WebpackDevServerUtils during development
 					formatter: isEnvProduction ? typescriptFormatter : undefined,
 				}),
-			!disableESLintPlugin &&
-				new ESLintPlugin({
-					// Plugin options
-					extensions: ['js', 'mjs', 'jsx', 'ts', 'tsx'],
-					formatter: require.resolve('react-dev-utils/eslintFormatter'),
-					eslintPath: require.resolve('eslint'),
-					emitWarning: isEnvDevelopment && emitErrorsAsWarnings,
-					context: paths.appSrc,
-					cache: true,
-					cacheLocation: path.resolve(paths.appNodeModules, '.cache/.eslintcache'),
-					// ESLint class options
-					cwd: paths.appPath,
-					resolvePluginsRelativeTo: __dirname,
-					baseConfig: {
-						extends: [require.resolve('eslint-config-react-app/base')],
-						rules: {
-							...(!hasJsxRuntime && {
-								'react/react-in-jsx-scope': 'error',
-							}),
-						},
-					},
-				}),
 			// new BundleAnalyzerPlugin({
 			//   defaultSizes: 'gzip'
 			// })

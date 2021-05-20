@@ -10,6 +10,15 @@ const codeGenerator = () => {
 	fs.writeFileSync(path.resolve(__dirname, codePath, `code.ts`), `export const codes = [${codes}]`);
 };
 
+const setCodesLength = () => {
+	//  用于计算浏览器高度
+	fs.writeFileSync(
+		path.resolve(__dirname, '../../server/static/code-info.js'),
+		`module.exports = {chartLength: ${index + 1}};`,
+		'utf8'
+	);
+};
+
 const filter = code => {
 	return code
 		.replace(`('container',`, `('container-${index}',`)
@@ -62,6 +71,7 @@ const scanFiles = (foldPath, dir) => {
 			}
 		});
 		codeGenerator();
+		setCodesLength();
 	} catch (err) {
 		console.log(err);
 	}
