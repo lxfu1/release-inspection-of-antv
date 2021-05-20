@@ -63,7 +63,7 @@ const App: React.FC = () => {
 		return (
 			<div className="diff-box">
 				<img src={`${basePath}/local.png`} alt="local" />
-				{/* <img src={`${basePath}/diff.png`} alt="diff" /> */}
+				<img src={`${basePath}/diff.png`} alt="diff" />
 				<img src={`${basePath}/online.png`} alt="online" />
 			</div>
 		);
