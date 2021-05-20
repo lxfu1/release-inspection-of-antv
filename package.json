@@ -4,7 +4,7 @@
   "description": "release inspection",
   "main": "index.js",
   "scripts": {
-    "build": "npx sh start.sh"
+    "build": "npx sh start.sh G2Plot master"
   },
   "repository": {
     "type": "git",

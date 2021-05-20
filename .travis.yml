@@ -17,6 +17,7 @@ deploy:
       branch: master
   - provider: surge
     project: ./server/static/
+    domain: ripe-mask.surge.sh
     cleanup: false
     on:
       branch: master

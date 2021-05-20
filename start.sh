@@ -6,20 +6,23 @@ echo $PATH
 
 # project_name=release-inspection-of-antv
 
+project_name=$1
+
+project_branch=$2
 
 cd ..
 
-echo "\033[49;32m \n******* G2Plot cloning *******\n \033[0m"
+echo "\033[49;32m \n******* ${project_name} cloning *******\n \033[0m"
 
-git clone https://github.com/antvis/G2Plot.git
+git clone -b ${project_branch} https://github.com/antvis/${project_name}.git
 
-cd ./G2Plot
+cd ./${project_name}
 
-echo "\033[49;32m \n******* G2Plot installing *******\n \033[0m"
+echo "\033[49;32m \n******* ${project_name} installing *******\n \033[0m"
 
 npm i
 
-echo "\033[49;32m \n******* G2Plot building *******\n \033[0m"
+echo "\033[49;32m \n******* ${project_name} building *******\n \033[0m"
 
 npm run dist
 

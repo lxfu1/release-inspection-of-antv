@@ -20,3 +20,20 @@
 	line-height: 100vh;
 	color: rgba(0, 0, 0, 0.65);
 }
+
+.diff-box {
+	width: 100vw;
+	justify-content: space-around;
+	display: flex;
+	overflow-y: scroll;
+}
+
+.diff-box > img {
+	display: block;
+	width: 33%;
+	height: auto;
+	border-right: 1px solid #ccc;
+}
+.diff-box > img:last-child {
+	border-right: none;
+}

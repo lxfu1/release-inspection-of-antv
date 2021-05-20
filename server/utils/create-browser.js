@@ -43,7 +43,7 @@ const createBrowser = async () => {
 		height: viewHeight,
 		deviceScaleFactor: 1,
 	});
-	await localPage.goto('http://localhost:3000?env=local');
+	await localPage.goto('http://localhost:3000?type=local');
 	await delay(renderTime);
 	const localPath = `${basePath}/local.png`;
 	await localPage.screenshot({
