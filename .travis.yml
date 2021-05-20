@@ -9,15 +9,16 @@ node_js: 14.8.0
 #   - client/node_modules
 
 deploy:
+  - provider: surge
+    project: ./server/static/
+    domain: ripe-mask.surge.sh
+    cleanup: false
+    on:
+      branch: master
   - provider: pages
     skip_cleanup: true
     github_token: $GH_TOKEN # Set in the settings page of your repository, as a secure variable
     keep_history: false
-    on:
-      branch: master
-  - provider: surge
-    project: ./server/static
-    domain: ripe-mask.surge.sh
     on:
       branch: master
 
