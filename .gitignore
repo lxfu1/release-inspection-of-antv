@@ -31,7 +31,5 @@
 package-lock.json
 
 # temp
-/server/static/g2plot.min.js
 /server/static/code-info.js
-/server/static/static
 /client/src/code.ts
