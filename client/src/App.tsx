@@ -57,6 +57,7 @@ const App: React.FC = () => {
 	if (laoding) {
 		return <div className="loading">脚本加载中</div>;
 	}
+
 	if (showDiff) {
 		const basePath = `/file/${getFormateDate()}`;
 		return (
@@ -67,6 +68,7 @@ const App: React.FC = () => {
 			</div>
 		);
 	}
+
 	return <Gallery />;
 };
 

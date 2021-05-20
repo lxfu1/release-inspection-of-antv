@@ -3,7 +3,7 @@
 ```bash
 
 # 执行
-sh start.sh
+npm run build
 
 ```
 
