@@ -8,6 +8,9 @@ node_js: 14.8.0
 #   - server/node_modules
 #   - client/node_modules
 
+addons:
+  chrome: stable
+
 deploy:
   provider: pages
   skip_cleanup: true
@@ -17,17 +20,17 @@ deploy:
     branch: master
 
 install:
-- npm i
+  - npm i
 
 script:
-- npm run build
+  - npm run build
 
 before_script:
   - composer config --global github-oauth.github.com "$GH_TOKEN"
 
 branches:
   only:
-  - master
+    - master
 
 env:
   global:
