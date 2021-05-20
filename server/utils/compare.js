@@ -1,13 +1,8 @@
-/*
- * @version: 0.0.1
- * @Author: fujin
- * @Date: 2021-02-25 20:45:27
- * @LastEditTime: 2021-02-26 15:42:37
- */
 const fs = require('fs');
 const chalk = require('chalk');
 const PNG = require('pngjs').PNG;
 const pixelmatch = require('pixelmatch');
+const openImage = require('./open');
 
 const compareImage = (path1, path2, basePath) => {
 	console.log(chalk.green('\n****** 截图比对中 ******\n'));
@@ -19,7 +14,7 @@ const compareImage = (path1, path2, basePath) => {
 	const diffPath = `${basePath}/diff.png`;
 	fs.writeFileSync(diffPath, PNG.sync.write(diff));
 	console.log(chalk.green('\n****** 截图比对完成 ******\n'));
-	process.exit();
+	openImage(diffPath);
 };
 
 module.exports = compareImage;

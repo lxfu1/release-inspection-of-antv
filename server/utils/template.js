@@ -1,10 +1,3 @@
-/*
- * @Descripttion: 返回静态资源
- * @version: 0.0.1
- * @Author: fujin
- * @Date: 2020-05-20 14:58:02
- * @LastEditTime: 2021-02-25 12:50:45
- */
 /**
  * 存放公共类
  * */

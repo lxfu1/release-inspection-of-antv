@@ -1,9 +1,3 @@
-/*
- * @version: 0.0.1
- * @Author: fujin
- * @Date: 2021-02-25 11:55:59
- * @LastEditTime: 2021-02-25 13:29:26
- */
 const net = require('net');
 
 function portInUse(port) {

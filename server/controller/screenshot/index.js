@@ -1,10 +1,3 @@
-/*
- * @Descripttion: 文件上传
- * @version: 0.0.1
- * @Author: fujin
- * @Date: 2020-05-20 14:58:02
- * @LastEditTime: 2021-02-25 14:17:42
- */
 const chalk = require('chalk');
 const fs = require('fs');
 const { jsonMiddle } = require('../../utils');

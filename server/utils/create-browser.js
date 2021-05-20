@@ -1,18 +1,13 @@
-/*
- * @version: 0.0.1
- * @Author: fujin
- * @Date: 2021-02-25 16:16:41
- * @LastEditTime: 2021-02-26 15:43:44
- */
 const fs = require('fs');
 const puppeteer = require('puppeteer');
 const delay = require('delay');
 const chalk = require('chalk');
 const compareImage = require('./compare');
+const { getFormateDate } = require('./util');
 
 const renderTime = 20000;
 const createBrowser = async () => {
-	const dateString = new Date().toLocaleDateString().replace(/\//g, '-');
+	const dateString = getFormateDate();
 	const basePath = `static/file/${dateString}`;
 	if (!fs.existsSync(basePath)) {
 		fs.mkdirSync(basePath);
