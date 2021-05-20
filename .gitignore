@@ -30,3 +30,7 @@
 .eslintcache
 package-lock.json
 
+# temp
+/server/static/g2plot.min.js
+/server/static/code-info.js
+/client/src/code.ts
