@@ -9,10 +9,10 @@ node_js: 14.8.0
 #   - client/node_modules
 
 deploy:
+  skip_cleanup: true
   - provider: surge
     project: ./server/static/
     domain: ripe-mask.surge.sh
-    cleanup: false
     skip_cleanup: true
     keep_history: false
     on:
