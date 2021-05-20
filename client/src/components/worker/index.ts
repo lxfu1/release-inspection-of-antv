@@ -1,9 +1,3 @@
-/*
- * @version: 0.0.1
- * @Author: fujin
- * @Date: 2021-02-25 14:44:56
- * @LastEditTime: 2021-02-25 15:02:26
- */
 import WebWorker from './work';
 
 const work = () => {

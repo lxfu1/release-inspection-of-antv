@@ -1,9 +1,3 @@
-/*
- * @version: 0.0.1
- * @Author: fujin
- * @Date: 2021-02-08 15:21:11
- * @LastEditTime: 2021-02-25 14:37:59
- */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';

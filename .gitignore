@@ -27,3 +27,4 @@
 #ide
 .idea/
 .eslintcache
+package-lock.json

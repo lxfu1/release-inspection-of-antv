@@ -1,9 +1,3 @@
-/*
- * @version: 0.0.1
- * @Author: fujin
- * @Date: 2021-02-08 15:21:11
- * @LastEditTime: 2021-02-25 18:25:01
- */
 import React, { useEffect, useState } from 'react';
 import Gallery from './gallery';
 import './App.css';
