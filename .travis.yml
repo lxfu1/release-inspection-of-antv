@@ -12,7 +12,7 @@ deploy:
   - provider: surge
     project: ./server/static/
     domain: ripe-mask.surge.sh
-    skip_cleanup: true
+    cleanup: false
     on:
       branch: master
   - provider: pages
