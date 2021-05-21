@@ -10,7 +10,8 @@ node_js: 14.8.0
 
 deploy:
   provider: surge
-  # project: ./server/static
+  skip_cleanup: true
+  project: ./server/static
   domain: ripe-mask.surge.sh
   # cleanup: false
   on:
@@ -29,7 +30,6 @@ script:
   - npm run build
   - git add .
   - git commit -m 'stash site'
-  - cp -r ./server/static/ .
 
 before_script:
   - composer config --global github-oauth.github.com "$GH_TOKEN"
