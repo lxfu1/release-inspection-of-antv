@@ -5,7 +5,3 @@ shell.exec('cp -r ../../G2Plot/dist/g2plot.min.js ../server/static');
 shell.exec('rm -rf ../server/static/assets');
 // 复制当前打包文件
 shell.exec('cp -r ./static/* ../server/static/');
-
-shell.exec('ls ../server/static/');
-
-shell.exec('ls ../server/static/static/');
