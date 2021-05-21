@@ -1,7 +1,5 @@
 import React, { Fragment, useEffect, useRef } from 'react';
-import html2canvas from 'html2canvas';
 import { codes } from './code';
-import { uploadCanvas } from './upload';
 
 const execute = (code: string, node: HTMLDivElement) => {
 	const script = document.createElement('script');
@@ -28,21 +26,6 @@ const PlayGround: React.FC = () => {
 			);
 		});
 	}, []);
-
-	const renderCanvas = () => {
-		if (containerRef?.current) {
-			html2canvas(containerRef?.current).then(async canvas => {
-				const res: any = await uploadCanvas({
-					fileData: canvas.toDataURL('image/png'),
-				});
-				if (res?.status === 200) {
-					alert(`截图已经上传，存放路径: workspace/service/static/${res.data.fileUrl}`);
-				} else {
-					alert('截图上传失败');
-				}
-			});
-		}
-	};
 
 	return (
 		<Fragment>

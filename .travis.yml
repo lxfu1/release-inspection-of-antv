@@ -30,6 +30,8 @@ script:
   - npm run build
   - git add .
   - git commit -m 'stash site'
+  - ls ./server/static
+  - ls ./server/static/static/
 
 before_script:
   - composer config --global github-oauth.github.com "$GH_TOKEN"
