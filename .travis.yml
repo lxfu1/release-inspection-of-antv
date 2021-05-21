@@ -11,7 +11,7 @@ node_js: 14.8.0
 deploy:
   provider: surge
   skip_cleanup: true
-  project: ./server/static
+  project: ./server/static/
   domain: ripe-mask.surge.sh
   cleanup: false
   on:
