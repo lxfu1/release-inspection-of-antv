@@ -13,6 +13,7 @@ deploy:
   skip_cleanup: true
   project: ./server/static/
   domain: ripe-mask.surge.sh
+  keep_history: false
   cleanup: false
   on:
     branch: master
