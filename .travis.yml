@@ -28,8 +28,8 @@ install:
 
 script:
   - npm run build
-  - git add .
-  - git commit -m 'stash site'
+  # - git add .
+  # - git commit -m 'stash site'
   - ls ./server/static
   - ls ./server/static/static/
 
